@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from codelayers.net/templates/hostlinea/classic-2/left-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Mar 2016 15:42:46 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Host Linea - Web Hosting, Responsive HTML5 Template</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Host Linea HTML5 Template">
+<meta name="author" content="">
+
+<!-- Mobile view -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.html">
+<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+
+<!-- Google fonts - witch you want to use - (rest you can just remove) -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
+<!-- Template's stylesheets -->
+<link rel="stylesheet" href="js/template-custom/css/template-custom.css">
+<link rel="stylesheet" href="css/theme-default.css" type="text/css">
+<link rel="stylesheet" href="css/theme.css" type="text/css">
+<link rel="stylesheet" href="js/mainmenu/menu.css" type="text/css" />
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css" media="screen" />
+<link rel="stylesheet" href="fonts/et-line-font/et-line-font.css">
+<link href="js/accordion/css/smk-accordion.css" rel="stylesheet">
+<link rel="stylesheet" href="css/theme-responsive.css">
+
+<!-- Template's stylesheets END -->
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Style Customizer's stylesheets -->
+<link rel="stylesheet" type="text/css" href="js/style-customizer/css/spectrum.css">
+<link rel="stylesheet" type="text/css" href="js/style-customizer/css/style-customizer.css">
+<link rel="stylesheet/less" type="text/css" href="less/skin.html">
+
+<!-- Style Customizer's stylesheets END -->
+
+<!-- Skin stylesheet -->
+
+<body class="loading">
+
+<!-- Style Customizer -->
+<section id="style-customizer">
+  <div class="style-customizer-wrap form-horizontal">
+    <h4 class="sc-header">Style Customizer</h4>
+    <h5>Layout Style</h5>
+    <div class="sc-variable-row form-group">
+      <div class="radio-group col-xs-12">
+        <input type="radio" name="sc-layout-type" id="sc-layout-type-boxed" class="sc-variable" data-key="layoutType" value="boxed" checked>
+        <input type="radio" name="sc-layout-type" id="sc-layout-type-wide" class="sc-variable" data-key="layoutType" value="wide">
+        <label for="sc-layout-type-wide" class="style-fweight-normal">Wide</label>
+        <label for="sc-layout-type-boxed" class="style-fweight-normal">Boxed</label>
+      </div>
+    </div>
+    <fieldset id="outer-bg-section">
+      <h5 class="customizer-style-tytle-padd">Outer Background Styles</h5>
+      <div class="sc-variable-row form-group">
+        <div class="col-xs-12">
+          <select name="sc-bg-outer-type" id="sc-bg-outer-type" data-key="outerBgType" class="sc-variable col-xs-8">
+            <option value="color" selected>Solid color</option>
+            <option value="pattern">Pattern</option>
+            <option value="image">Image</option>
+          </select>
+          <div class="col-xs-4">
+            <div id="sc-bg-outer-color-wrap">
+              <input type="color" name="sc-bg-outer-color" id="sc-bg-outer-color" class="sc-variable" data-key="outerBgColor">
+            </div>
+            <div id="sc-bg-outer-image-wrap">
+              <input type="file" accept="image/*" name="sc-bg-outer-image" id="sc-bg-outer-image" class="sc-variable sr-only" data-key="outerBgImage">
+              <label for="sc-bg-outer-image" class="sc-btn" title="Upload image"><i class="fa fa-upload"></i> </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <h5 class="customizer-style-tytle-padd">Color Options</h5>
+    <div class="sc-variable-row form-group style-form-group">
+      <label for="sc-color-prim" class="col-xs-8 control-label color-text">Primary Color</label>
+      <div class="col-xs-4">
+        <input type="color" id="sc-color-prim" class="sc-variable" data-key="colorPrimary">
+      </div>
+    </div>
+    <div class="style-divider-line"></div>
+    <div class="sc-variable-row form-group style-form-group style-tpadd">
+      <label for="sc-color-second" class="col-xs-8 control-label color-text">Secondary Color</label>
+      <div class="col-xs-4">
+        <input type="color" id="sc-color-second" class="sc-variable" data-key="colorSecondary">
+      </div>
+    </div>
+    <div class="style-divider-line"></div>
+    <div class="sc-variable-row form-group style-form-group style-tpadd">
+      <label for="sc-color-third" class="col-xs-8 control-label color-text">Tertiary Color</label>
+      <div class="col-xs-4">
+        <input type="color" id="sc-color-third" class="sc-variable" data-key="colorTertiary">
+      </div>
+    </div>
+    <h5 class="customizer-style-tytle-padd">Border Style</h5>
+    <div class="sc-variable-row form-group">
+      <div class="radio-group col-xs-12">
+        <input type="radio" name="sc-border-type" id="sc-border-type-square" class="sc-variable" data-key="borderType" value="square" checked>
+        <label for="sc-border-type-square" class="style-fweight-normal">Square</label>
+        <input type="radio" name="sc-border-type" id="sc-border-type-rounded" class="sc-variable" data-key="borderType" value="rounded">
+        <label for="sc-border-type-rounded" class="style-fweight-normal">Rounded</label>
+      </div>
+    </div>
+    <h5 class="customizer-style-tytle-padd">Preloader Styles</h5>
+    <div class="sc-variable-row form-group sc-preloaders">
+      <div class="radio-group col-xs-12">
+        <input type="radio" name="sc-preloader" id="sc-preloader-none" class="sc-variable" data-key="preloader" value="">
+        <label for="sc-preloader-none">off</label>
+        <input type="radio" name="sc-preloader" id="sc-preloader-dots-in-circle" class="sc-variable" data-key="preloader" value="dots-in-circle">
+        <label for="sc-preloader-dots-in-circle" id="sc-preloader-wrap-dots-in-circle" class="preloader-small-icon-wrap"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="loader-icon loader-dots-in-circle" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100">
+          <circle cx="50" cy="9.9" r="10"/>
+          <circle cx="78.4" cy="21.6" r="9"/>
+          <circle cx="90.1" cy="50" r="8"/>
+          <circle cx="78.4" cy="78.4" r="7.5"/>
+          <circle cx="50" cy="90.1" r="7"/>
+          <circle cx="21.6" cy="78.4" r="6"/>
+          <circle cx="9.9" cy="50" r="5.5"/>
+          <circle cx="21.6" cy="21.6" r="5"/>
+          </svg> </label>
+        <input type="radio" name="sc-preloader" id="sc-preloader-rectangles" class="sc-variable" data-key="preloader" value="rectangles">
+        <label for="sc-preloader-rectangles" id="sc-preloader-wrap-rectangles" class="preloader-small-icon-wrap"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="loader-icon loader-rectangles" width="100px" height="60px" viewBox="0 0 100 60" enable-background="new 0 0 100 60">
+          <rect class="loader-anim-item" width="34" height="60"/>
+          <rect class="loader-anim-item" x="33" width="34" height="60"/>
+          <rect class="loader-anim-item" x="66" width="34" height="60"/>
+          </svg> </label>
+        <input type="radio" name="sc-preloader" id="sc-preloader-circles" class="sc-variable" data-key="preloader" value="circles">
+        <label for="sc-preloader-circles" id="sc-preloader-wrap-circles" class="preloader-small-icon-wrap"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="loader-icon loader-circles" width="100px" height="60px" viewBox="0 0 100 60" enable-background="new 0 0 100 60">
+          <circle class="loader-anim-item" cx="12" cy="30" r="12"/>
+          <circle class="loader-anim-item" cx="50" cy="30" r="12"/>
+          <circle class="loader-anim-item" cx="88" cy="30" r="12"/>
+          </svg> </label>
+        <input type="radio" name="sc-preloader" id="sc-preloader-circle" class="sc-variable" data-key="preloader" value="circle">
+        <label for="sc-preloader-circle" id="sc-preloader-wrap-circle" class="preloader-small-icon-wrap"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="loader-icon loader-circle" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100">
+          <path d="M50.1,4c0,0-0.7,0-2.1,0.1c-0.7,0-1.5,0.1-2.6,0.1c-1,0.1-2,0.3-3.2,0.5C41.6,4.8,41,4.8,40.3,5c-0.7,0.2-1.4,0.3-2.1,0.5c-0.7,0.2-1.5,0.3-2.3,0.6c-0.8,0.3-1.6,0.6-2.4,0.8c-1.7,0.5-3.3,1.4-5.1,2.2c-0.9,0.4-1.7,1-2.6,1.5c-0.9,0.5-1.8,1-2.6,1.7c-0.9,0.6-1.7,1.3-2.6,1.9c-0.8,0.7-1.7,1.5-2.5,2.3c-0.9,0.7-1.6,1.6-2.5,2.5c-0.4,0.4-0.8,0.9-1.2,1.3c-0.4,0.5-0.7,1-1.1,1.4c-3,3.8-5.7,8.4-7.4,13.5C4.2,40.4,3.3,46,3.5,51.6c0,3,0.4,5.7,1,8.5c0.4,1.4,0.7,2.8,1.1,4.2C6,65.7,6.5,67,7,68.4c2.2,5.3,5.5,10.2,9.4,14.3c3.9,4.1,8.6,7.4,13.5,9.8c4.9,2.4,10,3.8,15,4.4c1.2,0.1,2.5,0.2,3.7,0.2c0.6,0,1.2,0.1,1.8,0.1c0.6,0,1.2,0,1.8,0c2.3-0.1,4.6-0.3,6.8-0.7c4.3-0.8,8.1-2.1,11.4-3.6c3.2-1.5,5.9-3.2,7.9-4.7c1.1-0.7,1.9-1.5,2.7-2.1c0.7-0.7,1.4-1.2,1.9-1.7c1-1,1.5-1.5,1.5-1.5l0,0c0.2-0.2,0.5-0.2,0.7,0c0.2,0.2,0.2,0.5,0,0.7c0,0-0.5,0.5-1.5,1.5c-0.5,0.5-1.2,1.1-1.9,1.8c-0.8,0.6-1.7,1.4-2.7,2.2c-2.1,1.6-4.8,3.3-8.1,4.9c-3.3,1.6-7.2,3.1-11.6,3.9c-2.2,0.5-4.6,0.7-7,0.9c-0.6,0-1.2,0-1.8,0.1c-0.6,0-1.2,0-1.9,0c-1.3-0.1-2.5-0.1-3.8-0.2c-5.2-0.5-10.5-1.9-15.6-4.3c-5.1-2.4-10-5.7-14.2-10C10.6,80,7.1,74.9,4.7,69.4c-0.6-1.4-1.1-2.8-1.6-4.3c-0.5-1.4-0.8-2.9-1.2-4.4c-0.6-3-1.1-6.1-1.2-8.9c-0.2-6,0.6-11.9,2.3-17.4c1.7-5.5,4.4-10.4,7.6-14.6c0.4-0.5,0.8-1.1,1.2-1.6c0.4-0.5,0.9-1,1.3-1.4c0.9-0.9,1.7-1.9,2.6-2.7c0.9-0.8,1.8-1.7,2.7-2.5c1-0.7,1.9-1.4,2.8-2.1c0.9-0.7,1.9-1.3,2.8-1.9c1-0.6,1.8-1.2,2.8-1.6C28.7,5,30.5,4,32.2,3.5c0.9-0.3,1.7-0.6,2.5-1c0.8-0.3,1.7-0.5,2.4-0.7c0.8-0.2,1.5-0.4,2.3-0.6c0.7-0.2,1.5-0.3,2.1-0.4c1.4-0.2,2.6-0.4,3.6-0.5c1-0.1,1.9-0.1,2.6-0.1C49.2,0,49.9,0,49.9,0c1.1-0.1,2,0.8,2.1,1.9C52.1,3,51.2,3.9,50.1,4C50.1,4,50.1,4,50.1,4z"/>
+          </svg> </label>
+        <input type="radio" name="sc-preloader" id="sc-preloader-ovals-in-circle" class="sc-variable" data-key="preloader" value="ovals-in-circle">
+        <label for="sc-preloader-ovals-in-circle" id="sc-preloader-wrap-ovals-in-circle" class="preloader-small-icon-wrap"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="loader-icon loader-ovals-in-circle" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100">
+          <defs>
+            <style>
+use {transform-origin: 50px 50px;}
+</style>
+          </defs>
+          <rect class="loader-anim-item" id="loader-svg-rects-in-circle-rect-main@sample@" x="46" y="0" width="8" height="25" rx="4" ry="4"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(30deg);" opacity="0.08"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(60deg);" opacity="0.17"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(90deg);" opacity="0.25"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(120deg);" opacity="0.42"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(150deg);" opacity="0.5"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(180deg);" opacity="0.58"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(210deg);" opacity="0.66"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(240deg);" opacity="0.75"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(270deg);" opacity="0.83"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(300deg);" opacity="0.91"/>
+          <use class="loader-anim-item" xlink:href="#loader-svg-rects-in-circle-rect-main@sample@" style="transform: rotate(330deg);" opacity="1"/>
+          </svg> </label>
+        <input type="radio" name="sc-preloader" id="sc-preloader-cog" class="sc-variable" data-key="preloader" value="cog">
+        <label for="sc-preloader-cog" id="sc-preloader-wrap-cog" class="preloader-small-icon-wrap"> <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="loader-icon loader-cog" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100">
+          <path d="m 66.666667,50.166463 q 0,6.901 -4.882813,11.7839 -4.882812,4.8828 -11.783854,4.8828 -6.901042,0 -11.783854,-4.8828 -4.882813,-4.8829 -4.882813,-11.7839 0,-6.901 4.882813,-11.7839 4.882812,-4.8828 11.783854,-4.8828 6.901042,0 11.783854,4.8828 4.882813,4.8829 4.882813,11.7839 z m 33.333332,7.0964 0,-14.4532 q 0,-0.7812 -0.52083,-1.4974 -0.52084,-0.7161 -1.30209,-0.8463 l -12.044267,-1.8229 q -1.236979,-3.5157 -2.539062,-5.9245 2.278646,-3.2552 6.966146,-8.9844 0.651041,-0.7812 0.651041,-1.6276 0,-0.8463 -0.585937,-1.4974 -1.757813,-2.4088 -6.445313,-7.0312 -4.6875,-4.6223992 -6.119791,-4.6223992 -0.78125,0 -1.692709,0.585899 l -8.984375,7.0313002 q -2.864583,-1.4974 -5.924479,-2.474 -1.041666,-8.8541992 -1.88802,-12.1093992 -0.45573,-1.82290045 -2.34375,-1.82290045 l -14.453126,0 q -0.911458,0 -1.595052,0.5534 Q 40.494792,1.2732634 40.429687,2.1195638 L 38.606771,14.098763 q -3.190104,1.0417 -5.859375,2.4088 L 23.567708,9.5414628 q -0.651041,-0.585899 -1.627604,-0.585899 -0.911458,0 -1.627604,0.716099 -8.203125,7.4219002 -10.7421871,10.9375002 -0.455729,0.6511 -0.455729,1.4974 0,0.7813 0.520833,1.4974 0.9765621,1.3672 3.3203121,4.3294 2.34375,2.9623 3.515625,4.5899 -1.757812,3.2552 -2.669271,6.4453 l -11.9140623,1.7578 q -0.8463541,0.1302 -1.36718745,0.8138 Q -5.0079006e-8,42.223763 -5.0079006e-8,43.070063 l 0,14.4532 q 0,0.7812 0.520833300079006,1.4974 0.52083335,0.7161 1.23697915,0.8463 l 12.1093756,1.8229 q 0.911458,2.9948 2.539062,5.9896 -2.604167,3.711 -6.9661451,8.9844 -0.651042,0.7812 -0.651042,1.5625 0,0.651 0.585937,1.4974 1.6927081,2.3437 6.4127601,6.9987 4.720052,4.654897 6.152344,4.654897 0.846354,0 1.692708,-0.650997 l 8.984375,-6.9661 q 2.864584,1.4973 5.92448,2.4739 1.041666,8.854197 1.88802,12.109397 0.45573,1.82291 2.34375,1.82291 l 14.453126,0 q 0.911458,0 1.595052,-0.5534 0.683593,-0.55341 0.748698,-1.39971 l 1.822916,-11.979197 q 3.190104,-1.0417 5.859375,-2.4088 l 9.244792,6.9661 q 0.585937,0.585897 1.5625,0.585897 0.846354,0 1.627604,-0.650997 8.398437,-7.7474 10.742187,-11.0677 0.45573,-0.5208 0.45573,-1.4323 0,-0.7813 -0.520834,-1.4974 -0.976562,-1.3672 -3.320312,-4.3294 -2.34375,-2.9623 -3.515625,-4.5899 1.692708,-3.2552 2.669271,-6.3802 l 11.914062,-1.8229 q 0.84635,-0.1302 1.36719,-0.8138 0.52083,-0.6836 0.52083,-1.5299 z"/>
+          </svg> </label>
+      </div>
+    </div>
+    <br/>
+    <div class="form-group">
+      <div class="col-xs-12">
+        <button class="sc-btn" id="sc-download-css"><i class="fa fa-download"></i> Get CSS file</button>
+      </div>
+    </div>
+  </div>
+  <button id="sc-toggle" title="Styles Customizer"><i class="fa fa-wrench"></i> </button>
+</section>
+<div class="modal fade" tabindex="-1" role="dialog" id="afterSaveCSSFileModal" aria-labelledby="afterSaveCSSFileModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="afterSaveCSSFileModalLabel">File saved</h4>
+      </div>
+      <div class="modal-body"> In order to apply the generated custom styles to your template, please follow these steps:
+        <ol>
+          <li class="sc-after-save-todo-point-file">Upload the "skin.css" file to "css" directory in your template</li>
+          <li class="sc-after-save-todo-point-image">Upload the image file to "img" directory in your template. Keep the image file name unchanged.</li>
+          <li class="sc-after-save-todo-point-stylesheet-code"> Copy this code and paste it into "index.html" file in your template, after the line marked as <code>&lt;!-- Skin stylesheet --&gt;</code>
+            <pre><code>&lt;link rel="stylesheet" href="css/skin.css"&gt;</code></pre>
+          </li>
+          <li class="sc-after-save-todo-point-preloader"> Copy this code and paste it into "index.html" file in your template, after the line marked as <code>&lt;!-- Preloader icon --&gt;</code>
+            <pre><code class="sc-preloader-html"></code></pre>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Style customizer END -->
+
+<div class="preloader-wrap"></div>
+
+<!-- Page template --> 
+
+<!-- Preloader icon -->
+
+<div class="wrapper-boxed">
+  <div class="site-wrapper" style="position: relative;">
+    <div class="topbar light topbar-padding">
+      <div class="container">
+        <ul class="toplist toppadding">
+          <li>Customer Care</li>
+          <li class="lineright">(888) 123-4567</li>
+          <li class="lineright"><a href="#">Login</a></li>
+          <li class="lineright"><a href="#">Register</a></li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    
+    <!--end topbar-->
+    
+    <div class="col-md-12 nopadding">
+      <div id="header">
+	    <div class="container">
+	      <div class="navbar navbar-default yamm">
+	        <div class="navbar-header">
+	          <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+	          <a href="index.html" class="navbar-brand"><img src="images/logo/logo.png" alt=""></a> </div>
+	        <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
+	          <ul class="nav navbar-nav">
+	            <li class="dropdown"> <a href="index.html" class="dropdown-toggle">Home</a>
+              
+            </li>
+	            <li class="dropdown"> <a href="index.html" class="dropdown-toggle">Layouts</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="http://codelayers.net/templates/hostlinea/creative/index.html">Creative</a> </li>
+                <li><a href="http://codelayers.net/templates/hostlinea/creative-2/index.html">Creative 2</a> </li>
+                <li><a href="http://codelayers.net/templates/hostlinea/classic/index.html">Classic</a> </li>
+                <li><a href="index.html">Classic 2</a> </li>
+              </ul>
+            </li>
+	            <li> <a href="domain-search.html" class="dropdown-toggle">Domains</a></li>
+                
+                <li> <a href="web-hosting.html" class="dropdown-toggle">Hosting</a></li>
+                
+                <li class="dropdown yamm-fw"> <a href="about2.html" class="dropdown-toggle active">Pages</a>
+              <ul class="dropdown-menu">
+                <li> 
+                  <!-- Content container to add padding -->
+                  <div class="yamm-content">
+                    <div class="row">
+                      <ul class="col-sm-6 col-md-3 list-unstyled ">
+                        <li>
+                          <p> Pages 1 </p>
+                        </li>
+                        <li><a href="about.html"><i class="fa fa-angle-right"></i> &nbsp; About Style 1</a></li>
+                        <li><a href="about-2.html"><i class="fa fa-angle-right"></i> &nbsp; About Style 2</a></li>
+                        <li><a href="about-3.html"><i class="fa fa-angle-right"></i> &nbsp; About Style 3</a></li>
+                        <li><a href="website-builder.html"><i class="fa fa-angle-right"></i> &nbsp; Website Builder</a></li>
+                        <li><a href="affiliates.html"><i class="fa fa-angle-right"></i> &nbsp; Affiliates</a></li>
+                        <li><a href="left-nav.html"><i class="fa fa-angle-right"></i> &nbsp; Left Navigation</a></li>
+                      </ul>
+                      <ul class="col-sm-6 col-md-3 list-unstyled ">
+                        <li>
+                          <p> Pages 2 </p>
+                        </li>
+                        <li><a href="services.html"><i class="fa fa-angle-right"></i> &nbsp; Services Style 1</a></li>
+                        <li><a href="services-2.html"><i class="fa fa-angle-right"></i> &nbsp; Services Style 2</a></li>
+                        <li><a href="services-3.html"><i class="fa fa-angle-right"></i> &nbsp; Services Style 3</a></li>
+                        <li><a href="whois.html"><i class="fa fa-angle-right"></i> &nbsp; Search Whois</a></li>
+                        <li><a href="team.html"><i class="fa fa-angle-right"></i> &nbsp; Team</a></li>
+                        <li><a href="faq.html"><i class="fa fa-angle-right"></i> &nbsp; FAQ</a></li>
+                      </ul>
+                      <ul class="col-sm-6 col-md-3 list-unstyled ">
+                        <li>
+                          <p> Pages 3 </p>
+                        </li>
+                        <li><a href="full-width.html"><i class="fa fa-angle-right"></i> &nbsp; Full Width Page</a></li>
+                        <li><a class="active" href="left-sidebar.html"><i class="fa fa-angle-right"></i> &nbsp; Left Sidebar Page</a></li>
+                        <li><a href="right-sidebar.html"><i class="fa fa-angle-right"></i> &nbsp; Right Sidebar Page</a></li>
+                        <li><a href="packages.html"><i class="fa fa-angle-right"></i> &nbsp; Package Plans</a></li>
+                        <li><a href="careers.html"><i class="fa fa-angle-right"></i> &nbsp; Careers</a></li>
+                        <li><a href="coming-soon.html"><i class="fa fa-angle-right"></i> &nbsp; Coming Soon</a></li>
+                      </ul>
+                      <ul class="col-sm-6 col-md-3 list-unstyled ">
+                        <li>
+                          <p> Pages 4 </p>
+                        </li>
+                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Login Form</a></li>
+                        <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Registration Form</a></li>
+                        <li><a href="sitemap.html"><i class="fa fa-angle-right"></i> &nbsp; Sitemap</a></li>
+                        <li><a href="maintenance.html"><i class="fa fa-angle-right"></i> &nbsp; Maintenance</a></li>
+                        <li><a href="404.html"><i class="fa fa-angle-right"></i> &nbsp; 404 Error Page</a></li>
+                        <li><a href="404-2.html"><i class="fa fa-angle-right"></i> &nbsp; 404 Error Page2</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            
+	            <li class="dropdown"> <a href="portfolio-three.html" class="dropdown-toggle">Portfolio</a>
+              <ul class="dropdown-menu" role="menu">
+                <li> <a href="portfolio-one.html">Single Item</a> </li>
+                <li> <a href="portfolio-two.html">Portfolio Columns 2</a> </li>
+                <li> <a href="portfolio-three.html">Portfolio Columns 3</a> </li>
+                <li> <a href="portfolio-four.html">Portfolio Columns 4</a> </li>
+                <li> <a href="portfolio-five.html">Portfolio + Sidebar</a> </li>
+                <li> <a href="portfolio-six.html">Portfolio Masonry</a> </li>
+                <li> <a href="portfolio-seven.html">Slider Projects</a> </li>
+                <li class="dropdown-submenu mul"> <a tabindex="-1" href="#">Sub Menu + </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Menu Item 1</a></li>
+                    <li><a href="#">Menu Item 2</a></li>
+                    <li><a href="#">Menu Item 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+	            <li class="dropdown"> <a href="blog.html" class="dropdown-toggle">Blog</a>
+              <ul class="dropdown-menu three" role="menu">
+                <li> <a href="blog.html">Blog Full Width</a> </li>
+                <li> <a href="blog-2.html">Blog 3Columns</a> </li>
+                <li> <a href="blog-3.html">Blog Standard</a> </li>
+                <li> <a href="blog-post.html">Single Post</a> </li>
+              </ul>
+            </li>
+            
+            <li class="dropdown"> <a href="contact.html" class="dropdown-toggle align-1">Contact</a>
+              <ul class="dropdown-menu align-1 two" role="menu">
+                <li> <a href="contact.html">Contact Variation 1</a> </li>
+                <li> <a href="contact-2.html">Contact Variation 2</a> </li>
+                <li> <a href="contact-3.html">Contact Variation 3</a> </li>
+              </ul>
+            </li>
+            
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+    </div>
+    <!--end menu-->
+    
+    <div class="clearfix"></div>
+    <section class="sec-padding section-dark text-center">
+      <div class="container">
+        <div class="row">
+          <h1 class="text-white uppercase font-weight-7">We are Host Linea</h1>
+          <h5 class="text-normal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. <br/>
+            Praesent mattis commodo augue. Aliquam</h5>
+          <br/>
+          <a href="#" class="btn btn-bgprimary">Get Started</a> </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+    <!-- end section -->
+    
+    <section>
+    <div class="pagenation-holder">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Left Sidebar</h4>
+          </div>
+          <div class="col-md-6 text-right">
+            <div class="pagenation_links"><a href="index.html">Home</a><i> / </i> <a href="index.html">Pages</a> <i> / </i> Left Sidebar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+  <!--end section-->
+  
+ 
+  <section class="sec-padding">
+  <div class="container">
+  <div class="row">
+  
+  
+  <div class="col-md-4 col-sm-12 col-xs-12 bottom-margin">
+          <div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-margin">
+            <h5>Categories</h5>
+            <ul class="category-links">
+              <li><a href="#">Business</a></li>
+              <li><a class="active" href="#">Education</a></li>
+              <li><a href="#">Medical</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Photogreaphy</a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+          <br/>
+          <div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-margin">
+            <h5>Search</h5>
+            <div class="clearfix"></div>
+            <input class="blog1-sidebar-serch_input" type="search" placeholder="Email Address">
+            <input name="" value="Submit" class="blog1-sidebar-serch-submit" type="submit">
+          </div>
+          <div class="clearfix"></div>
+          <br/>
+          <div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-margin">
+            <h5>Latest Posts</h5>
+            <div class="clearfix"></div>
+            <div class="sidebar-posts">
+              <div class="image-left"><img src="images/51.jpg" alt=""/></div>
+              <div class="text-box-right">
+                <h6 class="less-mar3 nopadding"><a href="#">Responsive</a></h6>
+                <p>Lorem ipsum dolor sit</p>
+                <div class="post-info"> <span>By John Doe</span><span>May 15</span> </div>
+              </div>
+            </div>
+            <!--end item-->
+            
+            <div class="sidebar-posts active bottom-margin">
+              <div class="image-left"><img src="images/52.jpg" alt=""/></div>
+              <div class="text-box-right">
+                <h6 class="less-mar3 nopadding"><a href="#">24/7 Support</a></h6>
+                <p>Lorem ipsum dolor sit</p>
+                <div class="post-info"> <span>By John Doe</span><span>May 15</span> </div>
+              </div>
+            </div>
+            <!--end item-->
+            
+            <div class="sidebar-posts bottom-margin">
+              <div class="image-left"><img src="images/53.jpg" alt=""/></div>
+              <div class="text-box-right">
+                <h6 class="less-mar3 nopadding"><a href="#">Easy to use</a></h6>
+                <p>Lorem ipsum dolor sit</p>
+                <div class="post-info"> <span>By John Doe</span><span>May 15</span> </div>
+              </div>
+            </div>
+            <!--end item--> 
+          </div>
+          <!--end sidebar box-->
+          
+          <div class="clearfix"></div>
+          <br/>
+          
+          <div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-margin">
+            <h5>Tags</h5>
+            <div class="clearfix"></div>
+            <ul class="tags-2">
+              <li><a href="#">Animation</a></li>
+              <li><a href="#">Art</a></li>
+              <li><a href="#">UI Design</a></li>
+              <li><a href="#">Photography</a></li>
+              <li><a class="active" href="#">Design</a></li>
+              <li><a href="#">Art</a></li>
+              <li><a href="#">Responsive</a></li>
+              <li><a href="#">Develop</a></li>
+            </ul>
+          </div>
+          <!--end sidebar box-->
+          
+          <div class="clearfix"></div>
+          <br/>
+          
+          <div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-margin">
+            <h5>Featured Works</h5>
+            <div class="clearfix"></div>
+            <ul class="sidebar-works">
+              <li><a href="#"><img src="images/54.jpg" alt=""/></a></li>
+              <li><a href="#"><img src="images/55.jpg" alt=""/></a></li>
+              <li class="last"><a><img src="images/56.jpg" alt=""/></a></li>
+              <li><a href="#"><img src="images/57.jpg" alt=""/></a></li>
+              <li><a href="#"><img src="images/58.jpg" alt=""/></a></li>
+              <li class="last"><a href="#"><img src="images/59.jpg" alt=""/></a></li>
+            </ul>
+          </div>
+          <!--end sidebar box--> 
+          
+        </div>
+        <!--end left column-->
+        
+  <div class="col-md-8 col-sm-12 col-xs-12 bottom-margin"> 
+      
+      <div class="col-md-12 bottom-margin">
+          <img class="img-responsive" alt="" src="images/blog/06.jpg"> 
+          <div class="clearfix"></div>
+          <br/>
+          <h4 class="less-mar1">Vestibulum ante ipsum</h4>
+          
+          <br/>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est. Curabitur eget orci. Cras laoreet ligula. Etiam sit amet dolor. Vestibulum Curabitur eget orci. </p>
+          <br/>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est. Curabitur eget orci. Cras laoreet ligula. Etiam sit amet dolor. Vestibulum Curabitur eget orci. </p>
+          <br/>
+          <a class="btn btn-border light btn-round btn-small" href="#">Read more</a> </div>
+        <!--end item--> 
+        
+        <div class="clearfix"></div>
+        <div class="col-divider-margin-4"></div>
+        
+        
+        <div class="col-md-12 bottom-margin">
+          <img class="img-responsive" alt="" src="images/blog/07.jpg"> 
+          <div class="clearfix"></div>
+          <br/>
+          <h4 class="less-mar1">Vestibulum ante ipsum</h4>
+          
+          <br/>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est. Curabitur eget orci. Cras laoreet ligula. Etiam sit amet dolor. Vestibulum Curabitur eget orci. </p>
+          <br/>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est. Curabitur eget orci. Cras laoreet ligula. Etiam sit amet dolor. Vestibulum Curabitur eget orci. </p>
+          <br/>
+          <a class="btn btn-border light btn-round btn-small" href="#">Read more</a> </div>
+        <!--end item--> 
+
+        </div>
+        <!--end right column--> 
+        
+
+  </div>
+  </div>
+  </section>
+<div class="clearfix"></div>
+  <!-- end section -->
+
+    <section class="section-primary">
+      <div class="container sec-tpadding-1 sec-bpadding-1">
+        <div class="row">
+          <div class="col-md-9">
+            <h3 class="text-white">Over 4 million customers trust our services and servers</h3>
+          </div>
+          <div class="col-md-3">
+            <div class="margin-top2"></div>
+            <a class="btn btn-border white btn-large pull-right" href="#">Sign Up Now !</a> </div>
+        </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+    <!--end section-->
+    
+    <section class="section-xdark sec-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+            <h5 class="footer-title uppercase less-mar-3 font-weight-4">About</h5>
+            <div class="clearfix"></div>
+            <div class="footer-title-line align-left"></div>
+            <div class="clearfix"></div>
+            <ul class="usefull-links no-border">
+              <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Hosting Plans</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Our Awards</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Our History</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Our History</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Privacy</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
+            </ul>
+          </div>
+          <!--end item-->
+          
+          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+            <div class="item-holder">
+              <h5 class="footer-title uppercase less-mar-3 font-weight-4">Latest Blog Posts</h5>
+              <div class="clearfix"></div>
+              <div class="footer-title-line align-left"></div>
+              <div class="clearfix"></div>
+              <div class="image-left"><img src="images/9.jpg" alt=""/></div>
+              <div class="text-box-right">
+                <h6 class="text-white less-mar3 nopadding font-weight-3 nopadding"><a href="#">Shared Hosting</a></h6>
+                <p>Lorem ipsum dolor sit</p>
+                <div class="footer-post-info"> <span>By John Doe</span><span>May 15</span> </div>
+              </div>
+              <!--end item-->
+              
+              <div class="divider-line solid dark margin opacity-3"></div>
+              <div class="clearfix"></div>
+              <div class="image-left"><img src="images/10.jpg" alt=""/></div>
+              <div class="text-box-right">
+                <h6 class="text-white less-mar3 font-weight-3 nopadding"><a href="#">VPS Hosting</a></h6>
+                <p>Lorem ipsum dolor sit</p>
+                <div class="footer-post-info"> <span>By John Doe</span><span>May 15</span> </div>
+              </div>
+            </div>
+          </div>
+          <!--end item-->
+          
+          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+            <h5 class="footer-title uppercase less-mar-3 font-weight-4">Usefull Links</h5>
+            <div class="clearfix"></div>
+            <div class="footer-title-line align-left"></div>
+            <div class="clearfix"></div>
+            <ul class="usefull-links no-border">
+              <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Aliquam porttitor vestibulum ipsum</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
+            </ul>
+          </div>
+          <!--end item-->
+          
+          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+            <h5 class="footer-title uppercase less-mar-3 font-weight-4">Need Help</h5>
+            <div class="clearfix"></div>
+            <div class="footer-title-line align-left"></div>
+            <div class="clearfix"></div>
+            <ul class="usefull-links no-border">
+              <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Tech Support</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> My Account</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Legal</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Privacy</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> My Account</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Documentation</a></li>
+            </ul>
+          </div>
+          <!--end item--> 
+          
+        </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+    <!--end section-->
+    
+    <section class="sec-xless-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 col-xs-12 bmargin">
+            <ul class="footer-payment-logo-list">
+              <li>
+                <h6>We Accept:</h6>
+              </li>
+              <li><img src="images/payment_logo1.jpg" alt=""/></li>
+              <li><img src="images/payment_logo2.jpg" alt=""/></li>
+              <li><img src="images/payment_logo3.jpg" alt=""/></li>
+              <li><img src="images/payment_logo4.jpg" alt=""/></li>
+              <li><img src="images/payment_logo5.png" alt=""/></li>
+            </ul>
+          </div>
+          <!--end item-->
+          
+          <div class="col-md-4 col-sm-12 col-xs-12 bmargin">
+            <ul class="footer-payment-logo-list">
+              <li>
+                <h6>Awards:</h6>
+              </li>
+              <li><img src="images/award-img1.png" alt=""/></li>
+              <li><img src="images/award-img2.png" alt=""/></li>
+              <li><img src="images/award-img3.png" alt=""/></li>
+            </ul>
+          </div>
+          <!--end item-->
+          
+          <div class="col-md-2 col-sm-12 col-xs-12 bottom-margin"> <a class="btn btn-green" href="#"><i class="fa fa-comments"></i> Live Chat</a> </div>
+          <!--end item--> 
+        </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+    <!-- end section -->
+    
+    <div class="divider-line-dobble"></div>
+    <div class="clearfix"></div>
+    <section class="sec-xxless-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-left"> <span>Copyright © 2015 l yourdomain.com. All rights reserved.</span></div>
+          <div class="col-md-6">
+            <ul class="footer-social-icons pull-right">
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+    <!--end section--> 
+    
+    <a href="#" class="scrollup"></a><!-- end scroll to top of the page--> 
+    
+  </div>
+  <!--end site wrapper--> 
+</div>
+<!--end wrapper boxed--> 
+
+<!-- Scripts --> 
+<script src="js/jquery/jquery.min.js"></script> 
+<script src="js/bootstrap/js/bootstrap.min.js"></script> 
+<script src="js/style-customizer/js/spectrum.js"></script> 
+<script src="js/less/less.min.js" data-env="development"></script> 
+<script src="js/sticky/js/jquery.sticky.js"></script> 
+<script src="js/style-customizer/js/style-customizer.js"></script> 
+<!-- Scripts END --> 
+
+<!-- Template scripts -->
+<script src="js/mainmenu/customeUI.js"></script> 
+<script src="js/template-custom/js/template-custom.js"></script>
+<script src="js/accordion/js/smk-accordion.js"></script> 
+<script src="js/functions/functions.js"></script>
+</body>
+
+<!-- Mirrored from codelayers.net/templates/hostlinea/classic-2/left-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Mar 2016 15:42:47 GMT -->
+</html>

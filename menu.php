@@ -27,7 +27,7 @@
                   <!-- Content container to add padding -->
                   <div class="yamm-content">
                     <div class="row">
-                      <ul class="col-sm-6 col-md-3 list-unstyled ">
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
                         <li>
                           <p>Ensamble</p>
                         </li>
@@ -40,7 +40,7 @@
                         <li><a href="left-nav.html"><i class="fa fa-angle-right"></i> &nbsp; Unidades Opticas</a></li>
                         <li><a href="left-nav.html"><i class="fa fa-angle-right"></i> &nbsp; Tarjetas de Video</a></li>
                       </ul>
-                      <ul class="col-sm-6 col-md-3 list-unstyled ">
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
                         <li>
                           <p> Computadoras </p>
                         </li>
@@ -58,7 +58,7 @@
                         <li><a href="left-sidebar.html"><i class="fa fa-angle-right"></i> &nbsp; Micro SD</a></li>
                         <li><a href="right-sidebar.html"><i class="fa fa-angle-right"></i> &nbsp; Discos Externos</a></li>
                       </ul>
-                      <ul class="col-sm-6 col-md-3 list-unstyled ">
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
                         <li>
                           <p> Accesorios </p>
                         </li>
@@ -66,6 +66,50 @@
                         <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Mouse </a></li>
                         <li><a href="sitemap.html"><i class="fa fa-angle-right"></i> &nbsp; Conexion</a></li>
                         <li><a href="maintenance.html"><i class="fa fa-angle-right"></i> &nbsp; Web Cam</a></li>
+                      </ul>
+                       <ul class="col-sm-6 col-md-2 list-unstyled ">
+                        <li>
+                          <p> Sonido </p>
+                        </li>
+                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Diadema</a></li>
+                        <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Bocinas </a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
+                        <li>
+                          <p> Video </p>
+                        </li>
+                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Diadema</a></li>
+                        <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Bocinas </a></li>
+                      </ul>
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
+                        <li>
+                          <p> Impresion </p>
+                        </li>
+                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Diadema</a></li>
+                        <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Bocinas </a></li>
+                      </ul>
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
+                        <li>
+                          <p> Redes </p>
+                        </li>
+                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Diadema</a></li>
+                        <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Bocinas </a></li>
+                      </ul>
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
+                        <li>
+                          <p> Energia </p>
+                        </li>
+                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Diadema</a></li>
+                        <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Bocinas </a></li>
+                      </ul>
+                      <ul class="col-sm-6 col-md-2 list-unstyled ">
+                        <li>
+                          <p> Software </p>
+                        </li>
+                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Diadema</a></li>
+                        <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Bocinas </a></li>
                       </ul>
                     </div>
                   </div>

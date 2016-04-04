@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from codelayers.net/templates/hostlinea/classic-2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Mar 2016 15:35:57 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,6 +41,7 @@
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<link rel="stylesheet" type="text/css" href="js/cubeportfolio/cubeportfolio.min.css">
 
 <!-- Style Customizer's stylesheets -->
 <link rel="stylesheet" type="text/css" href="js/style-customizer/css/spectrum.css">
@@ -216,23 +215,7 @@ use {transform-origin: 50px 50px;}
 
 <!-- Preloader icon -->
 
-<div class="wrapper-boxed">
-  <div class="site-wrapper" style="position: relative;">
-    <div class="topbar light topbar-padding">
-      <div class="container">
-        <ul class="toplist toppadding">
-          <li>Atención al cliente</li>
-          <li class="lineright">(888) 123-4567</li>
-          <!--<li class="lineright"><a href="#">Login</a></li>
-          <li class="lineright"><a href="#">Register</a></li>-->
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="clearfix"></div>
+
     
 
     <div class="menu">
@@ -365,237 +348,235 @@ use {transform-origin: 50px 50px;}
     <!--end menu-->
     
     <div class="clearfix"></div>
-    
-    <!-- masterslider -->
-    <div class="master-slider ms-skin-default" id="masterslider"> 
-      
-      <!-- slide 1 -->
-      <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/15.jpg" alt=""/> 
-         
-        <h3 class="ms-layer offerbadge orange-2"
-			style="top: 350px; left:900px;"
-			data-type="text"
-			data-delay="1500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Starting at <br/>
-          <span class="price">$4.99</span><br/>
-          /mo</h3>
+    <div id ="Contendor">
+        <!-- masterslider -->
+        <div class="master-slider ms-skin-default" id="masterslider"> 
           
-        <h3 class="ms-layer offerbadge two"
-			style="top: 420px; left:1030px;"
-			data-type="text"
-			data-delay="2000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Up to <br/>
-          <span class="price two">50%</span><br/>
-          /Offer</h3>
+          <!-- slide 1 -->
+          <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/15.jpg" alt=""/> 
+             
+            <h3 class="ms-layer offerbadge orange-2"
+    			style="top: 350px; left:900px;"
+    			data-type="text"
+    			data-delay="1500"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Starting at <br/>
+              <span class="price">$4.99</span><br/>
+              /mo</h3>
+              
+            <h3 class="ms-layer offerbadge two"
+    			style="top: 420px; left:1030px;"
+    			data-type="text"
+    			data-delay="2000"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Up to <br/>
+              <span class="price two">50%</span><br/>
+              /Offer</h3>
+              
+            <h3 class="ms-layer text1"
+    			style="left: 140px;top: 200px;"
+    			data-type="text"
+    			data-delay="2500"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> unlimited </h3>
+                
+            <h3 class="ms-layer text2 margin-top"
+    			style="left: 140px;top: 240px;"
+    			data-type="text"
+    			data-delay="3000"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Web Hosting </h3>
+                
+            <h3 class="ms-layer text3 align-left margin-top"
+            	style="left: 140px; top: 310px;"
+                data-type="text"
+                data-effect="top(45)"
+                data-duration="2000"
+                data-delay="3500"
+                data-ease="easeOutExpo"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse <br/>
+              et justo. Praesent mattis commodo augue. </h3>
+                
+                <a class="ms-layer btn sbut3 margin-top2"
+    			style="left: 140px; top: 420px;"
+    			data-type="text"
+    			data-delay="4000"
+    			data-ease="easeOutExpo"
+    			data-duration="1200"
+    			data-effect="scale(1.5,1.6)"> Get Started now </a>
+                
+                </div>
+          <!-- end slide 1 -->
           
-        <h3 class="ms-layer text1"
-			style="left: 140px;top: 200px;"
-			data-type="text"
-			data-delay="2500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> unlimited </h3>
-            
-        <h3 class="ms-layer text2 margin-top"
-			style="left: 140px;top: 240px;"
-			data-type="text"
-			data-delay="3000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Web Hosting </h3>
-            
-        <h3 class="ms-layer text3 align-left margin-top"
-        	style="left: 140px; top: 310px;"
-            data-type="text"
-            data-effect="top(45)"
-            data-duration="2000"
-            data-delay="3500"
-            data-ease="easeOutExpo"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse <br/>
-          et justo. Praesent mattis commodo augue. </h3>
-            
-            <a class="ms-layer btn sbut3 margin-top2"
-			style="left: 140px; top: 420px;"
-			data-type="text"
-			data-delay="4000"
-			data-ease="easeOutExpo"
-			data-duration="1200"
-			data-effect="scale(1.5,1.6)"> Get Started now </a>
-            
-            </div>
-      <!-- end slide 1 -->
-      
-      <!-- slide 2 -->
-      <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/9.jpg" alt=""/> 
-         
-        <img src="masterslider/blank.html" data-src="images/sliders/9.JPG" alt=""
-		 	  style="left:40px; top:210px;"
-		 	  class="ms-layer"
-		 	  data-type="image"
-		 	  data-delay="1000"
-		 	  data-duration="2500"
-		 	  data-ease="easeOutExpo"
-		 	  data-effect="scalefrom(1.1,1.1,190,0)"
-		 />
-         
-        <h3 class="ms-layer offerbadge orange-2"
-			style="top: 150px; left:550px;"
-			data-type="text"
-			data-delay="1500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Starting at <br/>
-          <span class="price">$4.99</span><br/>
-          /mo</h3>
+          <!-- slide 2 -->
+          <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/9.jpg" alt=""/> 
+             
+            <img src="masterslider/blank.html" data-src="images/sliders/9.JPG" alt=""
+    		 	  style="left:40px; top:210px;"
+    		 	  class="ms-layer"
+    		 	  data-type="image"
+    		 	  data-delay="1000"
+    		 	  data-duration="2500"
+    		 	  data-ease="easeOutExpo"
+    		 	  data-effect="scalefrom(1.1,1.1,190,0)"
+    		 />
+             
+            <h3 class="ms-layer offerbadge orange-2"
+    			style="top: 150px; left:550px;"
+    			data-type="text"
+    			data-delay="1500"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Starting at <br/>
+              <span class="price">$4.99</span><br/>
+              /mo</h3>
+              
+            <h3 class="ms-layer offerbadge two"
+    			style="top: 250px; left:650px;"
+    			data-type="text"
+    			data-delay="2000"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Up to <br/>
+              <span class="price two">50%</span><br/>
+              /Offer</h3>
+                
+            <h3 class="ms-layer text2 margin-top"
+    			style="right: 115px;top: 200px;"
+    			data-type="text"
+    			data-delay="3000"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="left(250)">Hosting Servers </h3>
+                
+            <h3 class="ms-layer text4 margin-top2"
+    			style="top: 260px; left:840px;"
+    			data-type="text"
+    			data-delay="3500"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="right(250)"> <i class="fa fa-check"></i> Unlimited Disk Space</h3>
+                
+            <h3 class="ms-layer text4 margin-top2"
+    			style="top: 285px; left:840px;"
+    			data-type="text"
+    			data-delay="3600"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Domain Registration</h3>
+                
+            <h3 class="ms-layer text4 margin-top2"
+    			style="top: 310px; left:840px;"
+    			data-type="text"
+    			data-delay="3700"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Security Suite</h3>
+                
+            <h3 class="ms-layer text4 margin-top2"
+    			style="top: 335px; left:840px;"
+    			data-type="text"
+    			data-delay="3800"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Site-Building Tools</h3>
+                
+            <h3 class="ms-layer text4 margin-top2"
+    			style="top: 360px; left:840px;"
+    			data-type="text"
+    			data-delay="3900"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Search Engine & Marketing Credits</h3>
+                
+                <a class="ms-layer btn sbut3 margin-top2"
+    			style="left: 840px; top: 440px;"
+    			data-type="text"
+    			data-delay="4000"
+    			data-ease="easeOutExpo"
+    			data-duration="1200"
+    			data-effect="scale(1.5,1.6)"> Get Started now </a>
+                
+                </div>
+          <!-- end slide 2 -->  
           
-        <h3 class="ms-layer offerbadge two"
-			style="top: 250px; left:650px;"
-			data-type="text"
-			data-delay="2000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Up to <br/>
-          <span class="price two">50%</span><br/>
-          /Offer</h3>
-            
-        <h3 class="ms-layer text2 margin-top"
-			style="right: 115px;top: 200px;"
-			data-type="text"
-			data-delay="3000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="left(250)">Hosting Servers </h3>
-            
-        <h3 class="ms-layer text4 margin-top2"
-			style="top: 260px; left:840px;"
-			data-type="text"
-			data-delay="3500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="right(250)"> <i class="fa fa-check"></i> Unlimited Disk Space</h3>
-            
-        <h3 class="ms-layer text4 margin-top2"
-			style="top: 285px; left:840px;"
-			data-type="text"
-			data-delay="3600"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Domain Registration</h3>
-            
-        <h3 class="ms-layer text4 margin-top2"
-			style="top: 310px; left:840px;"
-			data-type="text"
-			data-delay="3700"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Security Suite</h3>
-            
-        <h3 class="ms-layer text4 margin-top2"
-			style="top: 335px; left:840px;"
-			data-type="text"
-			data-delay="3800"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Site-Building Tools</h3>
-            
-        <h3 class="ms-layer text4 margin-top2"
-			style="top: 360px; left:840px;"
-			data-type="text"
-			data-delay="3900"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Search Engine & Marketing Credits</h3>
-            
-            <a class="ms-layer btn sbut3 margin-top2"
-			style="left: 840px; top: 440px;"
-			data-type="text"
-			data-delay="4000"
-			data-ease="easeOutExpo"
-			data-duration="1200"
-			data-effect="scale(1.5,1.6)"> Get Started now </a>
-            
-            </div>
-      <!-- end slide 2 -->  
-      
-	
-    <!-- slide 3 -->
-      <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/4.PNG" alt=""/> 
-      
-      <img src="masterslider/blank.html" data-src="images/sliders/1.png" alt=""
-		 	  style="left:120px; top:70px;"
-		 	  class="ms-layer"
-		 	  data-type="image"
-		 	  data-delay="1000"
-		 	  data-duration="2500"
-		 	  data-ease="easeOutExpo"
-		 	  data-effect="scalefrom(1.1,1.1,190,0)"
-		 />
-         
-        <h3 class="ms-layer offerbadge orange-2"
-			style="top: 260px; left:450px;"
-			data-type="text"
-			data-delay="1500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Starting at <br/>
-          <span class="price">$4.99</span><br/>
-          /mo</h3>
+        <!-- slide 3 -->
+          <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/4.PNG" alt=""/> 
           
-        <h3 class="ms-layer offerbadge two"
-			style="top: 190px; left:570px;"
-			data-type="text"
-			data-delay="2000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Up to <br/>
-          <span class="price two">50%</span><br/>
-          /Offer</h3>
-          
-        <h3 class="ms-layer text1"
-			style="left: 840px;top: 200px;"
-			data-type="text"
-			data-delay="2500"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> unlimited </h3>
-            
-        <h3 class="ms-layer text2 margin-top"
-			style="left: 840px;top: 240px;"
-			data-type="text"
-			data-delay="3000"
-			data-ease="easeOutExpo"
-			data-duration="1230"
-			data-effect="scale(1.5,1.6)"> Web Hosting </h3>
-            
-        <h3 class="ms-layer text3 align-left margin-top2"
-        	style="left: 840px; top: 310px;"
-            data-type="text"
-            data-effect="top(45)"
-            data-duration="2000"
-            data-delay="3500"
-            data-ease="easeOutExpo"> Lorem ipsum dolor sit amet, consectetuer adipiscing<br/> elit. Suspendisse 
-          et justo Praesent. </h3>
-          
-        <a class="ms-layer btn sbut3 margin-top2 fsize-big"
-			style="left: 840px; top: 390px;"
-			data-type="text"
-			data-delay="4000"
-			data-ease="easeOutExpo"
-			data-duration="1200"
-			data-effect="scale(1.5,1.6)"> Get Started now </a> 
-            
-            </div>
-      <!-- end slide 3 --> 
-      
-      
+          <img src="masterslider/blank.html" data-src="images/sliders/1.png" alt=""
+    		 	  style="left:120px; top:70px;"
+    		 	  class="ms-layer"
+    		 	  data-type="image"
+    		 	  data-delay="1000"
+    		 	  data-duration="2500"
+    		 	  data-ease="easeOutExpo"
+    		 	  data-effect="scalefrom(1.1,1.1,190,0)"
+    		 />
+             
+            <h3 class="ms-layer offerbadge orange-2"
+    			style="top: 260px; left:450px;"
+    			data-type="text"
+    			data-delay="1500"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Starting at <br/>
+              <span class="price">$4.99</span><br/>
+              /mo</h3>
+              
+            <h3 class="ms-layer offerbadge two"
+    			style="top: 190px; left:570px;"
+    			data-type="text"
+    			data-delay="2000"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Up to <br/>
+              <span class="price two">50%</span><br/>
+              /Offer</h3>
+              
+            <h3 class="ms-layer text1"
+    			style="left: 840px;top: 200px;"
+    			data-type="text"
+    			data-delay="2500"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> unlimited </h3>
+                
+            <h3 class="ms-layer text2 margin-top"
+    			style="left: 840px;top: 240px;"
+    			data-type="text"
+    			data-delay="3000"
+    			data-ease="easeOutExpo"
+    			data-duration="1230"
+    			data-effect="scale(1.5,1.6)"> Web Hosting </h3>
+                
+            <h3 class="ms-layer text3 align-left margin-top2"
+            	style="left: 840px; top: 310px;"
+                data-type="text"
+                data-effect="top(45)"
+                data-duration="2000"
+                data-delay="3500"
+                data-ease="easeOutExpo"> Lorem ipsum dolor sit amet, consectetuer adipiscing<br/> elit. Suspendisse 
+              et justo Praesent. </h3>
+              
+            <a class="ms-layer btn sbut3 margin-top2 fsize-big"
+    			style="left: 840px; top: 390px;"
+    			data-type="text"
+    			data-delay="4000"
+    			data-ease="easeOutExpo"
+    			data-duration="1200"
+    			data-effect="scale(1.5,1.6)"> Get Started now </a> 
+                
+                </div>
+          <!-- end slide 3 --> 
+           
+        </div>
+        <div class="clearfix"></div>
+        <!-- end of masterslider -->
     </div>
-    <div class="clearfix"></div>
-    <!-- end of masterslider -->
-    
-    
+    <!--
     <section class="sec-less-padding section-white">
       <div class="container">
         <div class="row">
@@ -606,7 +587,7 @@ use {transform-origin: 50px 50px;}
               <li> <span>.net</span> <span class="price">$7.99</span> </li>
             </ul>
           </div>
-          <!--end column-->
+          end column
           
           <div class="col-md-7 col-sm-12 col-xs-12">
             <div class="domain-search-home bmargin">
@@ -629,13 +610,13 @@ use {transform-origin: 50px 50px;}
               </form>
             </div>
           </div>
-          <!--end column--> 
+          <!--end column- 
           
         </div>
       </div>
     </section>
     <div class="clearfix"></div>
-    <!-- end section -->
+    <!-- end section -
     
     <section class="sec-padding">
       <div class="container">
@@ -647,7 +628,7 @@ use {transform-origin: 50px 50px;}
             <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
           </div>
           <div class="clearfix"></div>
-          <!--end title-->
+          <!--end title
           <br/><br/>
           <div class="col-md-3 col-sm-6">
             <div class="feature-box-19 text-center bottom-margin">
@@ -657,7 +638,7 @@ use {transform-origin: 50px 50px;}
               <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
             </div>
           </div>
-          <!--end item-->
+          <!--end item-
           
           <div class="col-md-3 col-sm-6">
             <div class="feature-box-19 text-center bottom-margin">
@@ -667,7 +648,7 @@ use {transform-origin: 50px 50px;}
               <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
             </div>
           </div>
-          <!--end item-->
+          <!--end item-
           
           <div class="col-md-3 col-sm-6">
             <div class="feature-box-19 text-center bottom-margin">
@@ -677,7 +658,7 @@ use {transform-origin: 50px 50px;}
               <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
             </div>
           </div>
-          <!--end item-->
+          <!--end item--
           
           <div class="col-md-3 col-sm-6">
             <div class="feature-box-19 text-center bottom-margin">
@@ -687,13 +668,13 @@ use {transform-origin: 50px 50px;}
               <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
             </div>
           </div>
-          <!--end item--> 
+          <!--end item-- 
           
         </div>
       </div>
     </section>
     <div class=" clearfix"></div>
-    <!--end section-->
+    <!--end section--
     
     <section class="parallax-sec-1">
       <div class="section-overlay bg-opacity-9">
@@ -706,7 +687,7 @@ use {transform-origin: 50px 50px;}
 			<br/>
           </div>
             <div class="clearfix"></div>
-            <!--end title-->
+            <!--end title--
             <br/>
             <div class="col-md-12 slide-controls-primary">
               <div id="owl-demo" class="owl-carousel color-primary owl-theme">
@@ -719,7 +700,7 @@ use {transform-origin: 50px 50px;}
                         <img src="images/1.png" alt="" class=" img-responsive"/> </div>
                     </div>
                   </div>
-                  <!--end column-->
+                  <!--end column--
                   
                   <div class="col-md-7 col-sm-12 col-sm-12 bottom-margin text-left">
                     <div class="feature-box-3">
@@ -739,7 +720,7 @@ use {transform-origin: 50px 50px;}
                   </div>
                   <!--end column--> 
                 </div>
-                <!--end carousel item-->
+                <!--end carousel item--
                 
                 <div class="item">
                   <div class="col-md-5">
@@ -750,7 +731,7 @@ use {transform-origin: 50px 50px;}
                         <img src="images/2.png" alt="" class=" img-responsive"/> </div>
                     </div>
                   </div>
-                  <!--end column-->
+                  <!--end column--
                   
                   <div class="col-md-7 col-sm-6 col-sm-12 bmargin text-left">
                     <div class="feature-box-3">
@@ -765,23 +746,23 @@ use {transform-origin: 50px 50px;}
                         <li><i class="fa fa-check"></i> Duis dictum auctor augue</li>
                       </ul>
                     </div>
-                    <!--end item--> 
+                    <!--end item-- 
                     
                   </div>
-                  <!--end column--> 
+                  <!--end column-- 
                 </div>
-                <!--end carousel item--> 
+                <!--end carousel item--
                 
               </div>
             </div>
-            <!--end column--> 
+            <!--end column--
             
           </div>
         </div>
       </div>
     </section>
      <div class="clearfix"></div>
-    <!--end section-->
+    <!--end section--
    
     <section class="sec-padding">
       <div class="container">
@@ -793,7 +774,7 @@ use {transform-origin: 50px 50px;}
             <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
           </div>
           <div class="clearfix"></div>
-          <!--end title-->
+          <!--end title--
           
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="pricetable-holder-6 bottom-margin">
@@ -814,7 +795,7 @@ use {transform-origin: 50px 50px;}
               <br/>
               <a class="btn btn-light" href="#">Order Now !</a> </div>
           </div>
-          <!--end item-->
+          <!--end item--
           
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="pricetable-holder-6 bottom-margin">
@@ -835,7 +816,7 @@ use {transform-origin: 50px 50px;}
               <br/>
               <a class="btn btn-light" href="#">Order Now !</a> </div>
           </div>
-          <!--end item-->
+          <!--end item--
           
           <div class="col-md-3 col-sm-6 col-xs-12 ">
             <div class="pricetable-holder-6 active bottom-margin">
@@ -856,7 +837,7 @@ use {transform-origin: 50px 50px;}
               <br/>
               <a class="btn btn-green-4 btn-round" href="#">Order Now !</a> </div>
           </div>
-          <!--end item-->
+          <!--end item--
           
           <div class="col-md-3 col-sm-6 col-xs-12 ">
             <div class="pricetable-holder-6 bottom-margin">
@@ -878,12 +859,12 @@ use {transform-origin: 50px 50px;}
               <br/>
               <a class="btn btn-light" href="#">Order Now !</a> </div>
           </div>
-          <!--end item--> 
+          <!--end item--
         </div>
       </div>
     </section>
     <div class="clearfix"></div>
-    <!-- end section -->
+    <!-- end section --
     
     
     
@@ -901,7 +882,7 @@ use {transform-origin: 50px 50px;}
             <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
           </div>
           <div class="clearfix"></div>
-          <!--end title-->
+          <!--end title--
           
           <div class="col-md-6">
             <div class="tab-navbar-main tabstyle-1">
@@ -934,7 +915,7 @@ use {transform-origin: 50px 50px;}
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
                       <p></p>
                     </div>
-                    <!--end item-->
+                    <!--end item--
                     
                   </div>
                   <div class="col-md-12">
@@ -945,7 +926,7 @@ use {transform-origin: 50px 50px;}
                  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
                   </div>
                 </div>
-                <!--end panel 1-->
+                <!--end panel 1--
                 
                 <div id="example-1-tab-2" class="responsive-tabs-panel">
                   <div class="responsive-tab-title"></div>
@@ -957,7 +938,7 @@ use {transform-origin: 50px 50px;}
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
                       <p></p>
                     </div>
-                    <!--end item-->
+                    <!--end item--
                     
                   </div>
                   <div class="col-md-12">
@@ -966,7 +947,7 @@ use {transform-origin: 50px 50px;}
                  
                   </div>
                 </div>
-                <!--end panel 2-->
+                <!--end panel 2--
                 
                 <div id="example-1-tab-3" class="responsive-tabs-panel">
                   <div class="responsive-tab-title"></div> 
@@ -977,7 +958,7 @@ use {transform-origin: 50px 50px;}
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
                       <p></p>
                     </div>
-                    <!--end item-->
+                    <!--end item--
                     
                   </div>
                   <div class="col-md-12">
@@ -988,7 +969,7 @@ use {transform-origin: 50px 50px;}
                  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
                   </div>
                 </div>
-                <!--end panel 3-->
+                <!--end panel 3--
                 
                 <div id="example-1-tab-4" class="responsive-tabs-panel">
                   <div class="responsive-tab-title"></div>
@@ -1000,7 +981,7 @@ use {transform-origin: 50px 50px;}
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
                       <p></p>
                     </div>
-                    <!--end item-->
+                    <!--end item--
                     
                   </div>
                   <div class="col-md-12">
@@ -1011,7 +992,7 @@ use {transform-origin: 50px 50px;}
                  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
                   </div>
                 </div>
-                <!--end panel 4-->
+                <!--end panel 4--
                 
                 <div id="example-1-tab-5" class="responsive-tabs-panel">
                   <div class="responsive-tab-title"></div>
@@ -1028,10 +1009,10 @@ use {transform-origin: 50px 50px;}
                       </div>
                     </div>
                   </div>
-                  <!--end item-->
+                  <!--end item--
                   
                 </div>
-                <!--end panel 5-->
+                <!--end panel 5--
                 
                 <div id="example-1-tab-6" class="responsive-tabs-panel">
                   <div class="responsive-tab-title"></div>
@@ -1041,15 +1022,15 @@ use {transform-origin: 50px 50px;}
                       <h4 class="font-weight-3 less-mar-1">Web Hosting</h4>
                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras </p>
                     </div>
-                    <!--end item-->
+                    <!--end item--
 
                     </div>
                   </div>
-                  <!--end panel 6--> 
+                  <!--end panel 6--
                 </div>
               </div>
             </div>
-            <!--end column--> 
+            <!--end column--
             
             
             
@@ -1097,14 +1078,14 @@ use {transform-origin: 50px 50px;}
         
         
         </div>
-        <!--end item-->
+        <!--end item--
             
           </div>
         </div>
       </div>
     </section>
     <div class="clearfix"></div>
-    <!-- end section -->
+    <!-- end section --
     
     <section class="parallax-sec-2">
       <div class="section-overlay dark bg-opacity-9">
@@ -1114,9 +1095,9 @@ use {transform-origin: 50px 50px;}
           <div class="col-md-8 col-centered">
           <h2 class="font-weight-6 uppercase text-white">Anytime <span class="text-color-primary">Money Back</span> Guarantee</h2>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. 
-Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
-<br/>
-<a class="btn btn-bgprimary" href="#">Read more</a>
+          Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
+          <br/>
+            <a class="btn btn-bgprimary" href="#">Read more</a>
           </div>
           
           </div>
@@ -1124,7 +1105,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
       </div>
     </section>
     <div class="clearfix"></div> 
-    <!--end section-->
+    <!--end section--
      
      
      
@@ -1138,7 +1119,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
             <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
           </div>
           <div class="clearfix"></div>
-          <!--end title-->
+          <!--end title--
           <br/><br/>
 
           
@@ -1156,7 +1137,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
               </div>
           </div>
         </div>
-        <!--end item-->
+        <!--end item--
         
         <div class="col-md-4">
           <div class="feature-box-92 bmargin">
@@ -1172,7 +1153,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
               </div>
           </div>
         </div>
-        <!--end item-->
+        <!--end item--
         
         <div class="col-md-4">
           <div class="feature-box-92 bmargin">
@@ -1188,13 +1169,13 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
               </div>
           </div>
         </div>
-        <!--end item-->
+        <!--end item--
           
         </div>
       </div>
     </section>
     <div class=" clearfix"></div>
-    <!--end section-->
+    <!--end section--
     
     
      <section>
@@ -1214,7 +1195,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
         </div>
         </div>
         <!--end calumn-->
-  <!--end column-->
+  <!--end column--
   
   <div class="col-md-4">
         <div class="feature-box-14 white">
@@ -1228,8 +1209,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
         </div>
         </div>
         <!--end calumn-->
-    <!--end item-->
-    
+    <!--end item--
     
     <div class="col-md-4">
         <div class="feature-box-14 white">
@@ -1243,13 +1223,13 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
         </div>
         </div>
         <!--end calumn-->
-  <!--end column-->
+  <!--end column--
     
   </div>
   </div>
   </section>
 <div class="clearfix"></div>
-  <!-- end section -->
+  <!-- end section --
   
     <section class="section-side-image section-white clearfix">
       <div class="img-holder col-md-6 col-sm-3 pull-left">
@@ -1280,7 +1260,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
                 <br/>
                 <a class="btn btn-bgprimary" href="#">Read more</a>
               </div>
-              <!--end item-->
+              <!--end item--
               
               <div class="col-md-6">
                 <div class="feature-box-2">
@@ -1290,7 +1270,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
                   
                   </div>
               </div>
-              <!--end column-->
+              <!--end column--
               
               
               <div class=" clearfix"></div>
@@ -1303,7 +1283,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
       </div>
     </section>
     <div class=" clearfix"></div>
-    <!--end section-->
+    <!--end section--
  
     <section class="sec-padding">
       <div class="container">
@@ -1316,7 +1296,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
             <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
           </div>
           <div class="clearfix"></div>
-          <!--end title-->
+          <!--end title--
           
           <div class="col-md-3 col-sm-6">
             <div class="team-holder-1 bottom-margin">
@@ -1337,7 +1317,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
               </div>
             </div>
           </div>
-          <!--end item-->
+          <!--end item--
           
           <div class="col-md-3 col-sm-6">
             <div class="team-holder-1 bottom-margin">
@@ -1359,7 +1339,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
               </div>
             </div>
           </div>
-          <!--end item-->
+          <!--end item--
           
           <div class="col-md-3 col-sm-6">
             <div class="team-holder-1 bottom-margin">
@@ -1380,7 +1360,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
               </div>
             </div>
           </div>
-          <!--end item-->
+          <!--end item--
           
           <div class="col-md-3 col-sm-6">
             <div class="team-holder-1 bottom-margin">
@@ -1401,7 +1381,7 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
               </div>
             </div>
           </div>
-          <!--end item--> 
+          <!--end item--
           
         </div>
       </div>
@@ -1409,351 +1389,13 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
     <div class="clearfix"></div>
     <!-- end section -->
     
-    
-    <section class="parallax-sec-11">
-    <div class="section-overlay bg-opacity-9">
-      <div class="container sec-tpadding-3 sec-bpadding-3">
-        <div class="row slide-controls-color-13">
-          <div class="col-md-8 col-centered">
-          
-            <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1 text-white">What people says</h3>
-            <div class="clearfix"></div>
-            <div class="title-line white align-center"></div>
-           
-          </div>
-          <div class="clearfix"></div>
-          <!--end title-->
-          
-          <br/><br/>
-            <div class="clearfix"></div>
-            <div id="owl-demo-2" class="owl-carousel">
-              <div class="item">
-                <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.</span>
-                <br/><br/>
-                <h5 class="text-white less-mar1">Emily</h5>
-                <span class="text-color-primary">Nullam turpis</span> </div>
-              <!--end slide item-->
-              
-              <div class="item">
-                <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. Cras tellus. In pulvinar lectus a est.</span>
-                <br/><br/>
-                <h5 class="text-white less-mar1">Emily</h5>
-                <span class="text-color-primary">Nullam turpis</span> </div>
-              <!--end slide item--> 
-              
-            </div>
-            <!--end carousel --> 
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
   <!--end section-->
   <div class="clearfix"></div>
   
-  
-  <section class="sec-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1">Our Services</h3>
-            <div class="clearfix"></div>
-            <div class="title-line align-center"></div>
-            <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
-          </div>
-          <div class="clearfix"></div>
-          <!--end title-->
-          <br/>
-          
-          <div class="col-md-3 col-sm-6">
-           <div class="iconcircle-medium white"><span class="icon-global"></span></div>
-            <div class="feature-box-21 text-center bottom-margin">
-            <div class="arrow-up"></div>
-            <br/>
-              <h5 class="title">Web Site Management</h5>
-              <p>Lorem ipsum dolor sit amet, consectetuer elit. </p>
-            </div>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-3 col-sm-6">
-           <div class="iconcircle-medium white"><span class="icon-layers"></span></div>
-            <div class="feature-box-21 text-center bottom-margin">
-            <div class="arrow-up"></div>
-            <br/>
-              <h5 class="title">Dedicated Servers</h5>
-              <p>Lorem ipsum dolor sit amet, consectetuer elit. </p>
-            </div>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-3 col-sm-6">
-           <div class="iconcircle-medium white"><span class="icon-envelope"></span></div>
-            <div class="feature-box-21 text-center bottom-margin active">
-            <div class="arrow-up"></div>
-            <br/>
-              <h5 class="title">Email Services</h5>
-              <p>Lorem ipsum dolor sit amet, consectetuer elit. </p>
-            </div>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-3 col-sm-6">
-           <div class="iconcircle-medium white"><span class="icon-lightbulb"></span></div>
-            <div class="feature-box-21 text-center bottom-margin">
-            <div class="arrow-up"></div>
-            <br/>
-              <h5 class="title">Marketing Services</h5>
-              <p>Lorem ipsum dolor sit amet, consectetuer elit. </p>
-            </div>
-          </div>
-          <!--end item--> 
-          
-        </div>
-      </div>
-    </section>
-    <div class=" clearfix"></div>
-    <!--end section-->
-    
-    
-    <section>
-      <div class="container">
-      <div class="divider-line-dobble"></div>
-      <div class="divider-line dark"></div>
-        <div class="row sec-padding">
-          <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1">From the blog</h3>
-            <div class="clearfix"></div>
-            <div class="title-line align-center"></div>
-            <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
-          </div>
-          <div class="clearfix"></div>
-          <!--end title-->
-          
-          <div class="col-md-4 col-sm-6 bottom-margin">
-              <div class="image-holder">
-                <img src="images/blog/11.jpg" alt="" class="img-responsive"/> </div>
-              <div class="text-box white padding-4">
-                <h5 class="uppercase less-mar-1"><a href="#">Vestibulum ante ipsum</a></h5>
-                <div class="blog-post-info"> <span><i class="fa fa-user"></i> By Benjamin</span> <span><i class="fa fa-comments-o"></i> 15 Comments</span> </div>
-                <p class="padding-top-1">Lorem ipsum dolor sit amet Suspendisse sit et justo amet dolor sit et.</p>
-              </div>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-4 col-sm-6 bottom-margin">
-              <div class="image-holder">
-                <img src="images/blog/12.jpg" alt="" class="img-responsive"/> </div>
-              <div class="text-box white padding-4">
-                <h5 class="uppercase less-mar-1"><a href="#">Vestibulum ante ipsum</a></h5>
-                <div class="blog-post-info"> <span><i class="fa fa-user"></i> By Benjamin</span> <span><i class="fa fa-comments-o"></i> 15 Comments</span> </div>
-                <p class="padding-top-1">Lorem ipsum dolor sit amet Suspendisse sit et justo amet dolor sit et.</p>
-              </div>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-4 col-sm-6 bottom-margin">
-              <div class="image-holder">
-                <img src="images/blog/13.jpg" alt="" class="img-responsive"/> </div>
-              <div class="text-box white padding-4">
-                <h5 class="uppercase less-mar-1"><a href="#">Vestibulum ante ipsum</a></h5>
-                <div class="blog-post-info"> <span><i class="fa fa-user"></i> By Benjamin</span> <span><i class="fa fa-comments-o"></i> 15 Comments</span> </div>
-                <p class="padding-top-1">Lorem ipsum dolor sit amet Suspendisse sit et justo amet dolor sit et.</p>
-              </div>
-          </div>
-          <!--end item-->
-          
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!-- end section -->
-    
-    <section class="sec-less-padding section-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="clientlogo-list">
-              <li><img src="images/clients/1.png" alt=""/></li>
-              <li><img src="images/clients/2.png" alt=""/></li>
-              <li><img src="images/clients/3.png" alt=""/></li>
-              <li><img src="images/clients/4.png" alt=""/></li>
-              <li><img src="images/clients/5.png" alt=""/></li>
-              <li><img src="images/clients/6.png" alt=""/></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!--end section -->
-    
-    <section class="section-primary sec-tpadding-1 sec-bpadding-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <h3 class="text-white">Over 4 million customers trust our services and servers</h3>
-          </div>
-          <div class="col-md-3">
-            <div class="margin-top2"></div>
-            <a class="btn btn-border white btn-large pull-right" href="#">Sign Up Now !</a> </div>
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!--end section-->
-    
-    <section class="section-xdark sec-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
-            <h5 class="footer-title uppercase less-mar-3 font-weight-4">About</h5>
-            <div class="clearfix"></div>
-            <div class="footer-title-line align-left"></div>
-            <div class="clearfix"></div>
-            <ul class="usefull-links no-border">
-              <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Hosting Plans</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Our Awards</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Our History</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Our History</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Privacy</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-            </ul>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
-            <div class="item-holder">
-              <h5 class="footer-title uppercase less-mar-3 font-weight-4">Latest Blog Posts</h5>
-              <div class="clearfix"></div>
-              <div class="footer-title-line align-left"></div>
-              <div class="clearfix"></div>
-              <div class="image-left"><img src="images/9.jpg" alt=""/></div>
-              <div class="text-box-right">
-                <h6 class="text-white less-mar3 nopadding font-weight-3 nopadding"><a href="#">Shared Hosting</a></h6>
-                <p>Lorem ipsum dolor sit</p>
-                <div class="footer-post-info"> <span>By John Doe</span><span>May 15</span> </div>
-              </div>
-              <!--end item-->
-              
-              <div class="divider-line solid dark margin opacity-3"></div>
-              <div class="clearfix"></div>
-              <div class="image-left"><img src="images/10.jpg" alt=""/></div>
-              <div class="text-box-right">
-                <h6 class="text-white less-mar3 font-weight-3 nopadding"><a href="#">VPS Hosting</a></h6>
-                <p>Lorem ipsum dolor sit</p>
-                <div class="footer-post-info"> <span>By John Doe</span><span>May 15</span> </div>
-              </div>
-            </div>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
-            <h5 class="footer-title uppercase less-mar-3 font-weight-4">Usefull Links</h5>
-            <div class="clearfix"></div>
-            <div class="footer-title-line align-left"></div>
-            <div class="clearfix"></div>
-            <ul class="usefull-links no-border">
-              <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Aliquam porttitor vestibulum ipsum</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
-            </ul>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
-            <h5 class="footer-title uppercase less-mar-3 font-weight-4">Need Help</h5>
-            <div class="clearfix"></div>
-            <div class="footer-title-line align-left"></div>
-            <div class="clearfix"></div>
-            <ul class="usefull-links no-border">
-              <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Tech Support</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> My Account</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Legal</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Privacy</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> My Account</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i> Documentation</a></li>
-            </ul>
-          </div>
-          <!--end item--> 
-          
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!--end section-->
-    
-    <section class="sec-xless-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-12 col-xs-12 bmargin">
-            <ul class="footer-payment-logo-list">
-              <li>
-                <h6>We Accept:</h6>
-              </li>
-              <li><img src="images/payment_logo1.jpg" alt=""/></li>
-              <li><img src="images/payment_logo2.jpg" alt=""/></li>
-              <li><img src="images/payment_logo3.jpg" alt=""/></li>
-              <li><img src="images/payment_logo4.jpg" alt=""/></li>
-              <li><img src="images/payment_logo5.png" alt=""/></li>
-            </ul>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-4 col-sm-12 col-xs-12 bmargin">
-            <ul class="footer-payment-logo-list">
-              <li>
-                <h6>Awards:</h6>
-              </li>
-              <li><img src="images/award-img1.png" alt=""/></li>
-              <li><img src="images/award-img2.png" alt=""/></li>
-              <li><img src="images/award-img3.png" alt=""/></li>
-            </ul>
-          </div>
-          <!--end item-->
-          
-          <div class="col-md-2 col-sm-12 col-xs-12 bottom-margin"> <a class="btn btn-green" href="#"><i class="fa fa-comments"></i> Live Chat</a> </div>
-          <!--end item--> 
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!-- end section -->
-    
-    <div class="divider-line-dobble"></div>
-    <div class="clearfix"></div>
-    <section class="sec-xxless-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-left"> <span>Copyright © 2015 l yourdomain.com. All rights reserved.</span></div>
-          <div class="col-md-6">
-            <ul class="footer-social-icons pull-right">
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!--end section-->
-    
-    <a href="#" class="scrollup"></a><!-- end scroll to top of the page--> 
-    
-  </div>
-  <!--end site wrapper--> 
-</div>
+
+
+
 <!--end wrapper boxed--> 
 
 <!-- Scripts --> 
@@ -1772,6 +1414,9 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
 <script src="js/owl-carousel/owl.carousel.js"></script> 
 <script src="js/owl-carousel/custom.js"></script> 
 <script src="js/tabs/js/responsive-tabs.min.js" type="text/javascript"></script> 
+
+<script type="text/javascript" src="js/cubeportfolio/jquery.cubeportfolio.min.js"></script> 
+<script type="text/javascript" src="js/cubeportfolio/main-four-col.js"></script> 
 <script type="text/javascript">
 (function($) {
  "use strict";
@@ -1814,11 +1459,13 @@ Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
 })(jQuery);
 </script> 
 <script src="js/functions/functions.js"></script> 
-
+<script src="js/index.js" type="text/javascript"></script> 
 
 
 
 </body>
-
+    <div class="foot">
+      <?php include 'footer.php';?>
+    </div>
 <!-- Mirrored from codelayers.net/templates/hostlinea/classic-2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Mar 2016 15:37:56 GMT -->
 </html>

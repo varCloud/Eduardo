@@ -1,15 +1,15 @@
 
 <!DOCTYPE html>
-<html>
-<?php
- echo"<input type='hidden'  id='producto' value ='".$_GET["prod"]."'>";
- echo"<input type='hidden'  id='subproducto' value ='".$_GET["subproducto"]."'>";
 
-?>
+
+<html>
+<?php 
+ echo"<input type='hidden'  id='campo' value ='".$_GET["InformacionEmpresa"]."'>";
+ ?>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Productros</title>
+<title>Host Linea - Web Hosting, Responsive HTML5 Template</title>
 <meta name="keywords" content="" />
 <meta name="description" content="Host Linea HTML5 Template">
 <meta name="author" content="">
@@ -31,9 +31,16 @@
 <link rel="stylesheet" href="css/theme.css" type="text/css">
 <link rel="stylesheet" href="js/mainmenu/menu.css" type="text/css" />
 <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css" portfolio="screen" />
+<link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css" media="screen" />
 <link rel="stylesheet" href="fonts/et-line-font/et-line-font.css">
-<link rel="stylesheet" type="text/css" href="js/cubeportfolio/cubeportfolio.min.css">
+<link rel="stylesheet" href="js/masterslider/style/masterslider.css"/>
+<link href="js/masterslider/skins/default/style.css" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="js/masterslider/style/style.css">
+<link href="js/masterslider/staffcarousel/ms-staff-style.css" rel='stylesheet' type='text/css'>
+<link href="js/masterslider/staffcarousel/ms-staff-style.css" rel='stylesheet' type='text/css'>
+<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
+<link href="js/tabs/css/responsive-tabs.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="css/theme-responsive.css">
 
 <!-- Template's stylesheets END -->
@@ -53,71 +60,42 @@
 
 <body class="loading">
 
-<div class="preloader-wrap"></div>
+
+
+<div class="preloader-wrap">
+  
+</div>
+
+    <div class="menu">
+      <?php include 'menu.php';?>
+    </div>
 
 <!-- Page template --> 
 
 <!-- Preloader icon -->
 
+
     
     <!--end topbar-->
-  
-    <!-- menu-->
-    <div class="menu">
-      <?php include 'menu.php';?>
-    </div>
-
-    <div class="clearfix"></div>
-    <div class="clearfix"></div>
-    <!-- end section -->
     
-    <section>
-    <div class="pagenation-holder">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h4 id="tituloProducto"></h4>
-          </div>
-          <div class="col-md-8 text-right">
-            <div class="pagenation_links">
-              <a href="index.php">INICIO</a><i> / </i>
-              <a href="index.php" id="HeaderProd"></p>  </a> <i> / </i> <span id="HeaderSubP"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="clearfix"></div>
-  <!--end section-->
-  
-  
-  <section class="sec-padding">
-      <div class="container">
-        <div class="row">
-
-          <div id="filters-container" class="cbp-l-filters-button two three text-right">
-            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item" ><p id="TituloProductos"></p>
-              <div class="cbp-filter-counter"></div>
-            </div>
-          </div>
-
-          <div class="demo-full-width">
-          <div id="ContenedorProductos">
-            <div id="grid-container" class="cbp">
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-  </section>
 
     
-    <a href="#" class="scrollup"></a><!-- end scroll to top of the page--> 
-   
+    <div class="clearfix"></div>
+    <section class="sec-padding section-dark text-center" style="height: 450px">
+      <div class="container">
+        <div class="row">
+          <h1 class="text-white uppercase font-weight-7">Vision</h1>
+          <h5 class="text-normal" id="vision"></h5>
+          <br/>
+         </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
     <div class="foot">
       <?php include 'footer.php';?>
     </div>
+
+<!--end wrapper boxed--> 
 
 <!-- Scripts --> 
 <script src="js/jquery/jquery.min.js"></script> 
@@ -129,19 +107,33 @@
 <!-- Scripts END --> 
 
 <!-- Template scripts -->
-<script src="js/mainmenu/customeUI.js"></script>
+<script src="js/mainmenu/customeUI.js"></script> 
 <script src="js/template-custom/js/template-custom.js"></script> 
-<script type="text/javascript" src="js/cubeportfolio/jquery.cubeportfolio.min.js"></script> 
-<script type="text/javascript" src="js/cubeportfolio/main-four-col.js"></script> 
+<script src="js/owl-carousel/owl.carousel.js"></script> 
+<script src="js/owl-carousel/custom.js"></script> 
+<script src="js/tabs/js/responsive-tabs.min.js" type="text/javascript"></script> 
+<script src="js/masterslider/masterslider.min.js"></script> 
+<script type="text/javascript">  
+     
+    var slider = new MasterSlider();
+    slider.setup('masterslider2' , {
+        loop:true,
+        width:100,
+        height:100,
+        speed:20,
+        view:'fadeBasic',
+        preload:0,
+        space:0,
+        space:35,
+        viewOptions:{centerSpace:1.6}
+    });
+    slider.control('arrows');
+    slider.control('slideinfo',{insertTo:'#staff-info'});
+     
+</script> 
 <script src="js/functions/functions.js"></script>
-<script src="js/Productos.js"></script>
-
+<script src="js/InformacionEmpresa.js"></script>
+<script src="js/index.js"></script> 
 </body>
 
-<!-- Mirrored from codelayers.net/templates/hostlinea/classic-2/portfolio-four.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Mar 2016 15:43:10 GMT -->
 </html>
-
-<?php 
-
-
- ?>

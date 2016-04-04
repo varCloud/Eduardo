@@ -22,7 +22,7 @@
 	
 	});
 	
-	
+	/*
 	$(".accordion_example").smk_Accordion({
             showIcon: true, //boolean
             animation: true, //boolean
@@ -30,7 +30,7 @@
             slideSpeed: 200 //integer, miliseconds
         });
 	
-	
+	*/
 	
 	
 	

@@ -1,3 +1,22 @@
+<div class="wrapper-boxed">
+  <div class="site-wrapper" style="position: relative;">
+    <div class="topbar light topbar-padding">
+      <div class="container">
+        <ul class="toplist toppadding">
+          <li>Atención al cliente</li>
+          <li class="lineright">(888) 123-4567</li>
+          <!--<li class="lineright"><a href="#">Login</a></li>
+          <li class="lineright"><a href="#">Register</a></li>-->
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix">
+  </div>
+
   <div class="col-md-12 nopadding section-white">
       <div id="header">
 	    <div class="container">
@@ -7,26 +26,17 @@
 	          <a href="index.php" class="navbar-brand"><img src="images/logo/logo.png" alt=""></a> </div>
 	        <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
 	          <ul class="nav navbar-nav">
-	            <li class="dropdown"> <a href="index.html" class="dropdown-toggle active">Inicio</a></li>
-	            <li class="dropdown"> <a href="index.html" class="dropdown-toggle">Galeria</a>
-					<ul class="dropdown-menu" role="menu">
-							<li><a href="http://codelayers.net/templates/hostlinea/creative/index.html">Seguridad</a> </li>
-							<li><a href="http://codelayers.net/templates/hostlinea/creative-2/index.html">Equipo de Computo</a></li>
-							<li><a href="http://codelayers.net/templates/hostlinea/classic/index.html">Instalaciones</a> </li>
-							<li><a href="index.html">Otros</a> </li>
-					</ul>
+	            <li class="dropdown"> <a href="index.php" class="dropdown-toggle active">Inicio</a></li>
             </li>
-	            <li> <a href="domain-search.html" class="dropdown-toggle">Dominios</a></li>
-                <li> <a href="web-hosting.html" class="dropdown-toggle">Mision</a></li>
-				<li> <a href="web-hosting.html" class="dropdown-toggle">Vision</a></li>
-				
-                
+              <li> <a href="mision.php?InformacionEmpresa=mision" class="dropdown-toggle">Mision</a></li>
+				      <li> <a href="vision.php?InformacionEmpresa=vision" class="dropdown-toggle">Vision</a></li>  
                 <li class="dropdown yamm-fw"> <a href="about2.html" class="dropdown-toggle">Productos</a>
               <ul class="dropdown-menu">
                 <li> 
                   <!-- Content container to add padding -->
                   <div class="yamm-content">
                     <div class="row">
+
                       <ul class="col-sm-6 col-md-2 list-unstyled ">
                         <li>
                           <p>Ensamble</p>
@@ -62,7 +72,7 @@
                         <li>
                           <p> Accesorios </p>
                         </li>
-                        <li><a href="login.html"><i class="fa fa-angle-right"></i> &nbsp; Teclados</a></li>
+                        <li><a href="#" onclick='CargarProductos(8,2)'><i class="fa fa-angle-right"></i> &nbsp; Teclados</a></li>
                         <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Mouse </a></li>
                         <li><a href="sitemap.html"><i class="fa fa-angle-right"></i> &nbsp; Conexion</a></li>
                         <li><a href="maintenance.html"><i class="fa fa-angle-right"></i> &nbsp; Web Cam</a></li>
@@ -144,12 +154,7 @@
               </ul>
             </li>
             
-            <li class="dropdown"> <a href="contact.html" class="dropdown-toggle align-1">Contactanos</a>
-              <ul class="dropdown-menu align-1 two" role="menu">
-                <li> <a href="contact.html">Contact Variation 1</a> </li>
-                <li> <a href="contact-2.html">Contact Variation 2</a> </li>
-                <li> <a href="contact-3.html">Contact Variation 3</a> </li>
-              </ul>
+            <li class="dropdown"> <a href="contactanos.php" class="dropdown-toggle align-1">Contactanos</a>
             </li>
             
 	          </ul>

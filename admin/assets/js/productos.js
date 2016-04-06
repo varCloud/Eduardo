@@ -6,6 +6,7 @@ $("document").ready(function() {
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
                 $('<p/>').text(file.name).appendTo('#files');
+                 $('#VistaPrevia').attr('src',file.thumbnailUrl);
             });
         },
         progressall: function (e, data) {

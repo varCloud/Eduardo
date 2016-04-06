@@ -34,7 +34,7 @@
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
         
         <script src="assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
-        
+        <link href="assets/css/fileInput.css" rel="stylesheet" type="text/css"/>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,20 +76,24 @@
                                                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                        <div class="form-group">
-
-      <input id="fileupload" type="file" name="files[]"  style="width: 0.1px; height: 0.1px;position: absolute;" />
-
-                                                    <br>
-                                                    <br>
-                                                    <!-- The global progress bar -->
-                                                    <div id="progress" class="progress">
-                                                        <div class="progress-bar progress-bar-success"></div>
-                                                    </div>
-                                                    <!-- The container for the uploaded files -->
-                                                    <div id="files" class="files"></div>
-
+                                                    <div class="form-group">
+                                                        <div class="inputfileDive">
+                                                          <input id="fileupload" type="file" name="files[]" class="inputfile" />
+                                                          <span>Seleccione una Imagen</span>
                                                         </div>
+
+                                                        <br>
+                                                        <!-- The global progress ba/r -->
+                                                        <div id="progress" class="progress">
+                                                            <div class="progress-bar progress-bar-success"></div>
+                                                        </div>
+
+                                                        <div style="position: relative; text-align: center; width: 200px;height: 200px;margin: auto;" align="center">
+                                                             <img id="VistaPrevia" class="form-control" style="text-align: center; width: 200px;height: 200px" />
+                                                             <div id="files" class="files"></div>
+                                                        </div>
+                                                        <br>
+                                                    </div>
                                                         <div class="form-group">
                                                             <input type="text" id="position-input" class="form-control" placeholder="Position" required>
                                                         </div>

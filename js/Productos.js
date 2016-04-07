@@ -22,7 +22,7 @@ function CargarProductos() {
     $.ajax({
         type: "POST",
         url: "AccesoDatos/productoDAO.php",
-        data: "producto="+$("#producto").val()+"&subproducto="+$("#subproducto").val(),
+        data: "accion=listarSubProductos&producto="+$("#producto").val()+"&subproducto="+$("#subproducto").val(),
         async: false,
         success: function(datos) {
              var data = '<div id="grid-container" class="cbp">';

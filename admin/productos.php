@@ -35,7 +35,7 @@
         
         <script src="assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
         <link href="assets/css/fileInput.css" rel="stylesheet" type="text/css"/>
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -76,11 +76,13 @@
                                                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <div class="inputfileDive">
-                                                          <input id="fileupload" type="file" name="files[]" class="inputfile" />
+                                                    <div class="form-group">                                               
+                                                         <div class="divInput">
+                                                          <input id="fileupload" type="file" name="files[]" class="InputFile"  />
+                                                          <i class="glyphicon glyphicon-upload"></i>
                                                           <span>Seleccione una Imagen</span>
                                                         </div>
+
 
                                                         <br>
                                                         <!-- The global progress ba/r -->
@@ -93,6 +95,10 @@
                                                              <div id="files" class="files"></div>
                                                         </div>
                                                         <br>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="btn-group" role="group" id="cbProducto">
+                                                        </div>
                                                     </div>
                                                         <div class="form-group">
                                                             <input type="text" id="position-input" class="form-control" placeholder="Position" required>

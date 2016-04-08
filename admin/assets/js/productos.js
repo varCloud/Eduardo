@@ -21,6 +21,11 @@ $("document").ready(function() {
 
 
 ObtenerProductos();
+$( "#cbProducto" ).change(function() {
+
+    ObtenerSubProductos($(this).val());
+
+});
 
 });
 
@@ -36,18 +41,34 @@ function ObtenerProductos()
             dataType: "json",
             success: function(datos) {
                 //alert(datos[0].id)
-            var cb ='<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">';
-                cb+='Dropdown';
-                cb+='<span class="caret"></span>';
-                cb+='</button>';
-                cb+='<ul class="dropdown-menu" role="menu">';
-
+                var cb='';
                  $.each(datos, function(i, item) {
-                  cb+='<li><a href="#">'+item.descripcion+'</a></li>';
-  
+                  cb+='<option value='+item.id+'>'+item.descripcion+'</option>';
               });
-                cb+='</ul>';
                 $("#cbProducto").html(cb);
+
+            }
+        });
+                                   
+}
+
+
+function ObtenerSubProductos(idProd)
+{
+
+    $.ajax({
+            type: "POST",
+            url: "../AccesoDatos/productoDAO.php",
+            data: "accion=obtenerSubProductos&idProd="+idProd,
+            async: false,
+            dataType: "json",
+            success: function(datos) {
+                var cb='';
+                 $.each(datos, function(i, item) {
+                  cb+='<option value='+item.idSub+'>'+item.descripcion+'</option>';
+              });
+                $("#cbSubProducto").html(cb);
+                $('#cbSubProducto').selectpicker('refresh');
             }
         });
                                    

@@ -46,7 +46,7 @@ switch ($_POST["accion"]) {
 
     case 'obtenerSubProductos':
         $sql = new MySQL();
-        $query = "SELECT *  FROM subproducto";
+        $query ="SELECT * FROM subproducto where idProducto=".$_POST['idProd'];
         $res = $sql->consulta($query);
         $lstSubProd = array();
         $indice =0;

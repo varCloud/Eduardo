@@ -18,6 +18,7 @@
         <link href="assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
         <link href="assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
         <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/bootstrap/css/bootstrap-select.css" rel="stylesheet" type="text/css"/>
         <link href="assets/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <link href="assets/plugins/line-icons/simple-line-icons.css" rel="stylesheet" type="text/css"/>	
         <link href="assets/plugins/waves/waves.min.css" rel="stylesheet" type="text/css"/>	
@@ -97,8 +98,13 @@
                                                         <br>
                                                     </div>
                                                     <div class="form-group">
-                                                        <div class="btn-group" role="group" id="cbProducto">
-                                                        </div>
+                                                        
+                                                          <select id="cbProducto" class="selectpicker col-md-5" data-live-search="true" data-live-search-style="begins" title="Seleccione un Producto">
+                                                          </select>
+                                                          
+                                                          <select id="cbSubProducto" class="selectpicker col-md-6" data-live-search="true" data-live-search-style="begins" title="Seleccione un SubProducto">
+                                                          </select>                                                            
+
                                                     </div>
                                                         <div class="form-group">
                                                             <input type="text" id="position-input" class="form-control" placeholder="Position" required>
@@ -216,6 +222,7 @@
         <script src="assets/plugins/pace-master/pace.min.js"></script>
         <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
         <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap_select.js"></script>
         <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <script src="assets/plugins/switchery/switchery.min.js"></script>
         <script src="assets/plugins/uniform/jquery.uniform.min.js"></script>
@@ -231,6 +238,7 @@
         <script src="assets/js/pages/table-data.js"></script>
         <script src="assets/js/jquery.fileupload.js"></script>
         <script src="assets/js/productos.js"></script>
+  
        
 
         

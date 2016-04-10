@@ -46,14 +46,14 @@ switch ($_POST["accion"]) {
 
     case 'obtenerSubProductos':
         $sql = new MySQL();
-        $query ="SELECT * FROM subproducto where idProducto=".$_POST['idProd'];
+        $query ="SELECT * FROM SubProductos where idProducto=".$_POST['idProd'];
         $res = $sql->consulta($query);
         $lstSubProd = array();
         $indice =0;
         while ($row = $sql->fetch_array($res)) {
           $s = new SubProducto;
           $s->idSub = $row["idSubProducto"];  
-          $s->descripcion = $row["Descripcion"]; 
+          $s->descripcion = $row["descripcion"]; 
           $lstSubProd[$indice]=$s;
           $indice ++;
         }
@@ -63,7 +63,7 @@ switch ($_POST["accion"]) {
 
       case 'obtenerProductos':
         $sql = new MySQL();
-        $query = "SELECT *  FROM producto";
+        $query = "SELECT *  FROM Productos";
         $res = $sql->consulta($query);
         $lstProd = array();
         $indice =0;
@@ -75,6 +75,16 @@ switch ($_POST["accion"]) {
           $indice ++;
         }
          echo json_encode($lstProd);
+    break;
+
+    case 'GuardaProducto':
+        $sql = new MySQL();
+  $query="INSERT INTO CatSubProductos VALUES('',".$_POST['cbSubProducto'].",".$_POST['cbProducto'].",'".$_POST['desc']."','".$_POST['urlImagen']."',".$_POST['costo'].")";
+  //echo "query".$query;
+        $res = $sql->consulta($query);
+          $data['status']=1;
+        
+         echo json_encode($data);
     break;
   
   

@@ -68,7 +68,7 @@
                                 <div class="panel-body">
             <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#myModal">Agregar Producto</button>
                                     <!-- Modal -->
-                            <form id="add-row-form" action="javascript:void(0);">
+                            <form id="formAltaItem" >
                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -92,36 +92,30 @@
                                                         </div>
 
                                                         <div style="position: relative; text-align: center; width: 200px;height: 200px;margin: auto;" align="center">
-                                                             <img id="VistaPrevia" class="form-control" style="text-align: center; width: 200px;height: 200px" />
+                                                             <img id="VistaPrevia" name="VistaPrevia" class="form-control" style="text-align: center; width: 200px;height: 200px" />
                                                              <div id="files" class="files"></div>
                                                         </div>
                                                         <br>
                                                     </div>
                                                     <div class="form-group">
                                                         
-                                                          <select id="cbProducto" class="selectpicker col-md-5" data-live-search="true" data-live-search-style="begins" title="Seleccione un Producto">
+                                                          <select id="cbProducto" name="cbProducto" class="selectpicker col-md-5" data-live-search="true" data-live-search-style="begins" title="Seleccione un Producto">
                                                           </select>
                                                           
-                                                          <select id="cbSubProducto" class="selectpicker col-md-6" data-live-search="true" data-live-search-style="begins" title="Seleccione un SubProducto">
+                                                          <select id="cbSubProducto" name="cbSubProducto" class="selectpicker col-md-6" data-live-search="true" data-live-search-style="begins" title="Seleccione un SubProducto">
                                                           </select>                                                            
 
                                                     </div>
                                                         <div class="form-group">
-                                                            <input type="text" id="position-input" class="form-control" placeholder="Position" required>
+                                                            <input type="text" id="desc" name="desc" class="form-control" placeholder="descripcion" required>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <input type="number" id="age-input" class="form-control" placeholder="Age" required>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" id="date-input" class="form-control date-picker" placeholder="Start Date" required>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="number" id="salary-input" class="form-control" placeholder="Salary" required>
+                                                           <div class="form-group">
+                                                            <input type="text" id="desc" class="form-control" placeholder="costo" name="costo" id="costo" required>
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                    <button type="submit" id="add-row" class="btn btn-success">Add</button>
+                                                    <button type="button" id="Guardar" class="btn btn-success">Guardar</button>
                                                 </div>
                                             </div>
                                         </div>

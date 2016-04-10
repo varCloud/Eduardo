@@ -872,6 +872,18 @@
         <div class="cd-overlay"></div>
 	
 
+                                    <div class="alert alert-success" role="alert">
+                                        Well done! You successfully read this important alert message.
+                                    </div>
+                                    <div class="alert alert-info" role="alert">
+                                        Heads up! This alert needs your attention, but it's not super important.
+                                    </div>
+                                    <div class="alert alert-warning" role="alert">
+                                        Warning! Better check yourself, you're not looking too good.
+                                    </div>
+                                    <div class="alert alert-danger" role="alert">
+                                        Oh snap! Change a few things up and try submitting again.
+                                    </div>
         <!-- Javascripts -->
         <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
         <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>

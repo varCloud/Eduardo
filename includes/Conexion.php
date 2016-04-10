@@ -8,7 +8,7 @@ class MySQL {
 
     public function MySQL() {
         if (!isset($this->conexion)) {
-             $this->conexion = (mysql_connect("localhost", "root", ""))
+             $this->conexion = (mysql_connect("localhost", "root", "root"))
   //$this->conexion = (mysql_connect("localhost", "eespecom_jesus", "ApwA@S8kN9;C"))
 //            $this->conexion = (mysql_connect("mysql2.000webhost.com", "a9832149_barcasa", "adrian1987"))
                     or die(mysql_error());

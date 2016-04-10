@@ -1,3 +1,7 @@
+var imagen;
+
+
+
 $("document").ready(function() {
 
  $('#fileupload').fileupload({
@@ -7,6 +11,7 @@ $("document").ready(function() {
             $.each(data.result.files, function (index, file) {
                 $('<p/>').text(file.name).appendTo('#files');
                  $('#VistaPrevia').attr('src',file.thumbnailUrl);
+                 urlImagen ='/images/Productos/'+file.name;
             });
         },
         progressall: function (e, data) {
@@ -24,6 +29,10 @@ ObtenerProductos();
 $( "#cbProducto" ).change(function() {
 
     ObtenerSubProductos($(this).val());
+});
+
+$("#Guardar").click(function() {
+    GuardaProducto();
 
 });
 
@@ -52,7 +61,6 @@ function ObtenerProductos()
                                    
 }
 
-
 function ObtenerSubProductos(idProd)
 {
 
@@ -73,3 +81,21 @@ function ObtenerSubProductos(idProd)
         });
                                    
 }
+
+function GuardaProducto()
+{
+
+    $.ajax({
+            type: "POST",
+            url: "../AccesoDatos/productoDAO.php",
+            data: "accion=GuardaProducto&"+$('#formAltaItem').serialize()+"&urlImagen="+urlImagen,
+            async: false,
+            dataType: "json",
+            success: function(datos) {
+                alert(datos.status)
+                $('#myModal').modal('hide');
+            }
+        });
+}
+
+

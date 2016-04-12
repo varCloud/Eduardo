@@ -353,9 +353,10 @@ use {transform-origin: 50px 50px;}
         <div class="master-slider ms-skin-default" id="masterslider"> 
           
           <!-- slide 1 -->
-          <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/15.jpg" alt=""/> 
+          <div class="ms-slide slide-1" data-delay="9"> 
+          <img src="js/masterslider/blank.html" data-src="images/sliders/15.jpg" alt=""/> 
              
-            <h3 class="ms-layer offerbadge orange-2"
+            <h3 class="ms-layer offerbadge orange-2" id="descCirAzul"
     			style="top: 350px; left:900px;"
     			data-type="text"
     			data-delay="1500"
@@ -365,7 +366,7 @@ use {transform-origin: 50px 50px;}
               <span class="price">$4.99</span><br/>
               /mo</h3>
               
-            <h3 class="ms-layer offerbadge two"
+            <h3 class="ms-layer offerbadge two" id="descCirBlanco"
     			style="top: 420px; left:1030px;"
     			data-type="text"
     			data-delay="2000"
@@ -375,7 +376,7 @@ use {transform-origin: 50px 50px;}
               <span class="price two">50%</span><br/>
               /Offer</h3>
               
-            <h3 class="ms-layer text1"
+            <h3 class="ms-layer text1" id="Titulo"
     			style="left: 140px;top: 200px;"
     			data-type="text"
     			data-delay="2500"
@@ -383,36 +384,39 @@ use {transform-origin: 50px 50px;}
     			data-duration="1230"
     			data-effect="scale(1.5,1.6)"> unlimited </h3>
                 
-            <h3 class="ms-layer text2 margin-top"
-    			style="left: 140px;top: 240px;"
-    			data-type="text"
-    			data-delay="3000"
-    			data-ease="easeOutExpo"
-    			data-duration="1230"
-    			data-effect="scale(1.5,1.6)"> Web Hosting </h3>
-                
-            <h3 class="ms-layer text3 align-left margin-top"
-            	style="left: 140px; top: 310px;"
+            <h3 class="ms-layer text2 margin-top" id="subTitulo"
+    			       style="left: 140px;top: 240px;"
+    			       data-type="text"
+          			 data-delay="3000"
+          			 data-ease="easeOutExpo"
+          			 data-duration="1230"
+          			 data-effect="scale(1.5,1.6)"> Web Hosting
+           </h3>
+                    
+            <h3 class="ms-layer text3 align-left margin-top" id="descSlider" 
+            	  style="left: 140px; top: 310px;"
                 data-type="text"
                 data-effect="top(45)"
                 data-duration="2000"
                 data-delay="3500"
                 data-ease="easeOutExpo"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse <br/>
               et justo. Praesent mattis commodo augue. </h3>
-                
+             <!--   
                 <a class="ms-layer btn sbut3 margin-top2"
-    			style="left: 140px; top: 420px;"
-    			data-type="text"
-    			data-delay="4000"
-    			data-ease="easeOutExpo"
-    			data-duration="1200"
-    			data-effect="scale(1.5,1.6)"> Get Started now </a>
-                
-                </div>
+          			style="left: 140px; top: 420px;"
+          			data-type="text"
+          			data-delay="4000"
+          			data-ease="easeOutExpo"
+          			data-duration="1200"
+          			data-effect="scale(1.5,1.6)"> Get Started now </a>
+                -->
+            </div>
           <!-- end slide 1 -->
           
           <!-- slide 2 -->
-          <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/9.jpg" alt=""/> 
+        <div class="ms-slide slide-1" data-delay="9"> 
+
+          <img src="js/masterslider/blank.html" data-src="images/sliders/9.jpg" alt=""/> 
              
             <img src="masterslider/blank.html" data-src="images/sliders/9.JPG" alt=""
     		 	  style="left:40px; top:210px;"
@@ -500,12 +504,13 @@ use {transform-origin: 50px 50px;}
     			data-duration="1200"
     			data-effect="scale(1.5,1.6)"> Get Started now </a>
                 
-                </div>
+          </div>
           <!-- end slide 2 -->  
           
         <!-- slide 3 -->
-          <div class="ms-slide slide-1" data-delay="9"> <img src="js/masterslider/blank.html" data-src="images/sliders/4.PNG" alt=""/> 
-          
+          <div class="ms-slide slide-1" data-delay="9"> 
+
+          <img src="js/masterslider/blank.html" data-src="images/sliders/4.PNG" alt=""/> 
           <img src="masterslider/blank.html" data-src="images/sliders/1.png" alt=""
     		 	  style="left:120px; top:70px;"
     		 	  class="ms-layer"
@@ -573,823 +578,14 @@ use {transform-origin: 50px 50px;}
           <!-- end slide 3 --> 
            
         </div>
+
+
+
+
         <div class="clearfix"></div>
         <!-- end of masterslider -->
     </div>
-    <!--
-    <section class="sec-less-padding section-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <ul class="tld-list">
-              <li> <span>.com</span> <span class="price">$11.99</span> </li>
-              <li> <span>.org</span> <span class="price">$9.99</span> </li>
-              <li> <span>.net</span> <span class="price">$7.99</span> </li>
-            </ul>
-          </div>
-          end column
-          
-          <div class="col-md-7 col-sm-12 col-xs-12">
-            <div class="domain-search-home bmargin">
-              <form method="get" id="domain-searchform" action="http://codelayers.net/templates/hostlinea/classic-2/domain-search.html">
-                <div>
-                  <input class="input-text" name="dsearch" id="dsearch" value="Enter your Domain Name here..." onFocus="if (this.value == 'Enter your Domain Name here...') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Enter your Domain Name here...';}" type="text" />
-                  <select class="drlist">
-                    <option value=".com">.com</option>
-                    <option value=".co">.co</option>
-                    <option value=".net">.net</option>
-                    <option value=".org">.org</option>
-                    <option value=".biz">.biz</option>
-                    <option value=".us.com">.us.com</option>
-                    <option value=".us">.us</option>
-                    <option value=".mobi">.mobi</option>
-                    <option value=".info">.info</option>
-                  </select>
-                  <input id="search-submit" value="Search" type="submit" />
-                </div>
-              </form>
-            </div>
-          </div>
-          <!--end column- 
-          
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!-- end section -
-    
-    <section class="sec-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1">What We Offer</h3>
-            <div class="clearfix"></div>
-            <div class="title-line align-center"></div>
-            <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
-          </div>
-          <div class="clearfix"></div>
-          <!--end title
-          <br/><br/>
-          <div class="col-md-3 col-sm-6">
-            <div class="feature-box-19 text-center bottom-margin">
-              <div class="iconcircle-medium white"><span class="icon-layers"></span></div>
-              <br/><br/>
-              <h4>Web Hosting</h4>
-              <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
-            </div>
-          </div>
-          <!--end item-
-          
-          <div class="col-md-3 col-sm-6">
-            <div class="feature-box-19 text-center bottom-margin">
-              <div class="iconcircle-medium white"><span class="icon-lock"></span></div>
-              <br/><br/>
-              <h4>Dedicated Servers</h4>
-              <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
-            </div>
-          </div>
-          <!--end item-
-          
-          <div class="col-md-3 col-sm-6">
-            <div class="feature-box-19 text-center bottom-margin">
-              <div class="iconcircle-medium white"><span class="icon-aperture"></span></div>
-              <br/><br/>
-              <h4>Reseller Hosting</h4>
-              <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
-            </div>
-          </div>
-          <!--end item--
-          
-          <div class="col-md-3 col-sm-6">
-            <div class="feature-box-19 text-center bottom-margin">
-              <div class="iconcircle-medium white"><span class="icon-alarmclock"></span></div>
-              <br/><br/>
-              <h4>VPS Web Hosting</h4>
-              <p>Lorem ipsum dolor sit amet, consectetuer et sit adipiscing justo.</p>
-            </div>
-          </div>
-          <!--end item-- 
-          
-        </div>
-      </div>
-    </section>
-    <div class=" clearfix"></div>
-    <!--end section--
-    
-    <section class="parallax-sec-1">
-      <div class="section-overlay bg-opacity-9">
-        <div class="container sec-tpadding-2 sec-bpadding-2">
-          <div class="row">
-            <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1 text-white">What's Hot</h3>
-            <div class="clearfix"></div>
-            <div class="title-line white align-center"></div>
-			<br/>
-          </div>
-            <div class="clearfix"></div>
-            <!--end title--
-            <br/>
-            <div class="col-md-12 slide-controls-primary">
-              <div id="owl-demo" class="owl-carousel color-primary owl-theme">
-                <div class="item">
-                  <div class="col-md-5">
-                    <div class="feature-box-2 bottom-margin">
-                      <div class="img-holder">
-                        <div class="price-badge">100%<br/>
-                          <span>Free</span> </div>
-                        <img src="images/1.png" alt="" class=" img-responsive"/> </div>
-                    </div>
-                  </div>
-                  <!--end column--
-                  
-                  <div class="col-md-7 col-sm-12 col-sm-12 bottom-margin text-left">
-                    <div class="feature-box-3">
-                      <h1 class="text-white font-weight-5 uppercase offer-title-big">Get <span class="text-color-primary">25%</span> Off</h1>
-                      <h2 class="text-white font-weight-5 offer-title-big uppercase">On Hosting</h2>
-                      <br/>
-                      <div class="offerbadge bg-color-primary"> Starting at<br/>
-                        <span class="price">$4.99</span><br/>
-                        /mo </div>
-                      <ul class="iconlist primary">
-                        <li><i class="fa fa-check"></i> Suspendisse sit amet velit in dui. </li>
-                        <li><i class="fa fa-check"></i> Duis dictum auctor augue</li>
-                      </ul>
-                    </div>
-                    <!--end item--> 
-                    <br/>
-                  </div>
-                  <!--end column--> 
-                </div>
-                <!--end carousel item--
-                
-                <div class="item">
-                  <div class="col-md-5">
-                    <div class="feature-box-2">
-                      <div class="img-holder">
-                        <div class="price-badge">100%<br/>
-                          <span>Free</span> </div>
-                        <img src="images/2.png" alt="" class=" img-responsive"/> </div>
-                    </div>
-                  </div>
-                  <!--end column--
-                  
-                  <div class="col-md-7 col-sm-6 col-sm-12 bmargin text-left">
-                    <div class="feature-box-3">
-                      <h1 class="text-white font-weight-5 uppercase lessmar-1">Get <span class="text-color-primary">25%</span> Off on</h1>
-                      <h1 class="text-white font-weight-5 uppercase">Website Builder</h1>
-                      <br/>
-                      <div class="offerbadge bg-color-primary"> Starting at<br/>
-                        <span class="price">$4.99</span><br/>
-                        /mo </div>
-                      <ul class="iconlist primary">
-                        <li><i class="fa fa-check"></i> Suspendisse sit amet velit in dui. </li>
-                        <li><i class="fa fa-check"></i> Duis dictum auctor augue</li>
-                      </ul>
-                    </div>
-                    <!--end item-- 
-                    
-                  </div>
-                  <!--end column-- 
-                </div>
-                <!--end carousel item--
-                
-              </div>
-            </div>
-            <!--end column--
-            
-          </div>
-        </div>
-      </div>
-    </section>
-     <div class="clearfix"></div>
-    <!--end section--
-   
-    <section class="sec-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1">Our Plans</h3>
-            <div class="clearfix"></div>
-            <div class="title-line align-center"></div>
-            <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
-          </div>
-          <div class="clearfix"></div>
-          <!--end title--
-          
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="pricetable-holder-6 bottom-margin">
-              <h3 class="title font-weight-5">Basic</h3>
-              <div class="price-circle">
-                <div class="price"> <sup>$</sup> 9.99<br/>
-                  <i>/ mo</i> </div>
-              </div>
-              <br/>
-              <ul class="features-list">
-                <li>1 GB Bandwidth</li>
-                <li>256 MB Memory</li>
-                <li>Full Support</li>
-                <li>Free Domain</li>
-              </ul>
-              <div class="clearfix"></div>
-              <br/>
-              <br/>
-              <a class="btn btn-light" href="#">Order Now !</a> </div>
-          </div>
-          <!--end item--
-          
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="pricetable-holder-6 bottom-margin">
-              <h3 class="title font-weight-5">Standard</h3>
-              <div class="price-circle">
-                <div class="price"> <sup>$</sup> 29.9<br/>
-                  <i>/ mo</i> </div>
-              </div>
-              <br/>
-              <ul class="features-list">
-                <li>1 GB Bandwidth</li>
-                <li>256 MB Memory</li>
-                <li>Full Support</li>
-                <li>Free Domain</li>
-              </ul>
-              <div class="clearfix"></div>
-              <br/>
-              <br/>
-              <a class="btn btn-light" href="#">Order Now !</a> </div>
-          </div>
-          <!--end item--
-          
-          <div class="col-md-3 col-sm-6 col-xs-12 ">
-            <div class="pricetable-holder-6 active bottom-margin">
-              <h3 class="title font-weight-5">Premium</h3>
-              <div class="price-circle">
-                <div class="price"> <sup>$</sup> 39.9<br/>
-                  <i>/ mo</i> </div>
-              </div>
-              <br/>
-              <ul class="features-list">
-                <li>1 GB Bandwidth</li>
-                <li>256 MB Memory</li>
-                <li>Full Support</li>
-                <li>Free Domain</li>
-              </ul>
-              <div class="clearfix"></div>
-              <br/>
-              <br/>
-              <a class="btn btn-green-4 btn-round" href="#">Order Now !</a> </div>
-          </div>
-          <!--end item--
-          
-          <div class="col-md-3 col-sm-6 col-xs-12 ">
-            <div class="pricetable-holder-6 bottom-margin">
-              <h3 class="title font-weight-5">Unlimited</h3>
-              <div class="clearfix"></div>
-              <div class="price-circle">
-                <div class="price"> <sup>$</sup> 49.9<br/>
-                  <i>/ mo</i> </div>
-              </div>
-              <br/>
-              <ul class="features-list">
-                <li>1 GB Bandwidth</li>
-                <li>256 MB Memory</li>
-                <li>Full Support</li>
-                <li>Free Domain</li>
-              </ul>
-              <div class="clearfix"></div>
-              <br/>
-              <br/>
-              <a class="btn btn-light" href="#">Order Now !</a> </div>
-          </div>
-          <!--end item--
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!-- end section --
-    
-    
-    
-    
-    
-    
-    <section>
-      <div class="container">
-      <div class="divider-line-dobble"></div>
-        <div class="row sec-padding">
-          <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1">Popular Features</h3>
-            <div class="clearfix"></div>
-            <div class="title-line align-center"></div>
-            <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
-          </div>
-          <div class="clearfix"></div>
-          <!--end title--
-          
-          <div class="col-md-6">
-            <div class="tab-navbar-main tabstyle-1">
-              <ul class="responsive-tabs lesswidth">
-                <li><a href="#example-1-tab-1" target="_self">
-                  <div class="tab-navicon less-fsize"><span class="icon-global"></span></div>
-                  Domains</a></li>
-                <li><a href="#example-1-tab-2" target="_self">
-                  <div class="tab-navicon less-fsize"><span class="icon-layers"></span></div>
-                  Hosting</a></li>
-                <li><a href="#example-1-tab-3" target="_self">
-                  <div class="tab-navicon less-fsize"><span class="icon-desktop"></span></div>
-                  Builder</a></li>
-                <li><a href="#example-1-tab-4" target="_self">
-                  <div class="tab-navicon less-fsize"><span class="icon-envelope"></span></div>
-                  Emails</a></li>
-    
-              </ul>
-            </div>
-            <div class="clearfix"></div>
-            <div class="tab-content-holder less-padding">
-              <div class="responsive-tabs-content">
-                <div id="example-1-tab-1" class="responsive-tabs-panel">
-                  <div class="responsive-tab-title"></div>
-                  <div class="col-md-6 col-sm-12 col-xs-12"> <img src="images/69.jpg" alt="" class="img-responsive"/> </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
-                    <div class="feature-box-4 bottom-margin">
-                    
-                      <h4 class="font-weight-3 less-mar-1">Domain Search</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
-                      <p></p>
-                    </div>
-                    <!--end item--
-                    
-                  </div>
-                  <div class="col-md-12">
-                  <br/>
-                 <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
-                 
-                 <br/>
-                 <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
-                  </div>
-                </div>
-                <!--end panel 1--
-                
-                <div id="example-1-tab-2" class="responsive-tabs-panel">
-                  <div class="responsive-tab-title"></div>
-                  <div class="col-md-6 col-sm-12 col-xs-12"> <img src="images/4.png" alt="" class="img-responsive"/> </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
-                    <div class="feature-box-4 bottom-margin">
-                    
-                      <h4 class="font-weight-3 less-mar-1">Domain Search</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
-                      <p></p>
-                    </div>
-                    <!--end item--
-                    
-                  </div>
-                  <div class="col-md-12">
-                  <br/>
-                 <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
-                 
-                  </div>
-                </div>
-                <!--end panel 2--
-                
-                <div id="example-1-tab-3" class="responsive-tabs-panel">
-                  <div class="responsive-tab-title"></div> 
-                  <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-                    <div class="feature-box-4 bottom-margin">
-                    
-                      <h4 class="font-weight-3 less-mar-1">Domain Search</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
-                      <p></p>
-                    </div>
-                    <!--end item--
-                    
-                  </div>
-                  <div class="col-md-12">
-                  <br/>
-                 <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
-                 
-                 <br/>
-                 <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
-                  </div>
-                </div>
-                <!--end panel 3--
-                
-                <div id="example-1-tab-4" class="responsive-tabs-panel">
-                  <div class="responsive-tab-title"></div>
-                  <div class="col-md-6 col-sm-12 col-xs-12"> <img src="images/69.jpg" alt="" class="img-responsive"/> </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
-                    <div class="feature-box-4 bottom-margin">
-                    
-                      <h4 class="font-weight-3 less-mar-1">Domain Search</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent</p>
-                      <p></p>
-                    </div>
-                    <!--end item--
-                    
-                  </div>
-                  <div class="col-md-12">
-                  <br/>
-                 <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
-                 
-                 <br/>
-                 <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci </p>
-                  </div>
-                </div>
-                <!--end panel 4--
-                
-                <div id="example-1-tab-5" class="responsive-tabs-panel">
-                  <div class="responsive-tab-title"></div>
-                  <div class="col-md-8 col-centered text-center">
-                    <h5 class="text-color-primary">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras tellus In pulvinar lectus a est Curabitur eget orci Cras" </h5>
-                  </div>
-                  <br/>
-                  <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="feature-box-99 bmargin">
-                      <div class="iconbox-tiny left border-gray-2 round"><span class="icon-note text-green-4"></span></div>
-                      <div class="text-box-right text-left">
-                        <h5 class="title nopadding">Email Forwarding</h5>
-                        <p class="padding-top-1">Lorem ipsum dolor sit amet sit et justo elit consectetuer.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!--end item--
-                  
-                </div>
-                <!--end panel 5--
-                
-                <div id="example-1-tab-6" class="responsive-tabs-panel">
-                  <div class="responsive-tab-title"></div>
-                  <div class="col-md-5 bottom-margin"> <img src="images/6.jpg" alt="" class="img-responsive"/> </div>
-                  <div class="col-md-7">
-                    <div class="feature-box-4 bottom-margin">
-                      <h4 class="font-weight-3 less-mar-1">Web Hosting</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam ornare hendrerit augue Cras </p>
-                    </div>
-                    <!--end item--
-
-                    </div>
-                  </div>
-                  <!--end panel 6--
-                </div>
-              </div>
-            </div>
-            <!--end column--
-            
-            
-            
-            <div class="col-md-6">
-        <div class="text-box padding-4 white bottom-margin">
-        <h4 class="uppercase">linux unlimited plan</h4>
-        
-        <div class="col-md-4 col-sm-4 col-xs-12 nopadding">
-        <img src="images/13.png" alt=""/>
-        </div>
-        
-        <div class="col-md-6 col-md-6 col-xs-12 nopadding">
-        <div><h4 class="text-color-primary less-mar-1">Save 40%</h4></div>
-        <div><span class="text-deco">$259</span>/ month</div>
-        <h2 class="font-weight-5">$259</h2>
-        </div>
-        
-        <br/>
-        <div class="clearfix"></div>
-        <br/>
-        
-        <div class="divider-line solid light opacity-6"></div>
-        <div class="col-divider-margin-3"></div>
-        <div class="col-md-6">
-        <ul class="iconlist primary">
-                  <li><i class="fa fa-check"></i>  Unlimited disk space</li>
-                  <li><i class="fa fa-check"></i>  Unlimited bandwidth  </li>
-                  <li><i class="fa fa-check"></i> Host unlimited domains </li>
-                  <li><i class="fa fa-check"></i> Free domain registration </li>
-                </ul>
-                </div>
-                
-         <div class="col-md-6">
-        <ul class="iconlist primary">
-                  <li><i class="fa fa-check"></i>  Unlimited disk space</li>
-                  <li><i class="fa fa-check"></i>  Unlimited bandwidth  </li>
-                  <li><i class="fa fa-check"></i> Host unlimited domains </li>
-                  <li><i class="fa fa-check"></i> Free domain registration </li>
-                </ul>
-                </div>
-                
-                <div class="clearfix"></div>
-              <br/><br/>
-              <a class="btn btn-bgprimary light btn-medium" href="#">Buy now !</a>
-        
-        
-        </div>
-        <!--end item--
-            
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!-- end section --
-    
-    <section class="parallax-sec-2">
-      <div class="section-overlay dark bg-opacity-9">
-        <div class="container sec-tpadding-3 sec-bpadding-3">
-          <div class="row">
-          
-          <div class="col-md-8 col-centered">
-          <h2 class="font-weight-6 uppercase text-white">Anytime <span class="text-color-primary">Money Back</span> Guarantee</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. 
-          Cras tellus. In pulvinar lectus a est Curabitur eget.</p>
-          <br/>
-            <a class="btn btn-bgprimary" href="#">Read more</a>
-          </div>
-          
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div> 
-    <!--end section--
-     
-     
-     
-     <section class="sec-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1">get many more features</h3>
-            <div class="clearfix"></div>
-            <div class="title-line align-center"></div>
-            <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
-          </div>
-          <div class="clearfix"></div>
-          <!--end title--
-          <br/><br/>
-
-          
-		<div class="col-md-4">
-          <div class="feature-box-92 bmargin">
-            <div class="iconcircle-small left white round"><span class="icon-layers"></span></div>
-            <div class=" text-box-right text-left">
-              <h4 class="title oswald font-weight-4">Web Hosting</h4>
-              <ul class="iconlist primary">
-                <li><i class="fa fa-check"></i> Duis dictum auctor augue</li>
-                <li><i class="fa fa-check"></i> Suspendisse sit amet velit in dui. </li>
-                <li><i class="fa fa-check"></i> Phasellus a metus nec augue justo. </li>
-                <li><i class="fa fa-check"></i> Nam convallis sagittis nunc. </li>
-              </ul>
-              </div>
-          </div>
-        </div>
-        <!--end item--
-        
-        <div class="col-md-4">
-          <div class="feature-box-92 bmargin">
-            <div class="iconcircle-small left white round"><span class="icon-aperture"></span></div>
-            <div class=" text-box-right text-left">
-              <h4 class="title oswald font-weight-4">Reseller Hosting</h4>
-              <ul class="iconlist primary">
-                <li><i class="fa fa-check"></i> Duis dictum auctor augue</li>
-                <li><i class="fa fa-check"></i> Suspendisse sit amet velit in dui. </li>
-                <li><i class="fa fa-check"></i> Phasellus a metus nec augue justo. </li>
-                <li><i class="fa fa-check"></i> Nam convallis sagittis nunc. </li>
-              </ul>
-              </div>
-          </div>
-        </div>
-        <!--end item--
-        
-        <div class="col-md-4">
-          <div class="feature-box-92 bmargin">
-            <div class="iconcircle-small left white round"><span class="icon-alarmclock"></span></div>
-            <div class=" text-box-right text-left">
-              <h4 class="title oswald font-weight-4">VPS Web Hosting</h4>
-              <ul class="iconlist primary">
-                <li><i class="fa fa-check"></i> Duis dictum auctor augue</li>
-                <li><i class="fa fa-check"></i> Suspendisse sit amet velit in dui. </li>
-                <li><i class="fa fa-check"></i> Phasellus a metus nec augue justo. </li>
-                <li><i class="fa fa-check"></i> Nam convallis sagittis nunc. </li>
-              </ul>
-              </div>
-          </div>
-        </div>
-        <!--end item--
-          
-        </div>
-      </div>
-    </section>
-    <div class=" clearfix"></div>
-    <!--end section--
-    
-    
-     <section>
-  <div class="container">
-  <div class="divider-line-dobble"></div>
-  <div class="row sec-padding">
   
-  <div class="col-md-4">
-        <div class="feature-box-14 white">
-        <img src="images/71.jpg" alt="" class="img-responsive"/>
-        <div class="clearfix"></div>
-        <br/>
-        <h4 class="uppercase">web hosting</h4>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit dolor sit. amet ipsum SuspendissejPraesent mattis.</p>
-        <br/>
-        <a class="btn btn-border light" href="#">Read more</a>
-        </div>
-        </div>
-        <!--end calumn-->
-  <!--end column--
-  
-  <div class="col-md-4">
-        <div class="feature-box-14 white">
-        <img src="images/72.jpg" alt="" class="img-responsive"/>
-        <div class="clearfix"></div>
-        <br/>
-        <h4 class="uppercase">Website Builder</h4>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit dolor sit. amet ipsum SuspendissejPraesent mattis.</p>
-        <br/>
-        <a class="btn btn-border light" href="#">Read more</a>
-        </div>
-        </div>
-        <!--end calumn-->
-    <!--end item--
-    
-    <div class="col-md-4">
-        <div class="feature-box-14 white">
-        <img src="images/73.jpg" alt="" class="img-responsive"/>
-        <div class="clearfix"></div>
-        <br/>
-        <h4 class="uppercase">Dedicated Servers</h4>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit dolor sit. amet ipsum SuspendissejPraesent mattis.</p>
-        <br/>
-        <a class="btn btn-border light" href="#">Read more</a>
-        </div>
-        </div>
-        <!--end calumn-->
-  <!--end column--
-    
-  </div>
-  </div>
-  </section>
-<div class="clearfix"></div>
-  <!-- end section --
-  
-    <section class="section-side-image section-white clearfix">
-      <div class="img-holder col-md-6 col-sm-3 pull-left">
-        <div class="background-imgholder" style="background:url(images/17.jpg);"><img class="nodisplay-image" src="images/17.jpg" alt=""/> </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-5 col-md-offset-7 col-sm-8 col-sm-offset-4 text-inner clearfix align-left">
-            <div class="text-box">
-              <div class="col-xs-12 text-left">
-                <h3 class="uppercase font-weight-5 less-mar-1">Special Offers</h3>
-                <div class="clearfix"></div>
-                <div class="title-line align-left white"></div>
-                <div class="clearfix"></div>
-                <p class="sub-title align-left">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit.</p>
-              </div>
-              <div class="clearfix"></div>
-              
-              
-              <div class="col-md-6">
-               <h4 class="uppercase">Web Hosting Plans</h4>
-               <ul class="iconlist primary">
-                  <li><i class="fa fa-check"></i>  Unlimited Domains, Email & Space</li>
-                  <li><i class="fa fa-check"></i>  Award-winning 24/7 support</li>
-                  <li><i class="fa fa-check"></i> Money Back Guarantee</li>
-                  <li><i class="fa fa-check"></i> Unlimited Monthly Bandwidth</li>
-                </ul>
-                <br/>
-                <a class="btn btn-bgprimary" href="#">Read more</a>
-              </div>
-              <!--end item--
-              
-              <div class="col-md-6">
-                <div class="feature-box-2">
-                  <div class="price-badge">100%<br/>
-                    <span>Free</span> </div>
-                  <img src="images/70.jpg" alt="" class=" img-responsive"/> 
-                  
-                  </div>
-              </div>
-              <!--end column--
-              
-              
-              <div class=" clearfix"></div>
-              <br/>
-              <a class="btn btn-border transparent-white" href="#">sign up now !</a>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class=" clearfix"></div>
-    <!--end section--
- 
-    <section class="sec-padding">
-      <div class="container">
-      <div class="divider-line dark"></div>
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <h3 class="uppercase font-weight-5 less-mar-1">Meet our team</h3>
-            <div class="clearfix"></div>
-            <div class="title-line align-center"></div>
-            <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p>
-          </div>
-          <div class="clearfix"></div>
-          <!--end title--
-          
-          <div class="col-md-3 col-sm-6">
-            <div class="team-holder-1 bottom-margin">
-              <div class="image-holder">
-                <div class="hover-box">
-                  <ul class="icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-                <img src="images/team/6.jpg" alt="" class="img-responsive"/> </div>
-              <div class="text-box-inner">
-                <h5 class="uppercase less-mar-1">Benjamin</h5>
-                <p class=" nopadding text-color-primary">Co Founder & CEO</p>
-                <p class="padding-top-1">Lorem ipsum dolor sit amet Suspendisse sit et justo amet dolor sit et.</p>
-              </div>
-            </div>
-          </div>
-          <!--end item--
-          
-          <div class="col-md-3 col-sm-6">
-            <div class="team-holder-1 bottom-margin">
-              <div class="image-holder">
-                <div class="hover-box">
-                  <ul class="icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-                <img src="images/team/5.jpg" alt="" class="img-responsive"/> </div>
-              <div class="text-box-inner">
-                <h5 class="uppercase less-mar-1">Charlotte</h5>
-                <p class=" nopadding text-color-primary">Developer</p>
-                <p class="padding-top-1">Lorem ipsum dolor sit amet Suspendisse sit et justo amet dolor sit et.</p>
-              </div>
-            </div>
-          </div>
-          <!--end item--
-          
-          <div class="col-md-3 col-sm-6">
-            <div class="team-holder-1 bottom-margin">
-              <div class="image-holder">
-                <div class="hover-box">
-                  <ul class="icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-                <img src="images/team/7.jpg" alt="" class="img-responsive"/> </div>
-              <div class="text-box-inner">
-                <h5 class="uppercase less-mar-1">Alexander</h5>
-                <p class=" nopadding text-color-primary">Marketing</p>
-                <p class="padding-top-1">Lorem ipsum dolor sit amet Suspendisse sit et justo amet dolor sit et.</p>
-              </div>
-            </div>
-          </div>
-          <!--end item--
-          
-          <div class="col-md-3 col-sm-6">
-            <div class="team-holder-1 bottom-margin">
-              <div class="image-holder">
-                <div class="hover-box">
-                  <ul class="icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-                <img src="images/team/8.jpg" alt="" class="img-responsive"/> </div>
-              <div class="text-box-inner">
-                <h5 class="uppercase less-mar-1">Olivia</h5>
-                <p class=" nopadding text-color-primary">Support</p>
-                <p class="padding-top-1">Lorem ipsum dolor sit amet Suspendisse sit et justo amet dolor sit et.</p>
-              </div>
-            </div>
-          </div>
-          <!--end item--
-          
-        </div>
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <!-- end section -->
-    
- 
   <!--end section-->
   <div class="clearfix"></div>
   

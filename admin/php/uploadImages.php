@@ -1,4 +1,6 @@
 <?php
 require('UploadHandler.php');
-$upload_handler = new UploadHandler();
+
+//echo"directorio :".$_POST['directorio'];
+$upload_handler = new UploadHandler(null,true,null,$_POST['directorio']);
 ?>

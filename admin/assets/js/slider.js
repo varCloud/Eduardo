@@ -1,18 +1,16 @@
-var imagen;
-
-
+var urlImagenslider;
 
 $("document").ready(function() {
 
- $('#fileupload').fileupload({
+ $('#fileuploadSlider').fileupload({
         url: 'php/uploadImages.php',
         dataType: 'json',
-        formData: {directorio: '/../../images/Productos/'},
+        formData: {directorio: '/../../images/sliders/'},
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
                 $('<p/>').text(file.name).appendTo('#files');
                  $('#VistaPrevia').attr('src',file.thumbnailUrl);
-                 urlImagen ='/images/Productos/'+file.name;
+                 urlImagenslider ='/images/sliders/'+file.name;
             });
         },
         progressall: function (e, data) {
@@ -26,21 +24,21 @@ $("document").ready(function() {
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
 
 
-ObtenerProductos();
+/*ObtenerProductos();
 $( "#cbProducto" ).change(function() {
 
     ObtenerSubProductos($(this).val());
 });
+*/
+    $("#GuardarSlider").click(function() {
+        GuardarSlider();
 
-$("#Guardar").click(function() {
-    GuardaProducto();
+        });
 
 });
 
-});
 
-
-function ObtenerProductos()
+function Obtener()
 {
 
     $.ajax({
@@ -83,18 +81,17 @@ function ObtenerSubProductos(idProd)
                                    
 }
 
-function GuardaProducto()
+function GuardarSlider()
 {
-
     $.ajax({
             type: "POST",
-            url: "../AccesoDatos/productoDAO.php",
-            data: "accion=GuardaProducto&"+$('#formAltaItem').serialize()+"&urlImagen="+urlImagen,
+            url: "../AccesoDatos/sliderDAO.php",
+            data: "accion=GuardarSlider&"+$('#formImgSlider').serialize()+"&urlImagenslider="+urlImagenslider,
             async: false,
             dataType: "json",
             success: function(datos) {
                 alert(datos.status)
-                $('#myModal').modal('hide');
+                $('#modalAddSlider').modal('hide');
             }
         });
 }

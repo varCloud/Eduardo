@@ -13,3 +13,25 @@ function CargarProductos(producto,sub) {
 }
 
 
+function ObtenerImgsSlider()
+{
+
+    $.ajax({
+            type: "POST",
+            url: "../AccesoDatos/sliderDAO.php",
+            data: "accion=obtenerSlide",
+            async: false,
+            dataType: "json",
+            success: function(datos) {
+                var cb='';
+                 $.each(datos, function(i, item) {
+                  cb+='<option value='+item.idSub+'>'+item.descripcion+'</option>';
+              });
+                $("#cbSubProducto").html(cb);
+                $('#cbSubProducto').selectpicker('refresh');
+            }
+        });
+                                   
+}
+
+

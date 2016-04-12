@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html>
+    
 <head>
         
         <!-- Title -->
-        <title>Modern | Datatables</title>
+        <title>Images Slier </title>
         
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">
@@ -65,10 +65,10 @@
                                     <h4 class="panel-title">Agregar Producto</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#myModal">Agregar Producto</button>
+            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalAddSlider">Agregar Imagen Slider</button>
                                     <!-- Modal -->
-                            <form id="formAltaItem" >
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <form id="formImgSlider" >
+                                    <div class="modal fade" id="modalAddSlider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -78,7 +78,8 @@
                                                 <div class="modal-body">
                                                     <div class="form-group">                                               
                                                          <div class="divInput">
-                                                          <input id="fileupload" type="file" name="files[]" class="InputFile"  />
+                                                          <input id="directorio" value="/../../images/sliders/" type="hidden" name="directorio" />
+                                                          <input id="fileuploadSlider" type="file" name="files[]" class="InputFile"  />
                                                           <i class="glyphicon glyphicon-upload"></i>
                                                           <span>Seleccione una Imagen</span>
                                                         </div>
@@ -96,25 +97,30 @@
                                                         </div>
                                                         <br>
                                                     </div>
-                                                    <div class="form-group">
-                                                        
-                                                          <select id="cbProducto" name="cbProducto" class="selectpicker col-md-5" data-live-search="true" data-live-search-style="begins" title="Seleccione un Producto">
-                                                          </select>
-                                                          
-                                                          <select id="cbSubProducto" name="cbSubProducto" class="selectpicker col-md-6" data-live-search="true" data-live-search-style="begins" title="Seleccione un SubProducto">
-                                                          </select>                                                            
-
-                                                    </div>
                                                         <div class="form-group">
-                                                            <input type="text" id="desc" name="desc" class="form-control" placeholder="descripcion" required>
+                                                            <input type="text" id="descCirAzul" name="descCirAzul" class="form-control" placeholder="Descripcion Circulo Azul" required>
+                                                        </div>
+
+
+                                                        <div class="form-group">
+                                                            <input type="text" id="descCirBlanco" name="descCirBlanco" class="form-control" placeholder="Descripcion Circulo Blanco" required>
+                                                        </div>
+
+
+                                                        <div class="form-group">
+                                                            <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Titulo" required>
                                                         </div>
                                                            <div class="form-group">
-                                                            <input type="text" id="desc" class="form-control" placeholder="costo" name="costo" id="costo" required>
+                                                            <input type="text" class="form-control" placeholder="Subtitulo" name="subTitulo" id="subTitulo" required>
+                                                        </div>
+                                                                                            
+                                                           <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Descripcion" name="descSlider" id="descSlider" required>
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                    <button type="button" id="Guardar" class="btn btn-success">Guardar</button>
+                                                    <button type="button" id="GuardarSlider" class="btn btn-success">Guardar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -230,7 +236,7 @@
         <script src="assets/js/modern.min.js"></script>
         <script src="assets/js/pages/table-data.js"></script>
         <script src="assets/js/jquery.fileupload.js"></script>
-        <script src="assets/js/productos.js"></script>
+        <script src="assets/js/slider.js"></script>
   
        
 

@@ -8,7 +8,7 @@ class Slider {
     var $descCirAzul;
     var $descCirBlanco;
     var $descripcion;
-    var $Urlimg
+    var $Urlimg;
 }
 
 ?>

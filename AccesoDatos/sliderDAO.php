@@ -2,13 +2,12 @@
  //echo"producto".$_GET["pro"]." sub".$_GET["sub"];
   include '../includes/Conexion.php';
   include '../Entidades/SubProducto.php';
-  include_once '../Entidades/producto.php';
   include_once '../Entidades/Slider.php';
 
 switch ($_POST["accion"]) {
   case 'ObtenerImgsSlider':
 
-        $lstSubProductos = array();
+       /* $lstSubProductos = array();
         $sql = new MySQL();
         $query = "SELECT relsub.*,s.descripcion AS descSub,p.descripcion AS descProd
                   FROM relsubproductos relsub 
@@ -41,50 +40,48 @@ switch ($_POST["accion"]) {
             $indice ++;
           }
           echo json_encode($Producto);
-  
+      */
     break;
 
     case 'obtenerSubProductos':
-        $sql = new MySQL();
-        $query ="SELECT * FROM SubProductos where idProducto=".$_POST['idProd'];
-        $res = $sql->consulta($query);
-        $lstSubProd = array();
-        $indice =0;
-        while ($row = $sql->fetch_array($res)) {
-          $s = new SubProducto;
-          $s->idSub = $row["idSubProducto"];  
-          $s->descripcion = $row["descripcion"]; 
-          $lstSubProd[$indice]=$s;
-          $indice ++;
-        }
-         echo json_encode($lstSubProd);
 
     break;
 
       case 'obtenerSlide':
-        $sql = new MySQL();
-        $query = "SELECT *  FROM CatSliders";
-        $res = $sql->consulta($query);
-        $lstCatSlider = array();
-        $indice =0;
-        while ($row = $sql->fetch_array($res)) {
-          $slider = new Slider;
-          $slider->$id=$row["idCatSliders"];  
-          $slider->$titulo = $row["titulo"];  
-          $slider->$subTitulo= $row["subtitulo"];  
-          $slider->$descCirAzul= $row["circAzul"];  
-          $slider->$descCirBlanco= $row["cirBlanco"];  
-          $slider->$descripcion= $row["descripcion"];  
-          $slider->$Urlimg=$row["img"]; 
-          $lstCatSlider[$indice]= $slider 
-        }
+          try{
+              $sql = new MySQL();
+              $query = "SELECT *  FROM CatSliders";
+              $res = $sql->consulta($query);
+              $lstCatSlider = array();
+              $indice =0;
+
+              while ($row = $sql->fetch_array($res)) {
+                  //echo "resultado".$row["idCatSliders"];
+                  $slider = new Slider;
+                  //echo "resultado".$row["idCatSliders"];
+                  $slider->id=$row["idCatSliders"];  
+                  $slider->titulo=$row["titulo"];  
+                  $slider->subTitulo=$row["subtitulo"];  
+                  $slider->descCirAzul=$row["circAzul"];  
+                  $slider->descCirBlanco=$row["cirBlanco"];  
+                  $slider->descripcion=$row["descripcion"];  
+                  $slider->Urlimg=$row["img"];
+                  $lstCatSlider[$indice]= $slider;
+                  //echo"titulo".$row["titulo"];
+                  $indice++;
+                } 
+             }
+              catch (Exception $e) {
+                  echo 'Excepción capturada: ',  $e->getMessage(), "\n";
+              }
+        
          echo json_encode($lstCatSlider);
     break;
 
     case 'GuardarSlider':
         $sql = new MySQL();
         $query="INSERT INTO CatSliders VALUES('','".$_POST['titulo']."','".$_POST['subTitulo']."','".$_POST['descCirAzul']."','".$_POST['descCirBlanco']."','".$_POST['descSlider']."','".$_POST['urlImagenslider']."')";
-  //echo "query".$query;,'".$_POST['descCirAzul']."
+        //echo "query".$query;,'".$_POST['descCirAzul']."
           $res = $sql->consulta($query);
           $data['status']=1;
         

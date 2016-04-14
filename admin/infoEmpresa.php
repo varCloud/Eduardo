@@ -4,7 +4,7 @@
 <head>
         
         <!-- Title -->
-        <title>Images Slier </title>
+        <title>Actualizar Entidad Coorporativa </title>
         
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">
@@ -63,65 +63,32 @@
                 <div id="main-wrapper" class="container">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">Agregar Producto</h4>
+                                    <h4 class="panel-title">Actualizar Entidad Corporativa</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalAddSlider">Agregar Imagen Slider</button>
+            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalInfoEmpresa">Actualiar Mision y Vision</button>
                                     <!-- Modal -->
-                            <form id="formImgSlider" >
-                                    <div class="modal fade" id="modalAddSlider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <form id="formInfoEmpresa" >
+                                    <div class="modal fade" id="modalInfoEmpresa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Actualizar Mision y Vision</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <div class="form-group">                                               
-                                                         <div class="divInput">
-                                                          <input id="directorio" value="/../../images/sliders/" type="hidden" name="directorio" />
-                                                          <input id="fileuploadSlider" type="file" name="files[]" class="InputFile"  />
-                                                          <i class="glyphicon glyphicon-upload"></i>
-                                                          <span>Seleccione una Imagen</span>
-                                                        </div>
-
-
-                                                        <br>
-                                                        <!-- The global progress ba/r -->
-                                                        <div id="progress" class="progress">
-                                                            <div class="progress-bar progress-bar-success"></div>
-                                                        </div>
-
-                                                        <div style="position: relative; text-align: center; width: 200px;height: 200px;margin: auto;" align="center">
-                                                             <img id="VistaPrevia" name="VistaPrevia" class="form-control" style="text-align: center; width: 200px;height: 200px" />
-                                                             <div id="files" class="files"></div>
-                                                        </div>
-                                                        <br>
-                                                    </div>
                                                         <div class="form-group">
-                                                            <input type="text" id="descCirAzul" name="descCirAzul" class="form-control" placeholder="Descripcion Circulo Azul" required>
+                                                            <input type="text" id="mision" name="mision" class="form-control" placeholder="mision" required style="height: 250px;">
                                                         </div>
 
 
                                                         <div class="form-group">
-                                                            <input type="text" id="descCirBlanco" name="descCirBlanco" class="form-control" placeholder="Descripcion Circulo Blanco" required>
-                                                        </div>
-
-
-                                                        <div class="form-group">
-                                                            <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Titulo" required>
-                                                        </div>
-                                                           <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Subtitulo" name="subTitulo" id="subTitulo" required>
-                                                        </div>
-                                                                                            
-                                                           <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="Descripcion" name="descSlider" id="descSlider" required>
+                                                            <input type="text" id="vision" name="vision" class="form-control" placeholder="vision" required style="height: 250px;">
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                    <button type="button" id="GuardarSlider" class="btn btn-success">Guardar</button>
+                                                    <button type="button" id="GuardarInfo" class="btn btn-success">Guardar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -238,7 +205,7 @@
         <script src="assets/js/modern.min.js"></script>
         <script src="assets/js/pages/table-data.js"></script>
         <script src="assets/js/jquery.fileupload.js"></script>
-        <script src="assets/js/slider.js"></script>
+        <script src="assets/js/info.js"></script>
   
        
 

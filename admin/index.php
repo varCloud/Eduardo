@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+f<!DOCTYPE html>
 <html>
     
 <!-- Mirrored from lambdathemes.in/admin2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2015 02:22:58 GMT -->
@@ -908,7 +908,7 @@
         <script src="assets/plugins/metrojs/MetroJs.min.js"></script>
         <script src="assets/js/modern.min.js"></script>
         <script src="assets/js/pages/dashboard.js"></script>
-        
+        <script src="assets/js/index.js"></script>
     </body>
 
 <!-- Mirrored from lambdathemes.in/admin2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2015 02:24:04 GMT -->

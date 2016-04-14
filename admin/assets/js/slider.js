@@ -2,6 +2,10 @@ var urlImagenslider;
 
 $("document").ready(function() {
 
+
+
+        
+
  $('#fileuploadSlider').fileupload({
         url: 'php/uploadImages.php',
         dataType: 'json',
@@ -10,7 +14,7 @@ $("document").ready(function() {
             $.each(data.result.files, function (index, file) {
                 $('<p/>').text(file.name).appendTo('#files');
                  $('#VistaPrevia').attr('src',file.thumbnailUrl);
-                 urlImagenslider ='/images/sliders/'+file.name;
+                 urlImagenslider ='images/sliders/'+file.name;
             });
         },
         progressall: function (e, data) {

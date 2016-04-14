@@ -353,28 +353,29 @@ use {transform-origin: 50px 50px;}
         <div class="master-slider ms-skin-default" id="masterslider"> 
           
           <!-- slide 1 -->
-          <div class="ms-slide slide-1" data-delay="9"> 
-          <img src="js/masterslider/blank.html" data-src="images/sliders/15.jpg" alt=""/> 
+            <div class="ms-slide slide-1" data-delay="9"> 
+
+            <img src="js/masterslider/blank.html" data-src="images/sliders/15.jpg" alt=""/> 
              
             <h3 class="ms-layer offerbadge orange-2" id="descCirAzul"
-    			style="top: 350px; left:900px;"
-    			data-type="text"
-    			data-delay="1500"
-    			data-ease="easeOutExpo"
-    			data-duration="1230"
-    			data-effect="scale(1.5,1.6)"> Starting at <br/>
-              <span class="price">$4.99</span><br/>
-              /mo</h3>
+        			style="top: 350px; left:900px;"
+        			data-type="text"
+        			data-delay="1500"
+        			data-ease="easeOutExpo"
+        			data-duration="1230"
+        			data-effect="scale(1.5,1.6)"> Starting at <br/>
+                  <span class="price">$4.99</span><br/>
+                  /mo</h3>
               
             <h3 class="ms-layer offerbadge two" id="descCirBlanco"
-    			style="top: 420px; left:1030px;"
-    			data-type="text"
-    			data-delay="2000"
-    			data-ease="easeOutExpo"
-    			data-duration="1230"
-    			data-effect="scale(1.5,1.6)"> Up to <br/>
-              <span class="price two">50%</span><br/>
-              /Offer</h3>
+        			style="top: 420px; left:1030px;"
+        			data-type="text"
+        			data-delay="2000"
+        			data-ease="easeOutExpo"
+        			data-duration="1230"
+        			data-effect="scale(1.5,1.6)"> Up to <br/>
+                  <span class="price two">50%</span><br/>
+                  /Offer</h3>
               
             <h3 class="ms-layer text1" id="Titulo"
     			style="left: 140px;top: 200px;"
@@ -414,10 +415,13 @@ use {transform-origin: 50px 50px;}
           <!-- end slide 1 -->
           
           <!-- slide 2 -->
+
         <div class="ms-slide slide-1" data-delay="9"> 
 
-          <img src="js/masterslider/blank.html" data-src="images/sliders/9.jpg" alt=""/> 
-             
+          <img src="js/masterslider/blank.html" data-src="images/sliders/9.jpg" alt=""/>       
+            
+
+
             <img src="masterslider/blank.html" data-src="images/sliders/9.JPG" alt=""
     		 	  style="left:40px; top:210px;"
     		 	  class="ms-layer"
@@ -426,7 +430,7 @@ use {transform-origin: 50px 50px;}
     		 	  data-duration="2500"
     		 	  data-ease="easeOutExpo"
     		 	  data-effect="scalefrom(1.1,1.1,190,0)"
-    		 />
+    		    />
              
             <h3 class="ms-layer offerbadge orange-2"
     			style="top: 150px; left:550px;"
@@ -497,12 +501,12 @@ use {transform-origin: 50px 50px;}
     			data-effect="right(250)"> <i class="fa fa-check"></i> FREE Search Engine & Marketing Credits</h3>
                 
                 <a class="ms-layer btn sbut3 margin-top2"
-    			style="left: 840px; top: 440px;"
-    			data-type="text"
-    			data-delay="4000"
-    			data-ease="easeOutExpo"
-    			data-duration="1200"
-    			data-effect="scale(1.5,1.6)"> Get Started now </a>
+            			style="left: 840px; top: 440px;"
+            			data-type="text"
+            			data-delay="4000"
+            			data-ease="easeOutExpo"
+            			data-duration="1200"
+            			data-effect="scale(1.5,1.6)"> Get Started now </a>
                 
           </div>
           <!-- end slide 2 -->  

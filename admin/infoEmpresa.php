@@ -78,12 +78,16 @@
                                                 </div>
                                                 <div class="modal-body">
                                                         <div class="form-group">
-                                                            <input type="text" id="mision" name="mision" class="form-control" placeholder="mision" required style="height: 250px;">
+                                                          <label for="mision">Mision</label>
+                                                            <textarea type="text" id="mision" name="mision" class="form-control" placeholder="mision" required style="height: 250px;">
+                                                            </textarea>
                                                         </div>
 
 
                                                         <div class="form-group">
-                                                            <input type="text" id="vision" name="vision" class="form-control" placeholder="vision" required style="height: 250px;">
+                                                          <label for="vision">Vision</label>
+                                                            <textarea type="text" id="vision" name="vision" class="form-control" placeholder="vision" required style="height: 250px;">
+                                                            </textarea>
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer">

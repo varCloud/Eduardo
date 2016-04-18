@@ -1,11 +1,14 @@
 var urlImagenslider;
 
 $("document").ready(function() {
+ $('#tableSlider').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
 
 
-
-        
-
+ ObtenerSliders();
  $('#fileuploadSlider').fileupload({
         url: 'php/uploadImages.php',
         dataType: 'json',
@@ -15,6 +18,7 @@ $("document").ready(function() {
                 $('<p/>').text(file.name).appendTo('#files');
                  $('#VistaPrevia').attr('src',file.thumbnailUrl);
                  urlImagenslider ='images/sliders/'+file.name;
+                 $("#eliminarImagenSlide").css('display','inline');
             });
         },
         progressall: function (e, data) {
@@ -26,60 +30,63 @@ $("document").ready(function() {
         }
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
-
-
-/*ObtenerProductos();
-$( "#cbProducto" ).change(function() {
-
-    ObtenerSubProductos($(this).val());
-});
-*/
+    
     $("#GuardarSlider").click(function() {
         GuardarSlider();
+        ObtenerSliders();
+        });
 
+    $("#eliminarImagenSlide").click(function() {
+            EliminarImgSlider();
         });
 
 });
 
-
-function Obtener()
+function ObtenerSliders()
 {
-
     $.ajax({
             type: "POST",
-            url: "../AccesoDatos/productoDAO.php",
-            data: "accion=obtenerProductos",
+            url: "../AccesoDatos/sliderDAO.php",
+            data: "accion=obtenerSlider",
             async: false,
             dataType: "json",
             success: function(datos) {
-                //alert(datos[0].id)
-                var cb='';
-                 $.each(datos, function(i, item) {
-                  cb+='<option value='+item.id+'>'+item.descripcion+'</option>';
-              });
-                $("#cbProducto").html(cb);
-
+                var cuerpo ="";
+                   $.each(datos, function(i, item) {
+                    cuerpo += "<tr><td>"+item.titulo+"</td>";
+                    cuerpo += "<td>"+item.subTitulo+"</td>";
+                    cuerpo += "<td>"+item.descCirAzul+"</td>";
+                    cuerpo += "<td>"+item.descCirBlanco+"</td>";
+                    cuerpo += "<td>"+item.descripcion+"</td>";
+                    cuerpo += "<td><img src='../"+item.Urlimg+"' style='height:120px;width:120px;' /></td>";
+                    cuerpo += "<td><button type='button' onclick='ObtenerItemSlide("+item.id+")' id='ObtenerItemSlide' class='btn btn-success'><i class='fa fa-plus-square-o'></i> Actualizar ";
+                    cuerpo +="</button>";
+                    cuerpo += " <br><br><button type='button' onclick='EliminarItemSlide("+item.id+")' id='ObtenerItemSlide' class='btn btn-danger'><i class='fa fa-plus-square-o'></i> Eliminar ";
+                    cuerpo +="</button></td></tr>";
+                });
+                $("#cuerpoSlider").html(cuerpo);
             }
         });
                                    
 }
 
-function ObtenerSubProductos(idProd)
+function ObtenerItemSlide(idSlide)
 {
-
+   $( "#resetSlider" ).trigger( "click" );
     $.ajax({
             type: "POST",
-            url: "../AccesoDatos/productoDAO.php",
-            data: "accion=obtenerSubProductos&idProd="+idProd,
+            url: "../AccesoDatos/sliderDAO.php",
+            data: "accion=ObtenerItemSlider&idSlide="+idSlide,
             async: false,
             dataType: "json",
             success: function(datos) {
-                var cb='';
-                 $.each(datos, function(i, item) {
-                  cb+='<option value='+item.idSub+'>'+item.descripcion+'</option>';
-              });
-                $("#cbSubProducto").html(cb);
-                $('#cbSubProducto').selectpicker('refresh');
+                 $("#titulo").val(datos.titulo);
+                 $("#subTitulo").val(datos.subTitulo);
+                 $("#descSlider").val(datos.descripcion);
+                 $("#descCirAzul").val(datos.descCirAzul);
+                 $("#descCirBlanco").val(datos.descCirBlanco);
+                 $('#VistaPrevia').attr('src','../'+datos.Urlimg);
+                 $('#modalAddSlider').modal('show');
             }
         });
                                    
@@ -96,6 +103,26 @@ function GuardarSlider()
             success: function(datos) {
                 alert(datos.status)
                 $('#modalAddSlider').modal('hide');
+            }
+        });
+}
+
+
+function EliminarImgSlider()
+{
+    $.ajax({
+            type: "POST",
+            url: "../AccesoDatos/sliderDAO.php",
+            data: "accion=EliminarImgSlider&url="+ $('#VistaPrevia').attr('src'),
+            async: false,
+            dataType: "json",
+            success: function(datos) {
+               if(datos == 1)
+                {
+                    $('#modalAddSlider').modal('hide');
+                    $("#eliminarImagenSlide").css('display','none');
+                    ObtenerSliders();
+                }
             }
         });
 }

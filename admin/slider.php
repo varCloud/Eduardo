@@ -50,20 +50,19 @@
             <div class="page-inner">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb container">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Tables</a></li>
-                        <li class="active">Datatables</li>
+                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="#">Agregar Imagen Slider</a></li>
                     </ol>
                 </div>
                 <div class="page-title">
                     <div class="container">
-                        <h3>Datatables</h3>
+                        <h3>Agregar Imagen Slider</h3>
                     </div>
                 </div>
                 <div id="main-wrapper" class="container">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">Agregar Producto</h4>
+                                    <h4 class="panel-title">Agregar Imagen Slider</h4>
                                 </div>
                                 <div class="panel-body">
             <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalAddSlider">Agregar Imagen Slider</button>
@@ -74,18 +73,18 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Agregar Imagen Slider</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <div class="form-group">                                               
-                                                         <div class="divInput">
+                                                    <div class="form-group">      
+                                        
+                                                        <div class="divInput">
                                                           <input id="directorio" value="/../../images/sliders/" type="hidden" name="directorio" />
                                                           <input id="fileuploadSlider" type="file" name="files[]" class="InputFile"  />
                                                           <i class="glyphicon glyphicon-upload"></i>
                                                           <span>Seleccione una Imagen</span>
                                                         </div>
-
-
+                                                    </div>
                                                         <br>
                                                         <!-- The global progress ba/r -->
                                                         <div id="progress" class="progress">
@@ -94,21 +93,14 @@
 
                                                         <div style="position: relative; text-align: center; width: 200px;height: 200px;margin: auto;" align="center">
                                                              <img id="VistaPrevia" name="VistaPrevia" class="form-control" style="text-align: center; width: 200px;height: 200px" />
-                                                             <div id="files" class="files"></div>
-                                                        </div>
                                                         <br>
-                                                    </div>
-                                                        <div class="form-group">
-                                                            <input type="text" id="descCirAzul" name="descCirAzul" class="form-control" placeholder="Descripcion Circulo Azul" required>
+                                                         <button  type="button" id="eliminarImagenSlide" class="btn btn-danger">Eliminar Imagen</button>
+                                                        
+                                                           <!--  <div id="files" class="files"></div> -->
                                                         </div>
-
-
-                                                        <div class="form-group">
-                                                            <input type="text" id="descCirBlanco" name="descCirBlanco" class="form-control" placeholder="Descripcion Circulo Blanco" required>
-                                                        </div>
-
-
-                                                        <div class="form-group">
+                                                        <br><br><br><br>
+                                                    
+                                                       <div class="form-group">
                                                             <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Titulo" required>
                                                         </div>
                                                            <div class="form-group">
@@ -118,8 +110,18 @@
                                                            <div class="form-group">
                                                             <input type="text" class="form-control" placeholder="Descripcion" name="descSlider" id="descSlider" required>
                                                         </div>
+                                                        <div class="form-group">
+                                                            <input type="text" id="descCirAzul" name="descCirAzul" class="form-control" placeholder="Descripcion Circulo Azul" required>
+                                                        </div>
+
+
+                                                        <div class="form-group">
+                                                            <input type="text" id="descCirBlanco" name="descCirBlanco" class="form-control" placeholder="Descripcion Circulo Blanco" required>
+                                                        </div>
                                                 </div>
                                                 <div class="modal-footer">
+                                                <button id="resetSlider" name="resetSlider" type="reset" style="display: none; width: 0px;height: 0px;" value=""></button>
+                                                    
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                                     <button type="button" id="GuardarSlider" class="btn btn-success">Guardar</button>
                                                 </div>
@@ -128,23 +130,28 @@
                                     </div>
                              </form>
                                     <div class="table-responsive">
-                                        <table id="example3" class="display table" style="width: 100%; cellspacing: 0;">
+                                    <table id="tableSlider" class="display table" style="width: 100%; cellspacing: 0;">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Salary</th>
+                                                    <th>Titulo</th>
+                                                    <th>SubTitulo</th>
+                                                    <th>Circulo Azul</th>
+                                                    <th>Circulo Blanco</th>
+                                                    <th>Descripcion</th>
+                                                    <th>Imagen</th>
+                                                    <th>Accion</th>
                                                 </tr>
                                             </thead>
+                                            <tbody id="cuerpoSlider"></tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Salary</th>
+                                                    <th>Titulo</th>
+                                                    <th>SubTitulo</th>
+                                                    <th>Circulo Azul</th>
+                                                    <th>Circulo Blanco</th>
+                                                    <th>Descripcion</th>
+                                                    <th>Imagen</th>
+                                                    <th>Accion</th>
                                                 </tr>
                                             </tfoot>
                                         </table>

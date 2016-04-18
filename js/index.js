@@ -30,16 +30,17 @@ function CargarPagina(url)
 }
 
 function CargarProductos(producto,sub) {
-	window.location.replace("http://localhost/Eduardo/productos.php?prod="+producto+"&subproducto="+sub);
+	window.location.replace("http://localhost:8888/Eduardo/productos.php?prod="+producto+"&subproducto="+sub);
 }
 
 
 function ObtenerImgsSlider()
 {
+         
     $.ajax({
             type: "POST",
             url: "AccesoDatos/sliderDAO.php",
-            data: "accion=obtenerSlide",
+            data: "accion=obtenerSlider",
             async: false,
             dataType: "json",
             success: function(datos) {
@@ -54,7 +55,8 @@ function ObtenerImgsSlider()
                      slide+=' data-delay="1500"';
                      slide+=' data-ease="easeOutExpo"';
                      slide+=' data-duration="1230"';
-                     slide+=' data-effect="scale(1.5,1.6)">'+item.descCirAzul+' </h3>';
+                     slide+=' data-effect="scale(1.5,1.6)">Antes<br/>';
+                   slide+='   <span class="price">$'+item.descCirAzul+'</span><br/>Descuento </h3>';
               
                      slide+=' <h3 class="ms-layer offerbadge two" id="descCirBlanco"';
                      slide+='style="top: 420px; left:1030px;"';
@@ -62,8 +64,8 @@ function ObtenerImgsSlider()
                      slide+='data-delay="2000"';
                      slide+=' data-ease="easeOutExpo"';
                      slide+='data-duration="1230"';
-                     slide+='data-effect="scale(1.5,1.6)"><br/>';
-                     slide+='<span class="price two">'+item.descCirBlanco+'</span><br/>/Oferta</h3>';
+                     slide+='data-effect="scale(1.5,1.6)">Ahora<br/>';
+                     slide+='<span class="price two">'+item.descCirBlanco+'</span><br/>Oferta</h3>';
               
                       slide+='<h3 class="ms-layer text1" id="Titulo"';
                       slide+='style="left: 140px;top: 200px;"';
@@ -91,7 +93,7 @@ function ObtenerImgsSlider()
 
                         slide+='</div>';
               });
-                 alert(slide);
+                //alert(slide);
                 $("#masterslider").html(slide);
                 InicializarSlider();
 

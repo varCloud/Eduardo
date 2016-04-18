@@ -5,60 +5,50 @@
   include_once '../Entidades/Slider.php';
 
 switch ($_POST["accion"]) {
-  case 'ObtenerImgsSlider':
 
-       /* $lstSubProductos = array();
-        $sql = new MySQL();
-        $query = "SELECT relsub.*,s.descripcion AS descSub,p.descripcion AS descProd
-                  FROM relsubproductos relsub 
-                  INNER JOIN subproducto s ON s.idsubproducto = relsub.idSub
-                  INNER JOIN producto p ON p.idproducto=relsub.idProd 
-                  WHERE relsub.idSub =".$_POST["subproducto"]." AND relsub.idProd =".$_POST["producto"]."";
-        $res = $sql->consulta($query);
-        $contador = 0;
-        $indice=0;
+  case 'EliminarImgSlider':
+    $bandera= 0;
+    if(file_exists ($_POST['url']))
+    {
+      if(unlink($_POST['url']));
+        $bandera= 1;
+    }
+    else
+      $bandera=0;
 
-        $Producto = new Producto;
-        $Producto->SubProd = new SubProducto;
-        $Producto->SubProd->Articulo = array();
-        while ($row = $sql->fetch_array($res)) {
-       
-              $Producto->SubProd->idSub = $row["idSub"];  
-              $Producto->SubProd->descripcion = $row["descSub"];  
+    echo json_encode($bandera);
+  break;
 
-              $Articulo = new Articulo;  
-              $Articulo ->img= $row["img"];
-              $Articulo ->descripcion= $row["descripcion"];
-              $Articulo ->id= $row["contador"];
-              $Articulo ->costo= $row["costo"];
+  case 'ObtenerItemSlider':
+  
+              $sql = new MySQL();
+              $query = "SELECT *  FROM CatSliders where idCatSliders =".$_POST['idSlide'];
+              $res = $sql->consulta($query);
+              while ($row = $sql->fetch_array($res)) {
 
-              $Producto->id=$row["idProd"];
-              $Producto->descripcion=$row["descProd"];
-
-             //echo"descripcion :".$row["Descripcion"]; 
-              $Producto->SubProd->Articulo[$indice]=$Articulo;
-            $indice ++;
-          }
-          echo json_encode($Producto);
-      */
-    break;
-
-    case 'obtenerSubProductos':
+                  $slider = new Slider;
+                  $slider->id=$row["idCatSliders"];  
+                  $slider->titulo=$row["titulo"];  
+                  $slider->subTitulo=$row["subtitulo"];  
+                  $slider->descCirAzul=$row["circAzul"];  
+                  $slider->descCirBlanco=$row["cirBlanco"];  
+                  $slider->descripcion=$row["descripcion"];  
+                  $slider->Urlimg=$row["img"];
+                } 
+        
+         echo json_encode($slider);
 
     break;
 
-      case 'obtenerSlide':
+      case 'obtenerSlider':
           try{
               $sql = new MySQL();
               $query = "SELECT *  FROM CatSliders";
               $res = $sql->consulta($query);
               $lstCatSlider = array();
               $indice =0;
-
               while ($row = $sql->fetch_array($res)) {
-                  //echo "resultado".$row["idCatSliders"];
                   $slider = new Slider;
-                  //echo "resultado".$row["idCatSliders"];
                   $slider->id=$row["idCatSliders"];  
                   $slider->titulo=$row["titulo"];  
                   $slider->subTitulo=$row["subtitulo"];  
@@ -81,6 +71,17 @@ switch ($_POST["accion"]) {
     case 'GuardarSlider':
         $sql = new MySQL();
         $query="INSERT INTO CatSliders VALUES('','".$_POST['titulo']."','".$_POST['subTitulo']."','".$_POST['descCirAzul']."','".$_POST['descCirBlanco']."','".$_POST['descSlider']."','".$_POST['urlImagenslider']."')";
+        //echo "query".$query;,'".$_POST['descCirAzul']."
+          $res = $sql->consulta($query);
+          $data['status']=1;
+        
+         echo json_encode($data);
+    break;
+
+
+    case 'UpdateSlider':
+        $sql = new MySQL();
+        $query="INTO CatSliders VALUES('','".$_POST['titulo']."','".$_POST['subTitulo']."','".$_POST['descCirAzul']."','".$_POST['descCirBlanco']."','".$_POST['descSlider']."','".$_POST['urlImagenslider']."')";
         //echo "query".$query;,'".$_POST['descCirAzul']."
           $res = $sql->consulta($query);
           $data['status']=1;

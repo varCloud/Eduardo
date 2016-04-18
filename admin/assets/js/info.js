@@ -1,6 +1,10 @@
-
-
 $("document").ready(function() {
+
+        $('#tblInfoEmpresa').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+        });
 
         obterneVisionMision();
         $("#GuardarInfo").click(function() {
@@ -21,6 +25,8 @@ function obterneVisionMision()
             success: function(datos) {
                 $("#vision").val(datos.vision);
                 $("#mision").val(datos.mision);
+                var cuerpo = "<td></td><td>"+datos.mision+"</td>"+"<td>"+datos.vision+"</td>"
+                $("#CuerpoInfoEmpresa").html(cuerpo);
             }
         });
                                    
@@ -36,8 +42,12 @@ function actualizarMisionVision()
             async: false,
             dataType: "json",
             success: function(datos) {
-                alert(datos.status)
+             if(datos.status == 1)
+             {
                 $('#modalInfoEmpresa').modal('hide');
+             }
+             else
+                
             }
         });
 }

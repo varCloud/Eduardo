@@ -51,69 +51,114 @@
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb container">
                         <li><a href="index.php">Inicio</a></li>
-                        <li class="active">Entidad Corportavita</li>
+                        <li class="active">Actualizar Direccion</li>
                     </ol>
                 </div>
                 <div class="page-title">
                     <div class="container">
-                        <h3>Entidad Corportavita</h3>
+                        <h3>Actualizar Direccion</h3>
                     </div>
                 </div>
                 <div id="main-wrapper" class="container">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">Actualizar Entidad Corporativa</h4>
+                                    <h4 class="panel-title">Actualizar Direccion de la Empresa</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalInfoEmpresa">Actualiar Mision y Vision</button>
+            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalDireccion">Actualizar Direccion</button>
                                     <!-- Modal -->
-                            <form id="formInfoEmpresa" >
+                            <form id="formDireccion" >
                                     <div class="modal fade" id="modalDireccion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Actualizar Mision y Vision</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Actualizar Direccion</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                         <div class="form-group">
-                                                          <label for="mision">Mision</label>
-                                                            <textarea type="text" id="mision" name="mision" class="form-control" placeholder="mision" required style="height: 200px;">
-                                                            </textarea>
+                                                          <label for="calle">Calle</label>
+                                                            <input type="text" id="calle" name="calle" class="form-control input-rounded" placeholder="Calle" required />
                                                         </div>
 
+                                                        <div class="form-group">
+                                                          <label for="col">Colonia</label>
+                                                            <input type="text" id="col" name="col" class="form-control input-rounded" placeholder="Colonia" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label for="noInt">No.Interior</label>
+                                                            <input type="text" id="noInt" name="noInt" class="form-control input-rounded" placeholder="No.Interior" required />
+                                                            
+                                                        </div>
 
                                                         <div class="form-group">
-                                                          <label for="vision">Vision</label>
-                                                            <textarea type="text" id="vision" name="vision" class="form-control" placeholder="vision" required style="height: 200px;">
-                                                            </textarea>
+                                                          <label for="noExt">No.Exterior</label>
+                                                            <input type="text" id="noExt" name="noExt" class="form-control input-rounded" placeholder="No.Exterior" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label for="cp">Codigo Postal</label>
+                                                            <input type="text" id="cp" name="cp" class="form-control input-rounded" placeholder="Codigo Postal" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label for="estado">Estado</label>
+                                                            <input type="text" id="estado" name="estado" class="form-control input-rounded" placeholder="Estado" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label for="pais">Pais</label>
+                                                            <input type="text" id="pais" name="pais" class="form-control input-rounded" placeholder="Pais" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label for="tel1">Telefono 1</label>
+                                                            <input type="text" id="tel1" name="tel1" class="form-control input-rounded" placeholder="Telefono" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label for="tel2">Telefono 2</label>
+                                                            <input type="text" id="tel2" name="tel2" class="form-control input-rounded" placeholder="Telefono Adicional" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label for="infoExtra">Informacion Adicional</label>
+                                                            <input type="text" id="infoExtra" name="infoExtra" class="form-control input-rounded" placeholder="Informacion Adicional" required />
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                                    <button type="button" id="GuardarInfo" class="btn btn-success">Guardar</button>
+                                                    <button type="button" id="GuardarDireccion" class="btn btn-success">Actualizar</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                              </form>
                                     <div class="table-responsive">
-                                        <table id="tblInfoEmpresa" class="display table" style="width: 100%; cellspacing: 0;">
+                                        <table id="tblDireccion" class="display table" style="width: 100%; cellspacing: 0;">
                                             <thead>
                                                 <tr>
-                                                    <th></th>
-                                                    <th>Mision</th>
-                                                    <th>Vision</th>
+                                                    <th>Calle</th>
+                                                    <th>Colonia</th>
+                                                    <th>No.Interior</th>
+                                                    <th>No.Exterior</th>
+                                                    <th>Codigo Postal</th>
+                                                    <th>Estado</th>
+                                                    <th>Pais</th>
+                                                    <th>Telefono 1</th>
+                                                    <th>Telefono 2</th>
+                                                    <th>Informacion Adicional</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="CuerpoInfoEmpresa">
+                                            <tbody id="CuerpoDireccion">
                                                 
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th></th>
-                                                    <th>Mision</th>
-                                                    <th>Vision</th>
+                                                    <th>Calle</th>
+                                                    <th>Colonia</th>
+                                                    <th>No.Interior</th>
+                                                    <th>No.Exterior</th>
+                                                    <th>Codigo Postal</th>
+                                                    <th>Estado</th>
+                                                    <th>Pais</th>
+                                                    <th>Telefono 1</th>
+                                                    <th>Telefono 2</th>
+                                                    <th>Informacion Adicional</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -207,7 +252,7 @@
         <script src="assets/js/modern.min.js"></script>
         <script src="assets/js/pages/table-data.js"></script>
         <script src="assets/js/jquery.fileupload.js"></script>
-        <script src="assets/js/info.js"></script>
+        <script src="assets/js/direccion.js"></script>
   
        
 

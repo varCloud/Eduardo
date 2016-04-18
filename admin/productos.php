@@ -65,7 +65,7 @@
                                     <h4 class="panel-title">Agregar Producto</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#myModal">Agregar Producto</button>
+                                   <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#myModal">Agregar Producto</button> 
                                     <!-- Modal -->
                             <form id="formAltaItem" >
                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -121,23 +121,28 @@
                                     </div>
                              </form>
                                     <div class="table-responsive">
-                                        <table id="example3" class="display table" style="width: 100%; cellspacing: 0;">
+                                        <table id="tblProductos" class="display table" style="width: 100%; cellspacing: 0;">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Salary</th>
+                                                    <th>Producto</th>
+                                                    <th>SubProducto</th>
+                                                    <th>Descripcion</th>
+                                                    <th>Costo</th>
+                                                    <th>Img</th>
+                                                    <th>Acciones</th>
                                                 </tr>
                                             </thead>
+                                            <tbody id="cuerpoProductos">
+                                                
+                                            </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Salary</th>
+                                                    <th>Producto</th>
+                                                    <th>SubProducto</th>
+                                                    <th>Descripcion</th>
+                                                    <th>Costo</th>
+                                                    <th>Img</th>
+                                                    <th>Acciones</th>
                                                 </tr>
                                             </tfoot>
                                         </table>

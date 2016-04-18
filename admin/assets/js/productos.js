@@ -1,8 +1,7 @@
 var imagen;
-
-
-
 $("document").ready(function() {
+
+ $('#tblProductos').DataTable();
 
  $('#fileupload').fileupload({
         url: 'php/uploadImages.php',
@@ -25,17 +24,16 @@ $("document").ready(function() {
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
 
+    listarTodosSubProductos();   
+    ObtenerProductos();
+    $( "#cbProducto" ).change(function() {
 
-ObtenerProductos();
-$( "#cbProducto" ).change(function() {
+        ObtenerSubProductos($(this).val());
+    });
 
-    ObtenerSubProductos($(this).val());
-});
-
-$("#Guardar").click(function() {
-    GuardaProducto();
-
-});
+    $("#Guardar").click(function() {
+        GuardaProducto();
+    });
 
 });
 
@@ -97,6 +95,40 @@ function GuardaProducto()
                 $('#myModal').modal('hide');
             }
         });
+}
+
+
+function listarTodosSubProductos()
+{
+    $.ajax({
+            type: "POST",
+            url: "../AccesoDatos/productoDAO.php",
+            data: "accion=listarTodosSubProductos",
+            async: false,
+            dataType: "json",
+            success: function(datos) {
+               var cuerpo ="";
+               //alert(datos.SubProd.idSub);
+                   $.each(datos, function(i, item) {
+
+                    cuerpo += "<tr><td>"+item.id+"</td>";
+                    cuerpo += "<tr><td>"+item.descripcion+"</td>";
+                       $.each(datos.SubProd, function(i, item) {
+                           cuerpo += "<td>"+item.id+"</td>";
+                    });
+                    cuerpo += "<td>"+item.SubProd+"</td>";
+                    cuerpo += "<td>"+item.SubProd.Articulo.descripcion+"</td>";
+                    cuerpo += "<td>"+item.SubProd.Articulo.costo+"</td>";
+                    cuerpo += "<td><img src='../"+item.Producto.SubProd.Articulo.img+"' style='height:120px;width:120px;' /></td>";
+                    cuerpo += "<td><button type='button' onclick='ObtenerItemSlide("+item.id+")' id='ObtenerItemSlide' class='btn btn-success'><i class='fa fa-plus-square-o'></i> Actualizar ";
+                    cuerpo +="</button>";
+                    cuerpo += " <br><br><button type='button' onclick='EliminarItemSlide("+item.id+")' id='ObtenerItemSlide' class='btn btn-danger'><i class='fa fa-plus-square-o'></i> Eliminar ";
+                    cuerpo +="</button></td></tr>";
+                });
+                $("#cuerpoProductos").html(cuerpo);
+
+            }
+        });    
 }
 
 

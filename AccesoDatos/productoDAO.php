@@ -6,6 +6,7 @@
   include_once '../Entidades/articulo.php';
 
 switch ($_POST["accion"]) {
+
   case 'listarSubProductos':
 
         $lstSubProductos = array();
@@ -85,6 +86,40 @@ switch ($_POST["accion"]) {
           $data['status']=1;
         
          echo json_encode($data);
+    break;
+
+  case 'listarTodosSubProductos':
+
+        $lstSubProductos = array();
+        $sql = new MySQL();
+        $query = "SELECT relsub.*,s.descripcion AS descSub,p.descripcion AS descProd
+                  FROM catsubproductos relsub 
+                  INNER JOIN subproductos s ON s.idSubProducto = relsub.idSubProducto
+                  INNER JOIN productos p ON p.idProducto=relsub.idProducto";
+        $res = $sql->consulta($query);
+        $contador = 0;
+        $indice=0;
+
+        $Producto =  array();
+       // $Producto->SubProd = new SubProducto;
+       // $Producto->SubProd->Articulo = array();
+        while ($row = $sql->fetch_array($res)) {
+              $Articulo = new Articulo;  
+              $Articulo ->img= $row["imagen"];
+              $Articulo ->descripcion= $row["descripcion"];
+              $Articulo ->id= $row["idCatSubProducto"];
+              $Articulo ->costo= $row["costo"];
+              $s =  new SubProducto;
+              $s->idSub = $row["idSubProducto"];  
+              $s->descripcion = $row["descSub"]; 
+              $s->Articulo =  $Articulo;
+              $Producto[$indice]["id"]=$row["idProducto"];
+              $Producto[$indice]["descripcion"]=$row["descProd"];
+              $Producto[$indice]["SubProd"] = $s;
+            $indice ++;
+          }
+          echo json_encode($Producto);
+  
     break;
   
   

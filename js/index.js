@@ -1,3 +1,5 @@
+// tipo menu 1  como el del blob
+//tipo menu 2 como el del productos
 $("document").ready(function() {
 /*    $("a#agregarProducto").click(function(event) {
         var id = $(this).attr("itemid");
@@ -14,10 +16,93 @@ $("document").ready(function() {
         });
         return false;
     });
-    cargarCarrito();*/ObtenerImgsSlider();
+    cargarCarrito();*/
+    obtenerMenu();
+    ObtenerImgsSlider();
 });
 
+function obtenerMenu()
+{
+    $.ajax({
+            type: "POST",
+            url: "AccesoDatos/menuDAO.php",
+            data: "accion=obtenerMenu",
+            async: false,
+            dataType: "json",
+            success: function(datos) {
+                 var menu='';              
+                  $.each(datos, function(i, item) {
+                    if(item.tipoMenu=='2'){
+                         menu+='<li class="dropdown yamm-fw"> <a href="index.php" class="dropdown-toggle active">'+item.descripcion+'</a>';
+                         menu+='<ul class="dropdown-menu">';
+                         menu+='<li>';
+                         menu+='<div class="yamm-content">';
+                         menu+='<div class="row">'
+                     }else
+                     {
+                        menu+='<li class="dropdown"> <a href="portfolio-three.html" class="dropdown-toggle">'+item.descripcion+'</a>';
+                        menu+='<ul class="dropdown-menu" role="menu">';
+                     }
+                         $.each(item.Categoria, function(i, cat) {
+                            if(item.tipoMenu == 2 )
+                            {
+                                menu+='<ul class="col-sm-6 col-md-2 list-unstyled ">';
+                                menu+='       <li>';
+                                menu+='         <p>'+cat.descripcion+'</p>';
+                                menu+=' </li>';
+                                if(cat.SubCategoria.length >0)
+                                {
+                                      $.each(cat.SubCategoria, function(i, sub) {
+                                        menu+='<li><a href="about.html"><i class="fa fa-angle-right"></i> &nbsp; '+sub.descripcion+'</a></li>';
+                                      });
+                                }
+                                 menu+=' </ul>';
+                             }else
+                             {
+                                menu+='<li> <a href="portfolio-one.html">Single Item</a> </li>';
+                             }
+                         });
+                    });
+                 menu+=' </div>';
+                 menu+=' </div>';
+                 menu+=' </li>';
+                 menu+=' </ul>';
+                 alert(menu);
+               //$("#cuerpoMenu").html(menu);
+               InicarMenu();
 
+            }
+
+
+          });
+
+}
+
+ function InicarMenu()
+ {
+    $('.dropdown-submenu').hover(function () {
+        if ($(window).width() >= 479) {
+            var p = $(this);
+            var offset = p.offset();
+
+            var multiLeft = offset.left;
+            var multilevelWidth = $(".multilevel").width();
+            var sublevelWidth = $(this).find(".dropdown-menu").width();
+
+            var allWidth = multiLeft + multilevelWidth + sublevelWidth;
+
+            if ($(window).width() <= allWidth) {
+                $(this).find(".dropdown-menu").css("marginLeft", "-" + (multilevelWidth + sublevelWidth) + "px");
+            } else {
+                $(".dropdown-submenu>.dropdown-menu").css("marginLeft", " ");
+            }
+        } else {
+            $(".dropdown-submenu>.dropdown-menu").css("marginLeft", " ");
+        }
+    });    
+    
+
+ }
 
 function CargarPagina(url)
 {

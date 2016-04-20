@@ -23,6 +23,7 @@ $("document").ready(function() {
 
 function obtenerMenu()
 {
+    var contadorRow =0;
     $.ajax({
             type: "POST",
             url: "AccesoDatos/menuDAO.php",
@@ -32,12 +33,13 @@ function obtenerMenu()
             success: function(datos) {
                  var menu='';              
                   $.each(datos, function(i, item) {
+
                     if(item.tipoMenu=='2'){
                          menu+='<li class="dropdown yamm-fw"> <a href="index.php" class="dropdown-toggle active">'+item.descripcion+'</a>';
                          menu+='<ul class="dropdown-menu">';
                          menu+='<li>';
                          menu+='<div class="yamm-content">';
-                         menu+='<div class="row">'
+                        
                      }else
                      {
                         menu+='<li class="dropdown"> <a href="portfolio-three.html" class="dropdown-toggle">'+item.descripcion+'</a>';
@@ -46,7 +48,14 @@ function obtenerMenu()
                          $.each(item.Categoria, function(i, cat) {
                             if(item.tipoMenu == 2 )
                             {
-                                menu+='<ul class="col-sm-6 col-md-2 list-unstyled ">';
+                                if(contadorRow == 0)
+                                    menu += '<div class="row">';
+//ESTA VALIDACION ES PARA ACOMODAR  UN ITEM DEL MENU CUANDO TIENE MAS DE 17 CARACTERES
+                                if(cat.descripcion.length >=18)
+                                   menu+='<ul class="col-sm-6 col-md-3 list-unstyled ">';
+                               else
+                                   menu+='<ul class="col-sm-6 col-md-2 list-unstyled ">';
+                                
                                 menu+='       <li>';
                                 menu+='         <p>'+cat.descripcion+'</p>';
                                 menu+=' </li>';
@@ -57,18 +66,34 @@ function obtenerMenu()
                                       });
                                 }
                                  menu+=' </ul>';
-                             }else
+                                 contadorRow++;
+                                 if(contadorRow == 5)
+                                 {
+                                        menu+='</div><br>';
+                                        contadorRow=0;
+                                 }
+
+                             }
+                             else
                              {
-                                menu+='<li> <a href="portfolio-one.html">Single Item</a> </li>';
+                                menu+='<li> <a href="portfolio-one.html">'+cat.descripcion+'</a> </li>';
                              }
                          });
+
+                         if(item.tipoMenu == 2)
+                         {
+                             menu+=' </div>';
+                             menu+=' </li>';
+                             menu+=' </ul>';
+
+                         }else
+                            {
+                                menu+='</ul>'
+                            }
                     });
-                 menu+=' </div>';
-                 menu+=' </div>';
-                 menu+=' </li>';
-                 menu+=' </ul>';
-                 alert(menu);
-               //$("#cuerpoMenu").html(menu);
+
+               //alert(menu);
+               $("#cuerpoMenu").html(menu);
                InicarMenu();
 
             }

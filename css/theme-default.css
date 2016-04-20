@@ -68,11 +68,14 @@ Design and Developed by: Codelayers
 
 /* =========== General ============= */
 
+
+/* =========== cambia la letra del menu ============= */
+
 body,
 input,
 textarea {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 23px;
   color: #727272;
   padding:0px;

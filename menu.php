@@ -19,11 +19,14 @@
 
   <div class="col-md-12 nopadding section-white">
       <div id="header">
-	    <div class="container">
+	    <div class="container" >
 	      <div class="navbar brown-2 navbar-default yamm">
 	        <div class="navbar-header">
 	          <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-	          <a href="index.php" class="navbar-brand"><img src="images/logo/logo.png" alt=""></a> </div>
+	             <a href="index.php" class="navbar-brand">
+                  <img src="images/logo/logo.png" alt="">
+               </a> 
+           </div>
 	        <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
 	          <ul class="nav navbar-nav" id="cuerpoMenu">
 	            <li class="dropdown"> <a href="index.php" class="dropdown-toggle active">Inicio</a></li>

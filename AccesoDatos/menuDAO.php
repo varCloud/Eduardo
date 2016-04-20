@@ -9,7 +9,7 @@ switch ($_POST["accion"]) {
   	case 'obtenerMenu':
         $sqlMenu = new MySQL();
 
-        $query = "SELECT   M.idMenu, M.descripcion,M.tipoMenu descMenu FROM MENU M  ";
+        $query = "SELECT   M.idMenu, M.descripcion descMenu,M.tipoMenu  FROM Menu M  ";
         $res = $sqlMenu->consulta($query);
         $indiceMenu=0;
         $indiceCat=0;
@@ -18,10 +18,10 @@ switch ($_POST["accion"]) {
 
                 $menu = new Menu;
                 $menu->idMenu=$row['idMenu'];
-                $menu->descripcion=$row['descMenu'];
+                $menu->descripcion=utf8_encode($row['descMenu']);
                 $menu->tipoMenu=$row['tipoMenu'];
                 $menu->Categoria= array();
-                $query = "SELECT   c.idCategoria,c.descripcion descMenuCat FROM categoria c  WHERE C.idMenu =".$row['idMenu'];
+                $query = "SELECT   c.idCategoria,c.descripcion descMenuCat FROM Categoria c  WHERE c.idMenu =".$row['idMenu'];
                 $sqlCat = new MySQL();
                 $filasCategoria = $sqlCat->consulta($query);
                 while ($rowCat = $sqlCat->fetch_array($filasCategoria)) { 
@@ -32,7 +32,7 @@ switch ($_POST["accion"]) {
                       $catego->SubCategoria =  array();
                 
 
-              $query = "SELECT s.idSubCategoria,s.descripcion descMenuSubCat FROM subcategoria S WHERE  S.idCategoria =".$rowCat['idCategoria'];
+              $query = "SELECT S.idSubCategoria,S.descripcion descMenuSubCat FROM SubCategoria S WHERE  S.idCategoria =".$rowCat['idCategoria'];
 
                 $sqlSub = new MySQL();
                 $filasSubCategoria = $sqlSub->consulta($query);
@@ -51,35 +51,6 @@ switch ($_POST["accion"]) {
                 $data[$indiceMenu]=$menu;
                 $indiceMenu++;
          }
-
-
-
-     /*   $query = "SELECT M.idMenu, M.descripcion descMenu,c.idCategoria,c.descripcion descMenuCat,
-                         s.idSubCategoria,s.descripcion descMenuSubCat
-                  FROM MENU M  
-                        INNER JOIN categoria C on M.idMenu = C.idMenu
-                        LEFT JOIN subcategoria S ON S.idCategoria = C.idCategoria 
-                        ORDER BY  M.idMenu ";
-        $res = $sql->consulta($query);
-       
-        $indice=0;
-        while ($row = $sql->fetch_array($res)) {
-              $menu = new Menu;
-              $menu->idMenu=$row['idMenu'];
-              $menu->descripcion=$row['descMenu'];
-              $menu->Categoria= array();
-              $catego = new Categoria;
-              $catego->idCategoria=$row['idCategoria'];
-              $catego->descripcion=$row['descMenuCat'];
-              $catego->SubCategoria =  array();
-              $menu->Categoria[$indice]=$catego;
-              $subCate = new SubCategoria;
-              $subCate->idSubCategoria=$row['idSubCategoria'];
-              $subCate->descripcion=$row['descMenuSubCat'];
-              $catego->SubCategoria[$indice]=$subCate;
-              $data[$indice]=$menu;
-              $indice++;
-        }*/
         echo json_encode($data);
 
   	break;
@@ -102,6 +73,55 @@ switch ($_POST["accion"]) {
         echo json_encode($data);
 
   	break;
+
+
+    case 'ObtenerItemMenu':
+        $sql = new MySQL();
+        $query = "SELECT * FROM Menu";
+        $res = $sql->consulta($query);
+        $indice=0;
+         while ($row = $sqlCat->fetch_array($res)) { 
+            $m = new Menu;
+            $m->idMenu=$row['idMenu'];
+            $m->descripcion=utf8_encode($row['descripcion']);
+            $m->tipoMenu=$row['tipoMenu'];
+            $data[$indice]= $m;
+            $indice++;
+         }
+        echo json_encode($data);
+    break;
+
+    case 'ObtenerItemCategoria':
+        $sql = new MySQL();
+        $query = "SELECT * FROM Categoria";
+        $res = $sql->consulta($query);
+        $indice=0;
+         while ($row = $sqlCat->fetch_array($res)) { 
+
+             $catego = new Categoria;
+             $catego->idCategoria=$rowCat['idCategoria'];
+             $catego->descripcion=utf8_encode($rowCat['descripcion']);
+             $data[$indice]= $catego;
+         }
+        echo json_encode($data);
+    break;
+
+
+    case 'ObtenerItemSubCat':
+        $sql = new MySQL();
+        $query = "SELECT * FROM SubCategoria";
+        $res = $sql->consulta($query);
+        $indice=0;
+         while ($row = $sqlCat->fetch_array($res)) { 
+             $subCate = new SubCategoria;
+             $subCate->idSubCategoria=$rowSub['idSubCategoria'];
+             $subCate->descripcion=$rowSub['descripcion'];
+             $data[$indice]= $subCate;
+         }
+        echo json_encode($data);
+    break;
+
+
 
   	default:
     # code...

@@ -25,12 +25,11 @@
 	          <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 	          <a href="index.php" class="navbar-brand"><img src="images/logo/logo.png" alt=""></a> </div>
 	        <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
-	          <ul class="nav navbar-nav">
+	          <ul class="nav navbar-nav" id="cuerpoMenu">
 	            <li class="dropdown"> <a href="index.php" class="dropdown-toggle active">Inicio</a></li>
-            </li>
               <li> <a href="mision.php?InformacionEmpresa=mision" class="dropdown-toggle">Mision</a></li>
 				      <li> <a href="vision.php?InformacionEmpresa=vision" class="dropdown-toggle">Vision</a></li>  
-                <li class="dropdown yamm-fw"> <a href="about2.html" class="dropdown-toggle">Productos</a>
+              <li class="dropdown yamm-fw"> <a href="about2.html" class="dropdown-toggle">Productos</a>
               <ul class="dropdown-menu">
                 <li> 
                   <!-- Content container to add padding -->
@@ -85,6 +84,7 @@
                         <li><a href="register.html"><i class="fa fa-angle-right"></i> &nbsp; Bocinas </a></li>
                       </ul>
                     </div>
+
                     <div class="row">
                       <ul class="col-sm-6 col-md-2 list-unstyled ">
                         <li>

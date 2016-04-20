@@ -15,7 +15,6 @@ $("document").ready(function() {
 
 function obterneVisionMision()
 {
-
     $.ajax({
             type: "POST",
             url: "../AccesoDatos/infoDAO.php",
@@ -28,8 +27,7 @@ function obterneVisionMision()
                 var cuerpo = "<td></td><td>"+datos.mision+"</td>"+"<td>"+datos.vision+"</td>"
                 $("#CuerpoInfoEmpresa").html(cuerpo);
             }
-        });
-                                   
+        });                            
 }
 
 
@@ -46,7 +44,6 @@ function actualizarMisionVision()
              {
                 $('#modalInfoEmpresa').modal('hide');
              }
-             else
                 
             }
         });

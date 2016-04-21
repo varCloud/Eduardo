@@ -65,10 +65,10 @@
                                     <h4 class="panel-title">Agregar Item A Menu</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalInfoEmpresa">Agregar Item A Menu</button>
+            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="" id="btnAbreModalItemMenu">Agregar Item A Menu</button>
                                     <!-- Modal -->
-                            <form id="formInfoEmpresa" >
-                                    <div class="modal fade" id="modalDireccion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <form id="formAltaItemMenu" >
+                                    <div class="modal fade" id="divAltaItemMenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -82,14 +82,19 @@
                                                         </div>
 
                                                         <div class="form-group">
-                                                          <label for="idTipoMenu">Tipo Vista Menu</label>
-                                                            <input type="text" id="idTipoMenu" name="idTipoMenu" class="form-control" placeholder="Tipo Vista Menu" required />
+                                                           <select id="cbTipoMenu" name="cbTipoMenu" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Seleccione Vista Menu" data-width="100%">
+                                                           <option value="2">Horizontal</option>
+                                                           <option value="1">Vertical</option>
+
+                                                          </select>
                                                         </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                                    <button type="button" id="GuardarItemMenu" class="btn btn-success">Guardar</button>
-                                                </div>
+                                        <div class="modal-footer">
+                                            <button type="reset" id="resetMenu" name="resetMenu" style="display: none;">reset </button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                            <button type="button" id="GuardarItemMenu" class="btn btn-success">Guardar</button>
+                                            <button type="button" id="ActualizarItemMenu" class="btn btn-success">Actualizar</button>
+                                        </div>
                                             </div>
                                         </div>
                                     </div>
@@ -98,25 +103,25 @@
                                         <table id="tblAltaMenu" class="display table" style="width: 100%; cellspacing: 0;">
                                             <thead>
                                                 <tr>
-                                                    <th></th>
+                                                    
                                                     <th>Id</th>
                                                     <th>Descripcion</th>
                                                     <th>Tipo Menu</th>
                                                     <th>Acciones</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="CuerpoAltaMenu">
-                                                
-                                            </tbody>
+                                            
                                             <tfoot>
                                                 <tr>
-                                                    <th></th>
+                                                   
                                                     <th>Id</th>
                                                     <th>Descripcion</th>
                                                     <th>Tipo Menu</th>
                                                     <th>Acciones</th>
                                                 </tr>
                                             </tfoot>
+                                            <tbody id="CuerpoAltaMenu">
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -208,9 +213,10 @@
         <script src="assets/js/modern.min.js"></script>
         <script src="assets/js/pages/table-data.js"></script>
         <script src="assets/js/jquery.fileupload.js"></script>
-        <script src="assets/js/info.js"></script>
+        <script src="assets/js/altaMenu.js"></script>
   
        
+
 
         
     </body>

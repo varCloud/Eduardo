@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 18-04-2016 a las 05:52:41
+-- Tiempo de generación: 21-04-2016 a las 07:14:04
 -- Versión del servidor: 5.5.29
 -- Versión de PHP: 5.4.10
 
@@ -23,6 +23,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `Categoria`
+--
+
+CREATE TABLE `Categoria` (
+  `idCategoria` int(11) NOT NULL AUTO_INCREMENT,
+  `idMenu` int(11) DEFAULT NULL,
+  `descripcion` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`idCategoria`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=10 ;
+
+--
+-- Volcado de datos para la tabla `Categoria`
+--
+
+INSERT INTO `Categoria` (`idCategoria`, `idMenu`, `descripcion`) VALUES
+(1, 1, 'Mision'),
+(2, 1, 'Vision'),
+(3, 2, 'Ensamble'),
+(4, 2, 'Computadoras'),
+(5, 2, 'Almacenamiento Externo'),
+(6, 2, 'Accesorios'),
+(7, 2, 'Sonido'),
+(8, 2, 'Videon'),
+(9, 2, 'Impresion');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `CatSliders`
 --
 
@@ -35,7 +63,7 @@ CREATE TABLE `CatSliders` (
   `descripcion` varchar(500) COLLATE utf8_spanish_ci DEFAULT NULL,
   `img` varchar(1000) COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`idCatSliders`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `CatSliders`
@@ -43,7 +71,8 @@ CREATE TABLE `CatSliders` (
 
 INSERT INTO `CatSliders` (`idCatSliders`, `titulo`, `subtitulo`, `circAzul`, `cirBlanco`, `descripcion`, `img`) VALUES
 (1, 'Mega', 'Oferta', '3 pesos', 'Aprovecha', 'es la oferta que estabas esperando', 'images/sliders/FB_IMG_1419603860636 (5).jpg'),
-(2, 'Mega', 'Oferta', '3 pesos', 'Aprovecha', 'es la oferta que estabas esperando', 'images/sliders/2.jpg');
+(2, 'Mega', 'Oferta', '3 pesos', 'Aprovecha', 'es la oferta que estabas esperando', 'images/sliders/2.jpg'),
+(3, 'victor', 'eduardo', '12', '12', '124123', 'images/sliders/8.jpg');
 
 -- --------------------------------------------------------
 
@@ -96,7 +125,7 @@ CREATE TABLE `Direccion` (
 --
 
 INSERT INTO `Direccion` (`idDireccion`, `colonia`, `calle`, `noInterior`, `noExterior`, `codigoPostal`, `estado`, `Pais`, `Telefono1`, `telefono2`, `informacionExtra`) VALUES
-(1, 'por cu', 'por cu', '2', '3', '58230', 'Morelia Mich', 'Mexico', '44 33 33 33 33', '44 33 74 04 72', 'las mejores ofertas y mejores servicios solo ');
+(1, 'por cu', 'por cu', '2', 'rgdgrtyryrty', '58230', 'Morelia Mich', 'Mexico', '44 33 33 33 33', '44 33 74 04 72', 'las mejores ofertas y mejores servicios solo ');
 
 -- --------------------------------------------------------
 
@@ -117,6 +146,35 @@ CREATE TABLE `Informacion` (
 
 INSERT INTO `Informacion` (`idInformacion`, `mision`, `vision`) VALUES
 (1, 'la mision de la empresa de eduardo', 'la vision de la empresa de eduardo ');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Menu`
+--
+
+CREATE TABLE `Menu` (
+  `idMenu` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `tipoMenu` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idMenu`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=22 ;
+
+--
+-- Volcado de datos para la tabla `Menu`
+--
+
+INSERT INTO `Menu` (`idMenu`, `descripcion`, `tipoMenu`) VALUES
+(1, 'Inicio', 1),
+(2, 'Productos', 2),
+(3, 'Video IP', 2),
+(4, 'Redes', 2),
+(5, 'Acceso', 2),
+(6, 'IntrusiÃƒÂƒÃ‚Â³n 1', 2),
+(7, 'CCTV', 2),
+(8, 'Automatización', 2),
+(9, 'Complementos', 2),
+(10, 'Infraestructura', 2);
 
 -- --------------------------------------------------------
 
@@ -144,6 +202,33 @@ INSERT INTO `Productos` (`idProducto`, `descripcion`) VALUES
 (7, 'Impresion'),
 (8, 'Energia'),
 (9, 'Software');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `SubCategoria`
+--
+
+CREATE TABLE `SubCategoria` (
+  `idSubCategoria` int(11) NOT NULL AUTO_INCREMENT,
+  `idCategoria` int(11) DEFAULT NULL,
+  `descripcion` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`idSubCategoria`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=11 ;
+
+--
+-- Volcado de datos para la tabla `SubCategoria`
+--
+
+INSERT INTO `SubCategoria` (`idSubCategoria`, `idCategoria`, `descripcion`) VALUES
+(1, 3, 'Gabinetes'),
+(2, 3, 'Tarjetas Madre'),
+(5, 3, 'Discos Duros'),
+(6, 3, 'Memorias'),
+(7, 4, 'Servidores'),
+(8, 4, 'LapTops'),
+(9, 6, 'Teclado'),
+(10, 6, 'Mouse');
 
 -- --------------------------------------------------------
 

@@ -4,7 +4,7 @@
 <head>
         
         <!-- Title -->
-        <title>Agrega Item Menu </title>
+        <title>Agregar Categoria</title>
         
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">
@@ -51,76 +51,73 @@
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb container">
                         <li><a href="index.php">Inicio</a></li>
-                        <li class="active">Agregar Item Menu</li>
+                        <li class="active">Agregar Categoria</li>
                     </ol>
                 </div>
                 <div class="page-title">
                     <div class="container">
-                        <h3>Agregar Item  Menu</h3>
+                        <h3>Agregar Categoria</h3>
                     </div>
                 </div>
                 <div id="main-wrapper" class="container">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">Agregar Item  Menu</h4>
+                                    <h4 class="panel-title">Agregar Categoria</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="" id="btnAbreModalItemMenu">Agregar Item  Menu</button>
+            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="" id="btnAbreModalCate">Agregar Categoria</button>
                                     <!-- Modal -->
-                            <form id="formAltaItemMenu" >
-                                    <div class="modal fade" id="divAltaItemMenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <form id="formAltaCate" >
+                                    <div class="modal fade" id="divAltaCate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Agregar Item A Menu</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Agregar Categoria</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                         <div class="form-group">
-                                                          <label for="descripcionMenu">Nombre del Item</label>
-                                                            <input type="text" id="descripcionMenu" name="descripcionMenu" class="form-control" placeholder="Nombre del Item" required  />
+                                                          <label for="descripcionCate">Nombre de la Categoria</label>
+                                                            <input type="text" id="descripcionCate" name="descripcionCate" class="form-control" placeholder="Nombre del Item" required  />
                                                         </div>
 
                                                         <div class="form-group">
-                                                           <select id="cbTipoMenu" name="cbTipoMenu" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Seleccione Vista Menu" data-width="100%">
-                                                           <option value="2">Horizontal</option>
-                                                           <option value="1">Vertical</option>
-
+                                                           <select id="cbMenu" name="cbMenu" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Selecciona Menu" data-width="100%">
                                                           </select>
                                                         </div>
                                                 </div>
                                         <div class="modal-footer">
-                                            <button type="reset" id="resetMenu" name="resetMenu" style="display: none;">reset </button>
+                                            <button type="reset" id="resetCate" name="resetMenu" style="display: none;">reset </button>
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                            <button type="button" id="GuardarItemMenu" class="btn btn-success">Guardar</button>
-                                            <button type="button" id="ActualizarItemMenu" class="btn btn-success">Actualizar</button>
+                                            <button type="button" id="GuardarCate" name="GuardarCate" class="btn btn-success">Guardar</button>
+                                            <button type="button" id="ActualizarCate" class="btn btn-success">Actualizar</button>
                                         </div>
                                             </div>
                                         </div>
                                     </div>
                              </form>
                                     <div class="table-responsive">
-                                        <table id="tblAltaMenu" class="display table" style="width: 100%; cellspacing: 0;">
+                                        <table id="tblAltaCate" class="display table" style="width: 100%; cellspacing: 0;">
                                             <thead>
                                                 <tr>
-                                                    
-                                                    <th>Id</th>
-                                                    <th>Descripcion</th>
-                                                    <th>Tipo Menu</th>
+                                                    <th></th>
+                                                    <th>#</th>
+                                                    <th>Menu</th>
+                                                    <th>Categoria</th>
                                                     <th>Acciones</th>
                                                 </tr>
                                             </thead>
                                             
                                             <tfoot>
                                                 <tr>
-                                                   
-                                                    <th>Id</th>
-                                                    <th>Descripcion</th>
-                                                    <th>Tipo Menu</th>
+                                                    <th></th>
+                                                    <th>#</th>
+                                                    <th>Menu</th>
+                                                    <th>Categoria</th>
                                                     <th>Acciones</th>
                                                 </tr>
                                             </tfoot>
-                                            <tbody id="CuerpoAltaMenu">
+                                            <tbody id="CuerpoAltaCate">
                                             </tbody>
                                         </table>
                                     </div>
@@ -213,7 +210,7 @@
         <script src="assets/js/modern.min.js"></script>
         <script src="assets/js/pages/table-data.js"></script>
         <script src="assets/js/jquery.fileupload.js"></script>
-        <script src="assets/js/altaMenu.js"></script>
+        <script src="assets/js/altaCategoria.js"></script>
   
        
 

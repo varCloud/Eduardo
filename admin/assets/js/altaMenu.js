@@ -2,8 +2,6 @@ var urlImagenslider;
 var idMenu;
 
 $("document").ready(function() {
-
-
  ObtenerMenu();
 
 $("#btnAbreModalItemMenu").click(function() {

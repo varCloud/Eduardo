@@ -12,10 +12,10 @@ switch ($_POST["accion"]) {
         $lstSubProductos = array();
         $sql = new MySQL();
         $query = "SELECT relsub.*,s.descripcion AS descSub,p.descripcion AS descProd
-                  FROM relsubproductos relsub 
-                  INNER JOIN subproducto s ON s.idsubproducto = relsub.idSub
-                  INNER JOIN producto p ON p.idproducto=relsub.idProd 
-                  WHERE relsub.idSub =".$_POST["subproducto"]." AND relsub.idProd =".$_POST["producto"]."";
+                  FROM relsubcategorias relsub 
+                  INNER JOIN Subcategoria s ON s.idSubCategoria = relsub.idSubCategoria
+                  INNER JOIN Categoria c ON c.idCategoria = relsub.idCategoria 
+                  WHERE relsub.idSubCategria =".$_POST["subproducto"]." AND relsub.idCategoria =".$_POST["producto"]."";
         $res = $sql->consulta($query);
         $contador = 0;
         $indice=0;

@@ -5,7 +5,7 @@ switch ($_POST["accion"]) {
   case "InformacionEmpresa":
 
             $sql = new MySQL();
-            $query = "SELECT ".$_POST["campo"]." FROM empresa";
+            $query = "SELECT ".$_POST["campo"]." FROM informacion";
             $res = $sql->consulta($query);
                
             while ($row = $sql->fetch_array($res)) {

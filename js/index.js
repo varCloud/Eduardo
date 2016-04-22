@@ -27,7 +27,7 @@ function obtenerMenu()
     $.ajax({
             type: "POST",
             url: "AccesoDatos/menuDAO.php",
-            data: "accion=obtenerMenu",
+            data: "accion=cargarMenui",
             async: false,
             dataType: "json",
             success: function(datos) {

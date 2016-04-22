@@ -192,24 +192,79 @@ switch ($_POST["accion"]) {
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////
-    case 'ObtenerItemSubCat':
+//////////////////////////////////////////////////////////// FUNCIONES SUBCATEGORIAS //////////////////////////////////////////
+   
+
+    case 'ObtenerSubCategorias':
         $sql = new MySQL();
-        $query = "SELECT * FROM SubCategoria";
+        $query = "SELECT  m.descripcion descMenu, c.descripcion descCate, m.idMenu,c.idCategoria, s.* FROM SubCategoria s INNER JOIN Categoria c on s.idCategoria = c.idCategoria
+                                               INNER JOIN  Menu m on m.idMenu = c.IdMenu order by m.IdMenu";
         $res = $sql->consulta($query);
         $indice=0;
-         while ($row = $sqlCat->fetch_array($res)) { 
-             $subCate = new SubCategoria;
-             $subCate->idSubCategoria=$rowSub['idSubCategoria'];
-             $subCate->descripcion=$rowSub['descripcion'];
-             $data[$indice]= $subCate;
+         while ($row = $sql->fetch_array($res)) { 
+              $menu = new Menu;
+              $menu->idMenu=$row['idMenu'];
+              $menu->descripcion=utf8_encode($row['descMenu']);
+              $menu->Categoria=new Categoria;
+              $menu->Categoria->idSubCategoria=$row['idCategoria'];
+              $menu->Categoria->descripcion=utf8_encode($row['descCate']);
+              $menu->Categoria->SubCategoria = new SubCategoria;
+              $menu->Categoria->SubCategoria->idSubCategoria=$row['idSubCategoria'];
+              $menu->Categoria->SubCategoria->descripcion=utf8_encode($row['descripcion']);
+              $data[$indice]= $menu;
+              $indice++;
+
          }
         echo json_encode($data);
     break;
 
+  case 'GuardarSubCate':
+        $sql = new MySQL();
+        $query = "INSERT INTO  SubCategoria values('',".$_POST['cbCate'].",'".utf8_decode($_POST['descripcionSubCate'])."')";
+        $sql->consulta($query);
+        $data['status']=1;
+        echo json_encode($data);
+    break;
+
+    case 'ObtenerUnaSubCate':
+        $sql = new MySQL();
+        $query = "SELECT * FROM SubCategoria where idSubCategoria=".$_POST['idSubCate'];
+        $res = $sql->consulta($query);
+         while ($row = $sql->fetch_array($res)) { 
+            $Categoria=new Categoria;
+            $Categoria->idCategoria=$row['idCategoria'];
+            $Categoria->SubCategoria= new SubCategoria;
+            $Categoria->SubCategoria->idSubCategoria=$row['idSubCategoria'];
+            $Categoria->SubCategoria->descripcion=utf8_encode($row['descripcion']);
+         }
+        echo json_encode($Categoria);
+    break;
+
+    case 'ActualizaSubCate':
+      $sql = new MySQL();
+      $query = "UPDATE  SubCategoria  SET descripcion = '".utf8_decode($_POST['descripcionSubCate'])."',idCategoria =".$_POST['cbCate']." where idSubCategoria = ".$_POST['idSubCate'];
+      $sql->consulta($query);
+      $data['status']=1;
+      echo json_encode($data);
+    break;
+
+        case 'EliminarSubCate':
+
+        /* 
+        para eliminar las subcategorias que tenga esta Subcategoria al momento de eliminarla 
+        $sql = new MySQL();
+        $query = "DELETE FROM Categoria where idCategoria = ".$_POST['idCate'];
+        $sql->consulta($query);
+        */
+
+        $sql = new MySQL();
+        $query = "DELETE FROM SubCategoria where idSubCategoria = ".$_POST['idSubCate'];
+        $sql->consulta($query);
+        $data['status']=1;
+        echo json_encode($data);
 
 
-
+    break;
 
 
   	default:

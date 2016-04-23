@@ -1,10 +1,9 @@
-/*
+$("document").ready(function() {
 
-1.- correcto
-2.- info
--1.- Error
+    MiAlerta('datos actualizados exitosamente',-1);
+});
 
-*/
+
 
 function MiAlerta(msj,status)
 {
@@ -35,16 +34,13 @@ function MiAlerta(msj,status)
 }
 
 
-$("document").ready(function() {
 
-    MiAlerta('datos actualizados exitosamente',-1);
-});
 
 
 
 function CargarPagina(url)
 {
-    $("#contendio").load(url, function(response, status, xhr) {
+    $("#contenido").load(url, function(response, status, xhr) {
       if (status == "error") {
            alert(msg + xhr.status + " " + xhr.statusText);
            //console.log(msg + xhr.status + " " + xhr.statusText);

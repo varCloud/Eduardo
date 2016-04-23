@@ -46,7 +46,7 @@
         
     </head>
     <body class="page-header-fixed compact-menu page-horizontal-bar">
-
+ <?php include 'menuAdmin.php';?>
             <div class="page-inner">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb container">
@@ -184,7 +184,7 @@
         <div class="cd-overlay"></div>
 	
 
-        <!-- Javascripts -->
+        <!-- Javascripts 
         <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
         <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 
@@ -206,7 +206,15 @@
         <script src="assets/plugins/toastr/toastr.min.js"></script>
         <script src="assets/js/modern.min.js"></script>
         <script src="assets/js/pages/table-data.js"></script>
-        <script src="assets/js/jquery.fileupload.js"></script>
+        <script src="assets/js/jquery.fileupload.js"></script>-->
+
+
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+        <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+        <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script> 
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+        <script src="assets/plugins/bootstrap/js/bootstrap_select.js"></script> 
+        <script src="assets/plugins/datatables/js/jquery.datatables.min.js"></script>
         <script src="assets/js/info.js"></script>
   
        

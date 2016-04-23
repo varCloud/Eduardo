@@ -248,7 +248,7 @@ switch ($_POST["accion"]) {
       echo json_encode($data);
     break;
 
-        case 'EliminarSubCate':
+    case 'EliminarSubCate':
 
         /* 
         para eliminar las subcategorias que tenga esta Subcategoria al momento de eliminarla 
@@ -262,9 +262,10 @@ switch ($_POST["accion"]) {
         $sql->consulta($query);
         $data['status']=1;
         echo json_encode($data);
-
-
     break;
+
+
+
 
 
   	default:

@@ -1,6 +1,15 @@
 var urlImagenslider;
 
 $("document").ready(function() {
+
+
+
+
+$("#btnAddSlider").click(function() {
+    $('#modalAddSlider').modal('show');
+
+});
+
  $('#tableSlider').DataTable( {
         "paging":   false,
         "ordering": false,

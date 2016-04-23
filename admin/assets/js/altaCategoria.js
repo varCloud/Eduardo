@@ -3,6 +3,8 @@ var idCate; // este campo es global es para  realizar actualizaciones y se asign
 
 $("document").ready(function() {
 
+MiAlerta('datos actualizados exitosamente',1);
+
 ObtenerMenu();
 ObtenerCategorias();
 $("#btnAbreModalCate").click(function() {

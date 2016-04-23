@@ -4,6 +4,8 @@
   include '../Entidades/SubProducto.php';
   include_once '../Entidades/producto.php';
   include_once '../Entidades/articulo.php';
+  include_once '../Entidades/categoria.php';
+  include_once '../Entidades/subcategoria.php';
 
 switch ($_POST["accion"]) {
 
@@ -45,17 +47,17 @@ switch ($_POST["accion"]) {
   
     break;
 
-    case 'obtenerSubProductos':
+    case 'obtenerSubCategorias':
         $sql = new MySQL();
-        $query ="SELECT * FROM SubProductos where idProducto=".$_POST['idProd'];
+        $query ="SELECT * FROM SubCategoria where idCategoria=".$_POST['idCat'];
         $res = $sql->consulta($query);
         $lstSubProd = array();
         $indice =0;
         while ($row = $sql->fetch_array($res)) {
-          $s = new SubProducto;
-          $s->idSub = $row["idSubProducto"];  
-          $s->descripcion = $row["descripcion"]; 
-          $lstSubProd[$indice]=$s;
+            $sub=new SubCategoria;
+            $sub->idCategoria=$row['idSubCategoria'];
+            $sub->descripcion=utf8_encode($row['descripcion']);
+          $lstSubProd[$indice]=$sub;
           $indice ++;
         }
          echo json_encode($lstSubProd);

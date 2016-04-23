@@ -1,5 +1,7 @@
 var imagen;
+var idCat;
 $("document").ready(function() {
+
 
  $('#tblProductos').DataTable();
 
@@ -25,48 +27,55 @@ $("document").ready(function() {
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
 
     listarTodosSubProductos();   
-    ObtenerProductos();
+    ObtenerCategoria();
     $( "#cbProducto" ).change(function() {
-
-        ObtenerSubProductos($(this).val());
+        idCat=$(this).val();
+        obtenerSubCategorias($(this).val());
     });
 
     $("#Guardar").click(function() {
         GuardaProducto();
     });
 
+
+    $("#btnModalProd").click(function() {
+       $('#modalProd').modal('show');
+    });
+
+
 });
 
 
-function ObtenerProductos()
+function ObtenerCategoria()
 {
 
     $.ajax({
             type: "POST",
-            url: "../AccesoDatos/productoDAO.php",
-            data: "accion=obtenerProductos",
+            url: "../AccesoDatos/menuDAO.php",
+            data: "accion=ObtenerCategorias",
             async: false,
             dataType: "json",
             success: function(datos) {
                 //alert(datos[0].id)
                 var cb='';
                  $.each(datos, function(i, item) {
-                  cb+='<option value='+item.id+'>'+item.descripcion+'</option>';
+                  cb+='<option value='+item.Categoria.idCategoria+'>'+item.Categoria.descripcion+'</option>';
               });
                 $("#cbProducto").html(cb);
+                $('#cbProducto').selectpicker('refresh');
 
             }
         });
                                    
 }
 
-function ObtenerSubProductos(idProd)
+function obtenerSubCategorias(idCat)
 {
 
     $.ajax({
             type: "POST",
             url: "../AccesoDatos/productoDAO.php",
-            data: "accion=obtenerSubProductos&idProd="+idProd,
+            data: "accion=obtenerSubCategorias&idCat="+idCat,
             async: false,
             dataType: "json",
             success: function(datos) {
@@ -92,7 +101,7 @@ function GuardaProducto()
             dataType: "json",
             success: function(datos) {
                 alert(datos.status)
-                $('#myModal').modal('hide');
+                $('#modalProd').modal('hide');
             }
         });
 }

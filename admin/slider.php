@@ -12,7 +12,7 @@
         <meta name="keywords" content="admin,dashboard" />
         <meta name="author" content="Steelcoders" />
         
-        <!-- Styles -->
+        <!-- Styles 
         <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
         <link href="assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
         <link href="assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
@@ -30,7 +30,7 @@
         <link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"/>
           <link href="assets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css"/>  
         
-        <!-- Theme Styles -->
+        <!-- Theme Styles 
         <link href="assets/css/modern.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
         
@@ -46,7 +46,7 @@
         
     </head>
     <body class="page-header-fixed compact-menu page-horizontal-bar">
-
+         <!--
             <div class="page-inner">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb container">
@@ -58,14 +58,14 @@
                     <div class="container">
                         <h3>Agregar Imagen Slider</h3>
                     </div>
-                </div>
+                </div>-->
                 <div id="main-wrapper" class="container">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Agregar Imagen Slider</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalAddSlider">Agregar Imagen Slider</button>
+            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" id="btnAddSlider">Agregar Imagen Slider</button>
                                     <!-- Modal -->
                             <form id="formImgSlider" >
                                     <div class="modal fade" id="modalAddSlider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -222,7 +222,7 @@
         <div class="cd-overlay"></div>
 	
 
-        <!-- Javascripts -->
+        <!-- Javascripts 
         <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
         <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 
@@ -243,8 +243,15 @@
         <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="assets/plugins/toastr/toastr.min.js"></script>
         <script src="assets/js/modern.min.js"></script>
-        <script src="assets/js/pages/table-data.js"></script>
+        <script src="assets/js/pages/table-data.js"></script>-->
+
+        <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+        <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script> 
         <script src="assets/js/jquery.fileupload.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+        <script src="assets/plugins/bootstrap/js/bootstrap_select.js"></script> 
+        <script src="assets/plugins/datatables/js/jquery.datatables.min.js"></script>
+       
         <script src="assets/js/slider.js"></script>
   
        

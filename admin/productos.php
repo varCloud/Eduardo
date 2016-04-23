@@ -45,7 +45,7 @@
         
     </head>
     <body class="page-header-fixed compact-menu page-horizontal-bar">
-
+            <!-- SON LAS MIGAS DE LA PAGINA
             <div class="page-inner">
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb container">
@@ -58,17 +58,17 @@
                     <div class="container">
                         <h3>Datatables</h3>
                     </div>
-                </div>
+                </div>-->
                 <div id="main-wrapper" class="container">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Agregar Producto</h4>
                                 </div>
                                 <div class="panel-body">
-                                   <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#myModal">Agregar Producto</button> 
+                        <button type="button" class="btn btn-success m-b-sm"  id="btnModalProd">Agregar Producto</button> 
                                     <!-- Modal -->
                             <form id="formAltaItem" >
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="modalProd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -98,10 +98,12 @@
                                                     </div>
                                                     <div class="form-group">
                                                         
-                                                          <select id="cbProducto" name="cbProducto" class="selectpicker col-md-5" data-live-search="true" data-live-search-style="begins" title="Seleccione un Producto">
+                                                          <select id="cbProducto" name="cbProducto" class="selectpicker" data-live-search="true" data-width="100%" data-live-search-style="begins" title="Seleccione una Categoria">
                                                           </select>
-                                                          
-                                                          <select id="cbSubProducto" name="cbSubProducto" class="selectpicker col-md-6" data-live-search="true" data-live-search-style="begins" title="Seleccione un SubProducto">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    
+                                                          <select id="cbSubProducto" name="cbSubProducto" class="selectpicker" data-live-search="true" data-live-search-style="begins" data-width="100%" title="Seleccione una SubCategoria">
                                                           </select>                                                            
 
                                                     </div>
@@ -213,7 +215,7 @@
         <div class="cd-overlay"></div>
 	
 
-        <!-- Javascripts -->
+        <!-- Javascripts 
         <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
         <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 
@@ -233,8 +235,17 @@
         <script src="assets/plugins/x-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
         <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="assets/js/modern.min.js"></script>
-        <script src="assets/js/pages/table-data.js"></script>
+        <script src="assets/js/pages/table-data.js"></script> -->
+
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+        <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+        <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script> 
         <script src="assets/js/jquery.fileupload.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+        <script src="assets/plugins/bootstrap/js/bootstrap_select.js"></script> 
+        <script src="assets/plugins/datatables/js/jquery.datatables.min.js"></script>
+       
+
         <script src="assets/js/productos.js"></script>
   
        

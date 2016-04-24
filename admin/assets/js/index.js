@@ -1,6 +1,6 @@
 $("document").ready(function() {
 
-    MiAlerta('datos actualizados exitosamente',-1);
+    //MiAlerta('datos actualizados exitosamente',-1);
 });
 
 
@@ -13,7 +13,9 @@ function MiAlerta(msj,status)
             progressBar: false,
             showMethod: 'fadeIn',
             hideMethod: 'fadeOut',
-            timeOut: 5000
+            timeOut: 2000,
+            showDuration: 300,
+
         };
 
         switch(status)
@@ -30,7 +32,7 @@ function MiAlerta(msj,status)
                 toastr.error(msj);
             break;
         }
-    }, 1800); 
+    }, 100); 
 }
 
 

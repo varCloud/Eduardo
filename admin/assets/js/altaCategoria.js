@@ -2,9 +2,6 @@ var urlImagenslider;
 var idCate; // este campo es global es para  realizar actualizaciones y se asigna en ObtenerUnaCate
 
 $("document").ready(function() {
-
-MiAlerta('datos actualizados exitosamente',1);
-
 ObtenerMenu();
 ObtenerCategorias();
 $("#btnAbreModalCate").click(function() {

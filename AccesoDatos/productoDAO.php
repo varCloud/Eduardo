@@ -9,15 +9,15 @@
 
 switch ($_POST["accion"]) {
 
-  case 'listarSubProductos':
+    case 'listarSubProductos':
 
         $lstSubProductos = array();
         $sql = new MySQL();
-        $query = "SELECT relsub.*,s.descripcion AS descSub,p.descripcion AS descProd
-                  FROM relsubcategorias relsub 
-                  INNER JOIN Subcategoria s ON s.idSubCategoria = relsub.idSubCategoria
+        $query = "SELECT relsub.*,s.descripcion AS descSub,c.descripcion AS descProd
+                  FROM relSubCategoria relsub 
+                  INNER JOIN SubCategoria s ON s.idSubCategoria = relsub.idSubCategoria
                   INNER JOIN Categoria c ON c.idCategoria = relsub.idCategoria 
-                  WHERE relsub.idSubCategria =".$_POST["subproducto"]." AND relsub.idCategoria =".$_POST["producto"]."";
+                  WHERE relsub.idSubCategoria =".$_POST["subproducto"]." AND relsub.idCategoria =".$_POST["producto"]."";
         $res = $sql->consulta($query);
         $contador = 0;
         $indice=0;
@@ -44,7 +44,6 @@ switch ($_POST["accion"]) {
             $indice ++;
           }
           echo json_encode($Producto);
-  
     break;
 
     case 'obtenerSubCategorias':
@@ -55,16 +54,15 @@ switch ($_POST["accion"]) {
         $indice =0;
         while ($row = $sql->fetch_array($res)) {
             $sub=new SubCategoria;
-            $sub->idCategoria=$row['idSubCategoria'];
+            $sub->idSubCategoria=$row['idSubCategoria'];
             $sub->descripcion=utf8_encode($row['descripcion']);
           $lstSubProd[$indice]=$sub;
           $indice ++;
         }
          echo json_encode($lstSubProd);
-
     break;
 
-      case 'obtenerProductos':
+    case 'obtenerProductos':
         $sql = new MySQL();
         $query = "SELECT *  FROM Productos";
         $res = $sql->consulta($query);
@@ -82,7 +80,7 @@ switch ($_POST["accion"]) {
 
     case 'GuardaProducto':
         $sql = new MySQL();
-  $query="INSERT INTO CatSubProductos VALUES('',".$_POST['cbSubProducto'].",".$_POST['cbProducto'].",'".$_POST['desc']."','".$_POST['urlImagen']."',".$_POST['costo'].")";
+     $query="INSERT INTO relSubCategoria VALUES('',".$_POST['cbSubCate'].",".$_POST['cbCate'].",'".$_POST['desc']."','".$_POST['costo']."','".$_POST['urlImagen']."')";
   //echo "query".$query;
         $res = $sql->consulta($query);
           $data['status']=1;
@@ -90,40 +88,119 @@ switch ($_POST["accion"]) {
          echo json_encode($data);
     break;
 
+
+
+  case 'ObtenerUnProducto':
+
+        $lstSubProductos = array();
+        $sql = new MySQL();
+        $query = "SELECT relsub.*,s.descripcion AS descSubCat,c.descripcion AS descCat,c.idCategoria,s.idSubCategoria
+                  FROM relSubCategoria relsub 
+                  INNER JOIN SubCategoria s ON s.idSubCategoria = relsub.idSubCategoria
+                  INNER JOIN Categoria c ON c.idCategoria = relsub.idCategoria
+                  WHERE relsub.id=".$_POST['idProd'];
+        $res = $sql->consulta($query);
+        $contador = 0;
+        $indice=0;
+        while ($row = $sql->fetch_array($res)) {
+
+           $catego = new Categoria;
+           $catego->idCategoria=$row['idCategoria'];
+           $catego->descripcion=$row['descCat'];
+           $catego->SubCategoria =  new Subcategoria;
+           $catego->SubCategoria->idSubCategoria=$row['idSubCategoria'];
+           $catego->SubCategoria->descripcion=$row['descSubCat'];
+           $catego->SubCategoria->Articulo = new Articulo;
+           $catego->SubCategoria->Articulo->id=$row['id'];
+           $catego->SubCategoria->Articulo->descripcion=$row['descripcion'];
+           $catego->SubCategoria->Articulo->img=$row['img'];
+           $catego->SubCategoria->Articulo->costo=$row['costo'];
+           $catego;
+          }
+          echo json_encode($catego);
+    break;
+
+
   case 'listarTodosSubProductos':
 
         $lstSubProductos = array();
         $sql = new MySQL();
-        $query = "SELECT relsub.*,s.descripcion AS descSub,p.descripcion AS descProd
-                  FROM catsubproductos relsub 
-                  INNER JOIN subproductos s ON s.idSubProducto = relsub.idSubProducto
-                  INNER JOIN productos p ON p.idProducto=relsub.idProducto";
+        $query = "SELECT relsub.*,s.descripcion AS descSubCat,c.descripcion AS descCat,c.idCategoria,s.idSubCategoria
+                  FROM relSubCategoria relsub 
+                  INNER JOIN SubCategoria s ON s.idSubCategoria = relsub.idSubCategoria
+                  INNER JOIN Categoria c ON c.idCategoria = relsub.idCategoria";
         $res = $sql->consulta($query);
         $contador = 0;
         $indice=0;
-
-        $Producto =  array();
-       // $Producto->SubProd = new SubProducto;
-       // $Producto->SubProd->Articulo = array();
         while ($row = $sql->fetch_array($res)) {
-              $Articulo = new Articulo;  
-              $Articulo ->img= $row["imagen"];
-              $Articulo ->descripcion= $row["descripcion"];
-              $Articulo ->id= $row["idCatSubProducto"];
-              $Articulo ->costo= $row["costo"];
-              $s =  new SubProducto;
-              $s->idSub = $row["idSubProducto"];  
-              $s->descripcion = $row["descSub"]; 
-              $s->Articulo =  $Articulo;
-              $Producto[$indice]["id"]=$row["idProducto"];
-              $Producto[$indice]["descripcion"]=$row["descProd"];
-              $Producto[$indice]["SubProd"] = $s;
-            $indice ++;
+
+           $catego = new Categoria;
+           $catego->idCategoria=$row['idCategoria'];
+           $catego->descripcion=$row['descCat'];
+           $catego->SubCategoria =  new Subcategoria;
+           $catego->SubCategoria->idSubCategoria=$row['idSubCategoria'];
+           $catego->SubCategoria->descripcion=$row['descSubCat'];
+           $catego->SubCategoria->Articulo = new Articulo;
+           $catego->SubCategoria->Articulo->id=$row['id'];
+           $catego->SubCategoria->Articulo->descripcion=$row['descripcion'];
+           $catego->SubCategoria->Articulo->img=$row['img'];
+           $catego->SubCategoria->Articulo->costo=$row['costo'];
+           $data[$indice]= $catego;
+           $indice ++;
           }
-          echo json_encode($Producto);
-  
+          echo json_encode($data);
     break;
   
+
+
+    case 'ActualizaProd':
+      $sql = new MySQL();
+      $query = "UPDATE  relSubCategoria  SET descripcion = '".utf8_decode($_POST['desc'])."' , idCategoria =".$_POST['cbCate'].",idSubCategoria =".$_POST['cbSubCate'].", costo='".$_POST['costo']."',img='".$_POST['urlImagen']."'   where id = ".$_POST['idProd'];
+
+      $sql->consulta($query);
+      $data['status']=1;
+      echo json_encode($data);
+    break;
+
+
+
+
+  case 'EliminarImagen':
+
+   $ruta="../".$_POST['urlImagen'];
+   $rutaTemp="../".$_POST['ImagenTemporal'];
+   $status = 0;
+   
+      if(file_exists($rutaTemp))
+      {
+         $status++;
+         unlink($rutaTemp);
+      }
+
+      if(file_exists($ruta))
+      {
+         $status++;
+         unlink($ruta);
+      }
+
+//PREGUNTO SI ES ACTUALIZACION SI ES, NO VA A AUMENTAR ESTATUS
+//CUANDO TRATE DE ELIMINAR EL ARCHIVO TEMPORAL
+//POR ESA RAZON LO ELIMINO LO CORRECTO SERIA ELIMINAR TAMBIEN EL ARCHIVO TEMPORAL
+
+
+      if($_POST['esActualizacion'])
+      {
+         $status++;
+          if(!file_exists($ruta))
+             $status++;
+      }
+
+      
+   $data['status']=$status;
+        echo json_encode($data);
+
+
+  break;
   
   default:
     # code...

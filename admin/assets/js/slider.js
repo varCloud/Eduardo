@@ -10,13 +10,6 @@ $("#btnAddSlider").click(function() {
 
 });
 
- $('#tableSlider').DataTable( {
-        "paging":   false,
-        "ordering": false,
-        "info":     false
-        });
-
-
  ObtenerSliders();
  $('#fileuploadSlider').fileupload({
         url: 'php/uploadImages.php',
@@ -74,6 +67,7 @@ function ObtenerSliders()
                     cuerpo +="</button></td></tr>";
                 });
                 $("#cuerpoSlider").html(cuerpo);
+                InicializaTabla();
             }
         });
                                    
@@ -110,8 +104,13 @@ function GuardarSlider()
             async: false,
             dataType: "json",
             success: function(datos) {
-                alert(datos.status)
-                $('#modalAddSlider').modal('hide');
+                if(datos.status ==1)
+                {
+                     MiAlerta("Imagen agregada exitosamente",1);
+                    $('#modalAddSlider').modal('hide');
+                }
+                else
+                    MiAlerta("Ocurrio un error al agregar la imagen",-1);
             }
         });
 }
@@ -129,11 +128,42 @@ function EliminarImgSlider()
                if(datos == 1)
                 {
                     $('#modalAddSlider').modal('hide');
+                    MiAlerta("Imagen eliminada exitosamente",1);
                     $("#eliminarImagenSlide").css('display','none');
                     ObtenerSliders();
                 }
+                else
+                     MiAlerta("Ocurrio un error al eliminar",-1);
             }
         });
 }
+
+function LimpiaTabla()
+{
+   $('#tableSlider').DataTable().clear().destroy();
+}
+
+function InicializaTabla()
+{
+    
+     $('#tableSlider').DataTable({
+      "language": {
+            "lengthMenu": "Muestra _MENU_ registros por pagina",
+            "zeroRecords": "No existe registro - sorry",
+            "info": "Pagina _PAGE_ de _PAGES_",
+            "infoEmpty": "No existe informacion para mostrar",
+            "infoFiltered": "(filtered from _MAX_ total records)",
+            "search":         "Buscar:",
+            "paginate": {
+                            "first":      "First",
+                            "last":       "Last",
+                            "next":       "Siguiente",
+                            "previous":   "Anterior"
+                        },
+        },
+        "bDestroy": true, // es necesario para poder ejecutar la funcion LimpiaTabla()
+     });
+}
+
 
 

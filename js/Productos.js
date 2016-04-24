@@ -1,21 +1,7 @@
 
-$("document").ready(function() {
-/*    $("a#agregarProducto").click(function(event) {
-        var id = $(this).attr("itemid");
-        $.ajax({
-            type: "POST",
-            url: "panel/operacionesCarrito.php",
-            data: "id_producto=" + id + "&operacion=agregarCarrito",
-            async: false,
-            success: function(datos) {
-                alert("Articulo agregado a carrito");
-                cargarCarrito();
 
-            }
-        });
-        return false;
-    });
-    cargarCarrito();*/CargarProductos();
+$("document").ready(function() {
+    CargarProductos();
 });
 
 function CargarProductos() {
@@ -37,7 +23,7 @@ function CargarProductos() {
                   //alert(item.Producto.descripcion);
                   data+='<div class="cbp-item identity logos">';
                   data+='<a href="'+item.img+'" class="cbp-caption cbp-lightbox" data-title="'+item.descripcion+'<br>$'+item.costo+'">';
-                  data+='  <div class="cbp-caption-defaultWrap"> <img src="'+item.img+'" alt=""> </div>';
+                  data+='  <div class="cbp-caption-defaultWrap"> <img src="'+item.img+'" alt="'+item.descripcion+'"  style="width: 200px;height: 200px"> </div>';
                   data+='      <div class="cbp-caption-activeWrap">';
                   data+='        <div class="cbp-l-caption-alignLeft">';
                   data+='          <div class="cbp-l-caption-body">';

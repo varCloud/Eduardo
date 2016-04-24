@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <?php 
- echo"<input type='hidden'  id='campo' value ='".$_GET["InformacionEmpresa"]."'>";
+ echo"<input type='hidden'  id='campo' value ='mision'>";
  ?>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Host Linea - Web Hosting, Responsive HTML5 Template</title>
+<title>Mision</title>
 <meta name="keywords" content="" />
 <meta name="description" content="Host Linea HTML5 Template">
 <meta name="author" content="">
@@ -132,8 +132,11 @@
     slider.control('slideinfo',{insertTo:'#staff-info'});
      
 </script> 
+
+
 <script src="js/functions/functions.js"></script>
- <script src="js/InformacionEmpresa.js"></script>
-<script src="js/index.js"></script> 
+<script src="js/menu.js"></script> 
+<script src="js/InformacionEmpresa.js"></script>
+
 
 </html>

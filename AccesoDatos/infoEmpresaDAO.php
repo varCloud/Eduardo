@@ -5,16 +5,13 @@ switch ($_POST["accion"]) {
   case "InformacionEmpresa":
 
             $sql = new MySQL();
-            $query = "SELECT ".$_POST["campo"]." FROM informacion";
+            $query = "SELECT ".$_POST["campo"]." FROM Informacion";
             $res = $sql->consulta($query);
                
             while ($row = $sql->fetch_array($res)) {
                      $data["info"]= utf8_encode($row[0]);
               }
         
-          //$data["infor"]+="sds";
-         // $data["infor1"]="sds";
-         // $data["infor2"]="sds";
           $query="";
           echo json_encode($data);
     break;

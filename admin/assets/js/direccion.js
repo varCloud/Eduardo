@@ -5,14 +5,22 @@ $("document").ready(function() {
         $('#tblDireccion').DataTable( {
         "paging":   false,
         "ordering": false,
-        "info":     false
+        "info":     false,
+        "bFilter": false,
         });
 
         obternerDireccion();
+
+       
+     $("#btnModalDireccion").click(function() {
+        $('#modalDireccion').modal('show');
+
+      });
+
         $("#GuardarDireccion").click(function() {
             actualizarDireccion();
             obternerDireccion();
-        });
+           });
     
  
 });
@@ -67,9 +75,27 @@ function actualizarDireccion()
             async: false,
             dataType: "json",
             success: function(datos) {
-                alert(datos.status)
-                $('#modalDireccion').modal('hide');
+                if(datos.status==1)
+                {
+                     MiAlerta("Informacion Actualizada",1);
+                     $('#modalDireccion').modal('hide');
+                }else
+                 MiAlerta("Ocurrio un error al actualizar",-1);
+               
             }
         });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

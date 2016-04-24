@@ -3,13 +3,21 @@ $("document").ready(function() {
         $('#tblInfoEmpresa').DataTable( {
         "paging":   false,
         "ordering": false,
-        "info":     false
+        "info":     false,
+        "bFilter": false,
         });
 
         obterneVisionMision();
         $("#GuardarInfo").click(function() {
             actualizarMisionVision();
         });
+
+        $("#btnAbremodalInfoEmp").click(function() {
+             $('#modalInfoEmp').modal('show');
+         
+        });
+
+        
 });
 
 
@@ -42,8 +50,10 @@ function actualizarMisionVision()
             success: function(datos) {
              if(datos.status == 1)
              {
-                $('#modalInfoEmpresa').modal('hide');
-             }
+                 MiAlerta("Informacion Actualizada",1);
+                $('#modalInfoEmp').modal('hide');
+             }else
+              MiAlerta("Ocurrio un error al actualizar",1);
                 
             }
         });

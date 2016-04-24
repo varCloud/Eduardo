@@ -12,7 +12,7 @@
         <meta name="keywords" content="admin,dashboard" />
         <meta name="author" content="Steelcoders" />
         
-        <!-- Styles -->
+        <!-- Styles 
         <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
         <link href="assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
         <link href="assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
@@ -30,7 +30,7 @@
         <link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"/>
           <link href="assets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css"/>  
         
-        <!-- Theme Styles -->
+        <!-- Theme Styles 
         <link href="assets/css/modern.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
         
@@ -46,8 +46,9 @@
         
     </head>
     <body class="page-header-fixed compact-menu page-horizontal-bar">
- <?php include 'menuAdmin.php';?>
+
             <div class="page-inner">
+            <!--
                 <div class="page-breadcrumb">
                     <ol class="breadcrumb container">
                         <li><a href="index.php">Inicio</a></li>
@@ -58,17 +59,17 @@
                     <div class="container">
                         <h3>Entidad Corportavita</h3>
                     </div>
-                </div>
+                </div>-->
                 <div id="main-wrapper" class="container">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Actualizar Entidad Corporativa</h4>
                                 </div>
                                 <div class="panel-body">
-            <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#modalInfoEmpresa">Actualiar Mision y Vision</button>
+            <button type="button" class="btn btn-success m-b-sm" id="btnAbremodalInfoEmp">Actualiar Mision y Vision</button>
                                     <!-- Modal -->
                             <form id="formInfoEmpresa" >
-                                    <div class="modal fade" id="modalDireccion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="modalInfoEmp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">

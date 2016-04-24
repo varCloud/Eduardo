@@ -2,9 +2,8 @@
 <!DOCTYPE html>
 <html>
 <?php
- echo"<input type='hidden'  id='producto' value ='".$_GET["prod"]."'>";
- echo"<input type='hidden'  id='subproducto' value ='".$_GET["subproducto"]."'>";
-
+ echo"<input type='text'  id='producto' value ='".$_GET["prod"]."'>";
+ echo"<input type='text'  id='subproducto' value ='".$_GET["subproducto"]."'>";
 ?>
 <head>
 <meta charset="utf-8">
@@ -80,7 +79,7 @@
           </div>
           <div class="col-md-8 text-right">
             <div class="pagenation_links">
-              <a href="index.php">INICIO</a><i> / </i>
+              <a href="index.php">Inicio</a><i> / </i>
               <a href="index.php" id="HeaderProd"></p>  </a> <i> / </i> <span id="HeaderSubP"></span>
             </div>
           </div>
@@ -90,9 +89,7 @@
   </section>
   <div class="clearfix"></div>
   <!--end section-->
-  
-  
-  <section class="sec-padding">
+
       <div class="container">
         <div class="row">
 
@@ -109,8 +106,13 @@
           </div>
           </div>
         </div>
+
+        <br/>
+        <br/>
+        <br/>
+          <div class="clearfix"></div>
       </div>
-  </section>
+
 
     
     <a href="#" class="scrollup"></a><!-- end scroll to top of the page--> 
@@ -134,7 +136,9 @@
 <script type="text/javascript" src="js/cubeportfolio/jquery.cubeportfolio.min.js"></script> 
 <script type="text/javascript" src="js/cubeportfolio/main-four-col.js"></script> 
 <script src="js/functions/functions.js"></script>
+
 <script src="js/Productos.js"></script>
+<script src="js/menu.js"></script>
 
 </body>
 

@@ -4,7 +4,7 @@
 
 <html>
 <?php 
- echo"<input type='hidden'  id='campo' value ='".$_GET["InformacionEmpresa"]."'>";
+ echo"<input type='hidden'  id='campo' value ='vision'>";
  ?>
 <head>
 <meta charset="utf-8">
@@ -133,7 +133,7 @@
 </script> 
 <script src="js/functions/functions.js"></script>
 <script src="js/InformacionEmpresa.js"></script>
-<script src="js/index.js"></script> 
+<script src="js/menu.js"></script> 
 </body>
 
 </html>

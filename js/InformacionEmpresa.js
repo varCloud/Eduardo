@@ -3,7 +3,7 @@ $("document").ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "AccesoDatos/infoEmpresaDAO.php",
+            url: "AccesoDatos/infoDAO.php",
             data: "accion=InformacionEmpresa&campo="+$("#campo").val(),
             async: false,
             dataType: "json",

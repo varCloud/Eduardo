@@ -77,7 +77,7 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="form-group">                                               
-                                                         <div class="divInput">
+                                                         <div class="divInput" id="divInput">
                                                           <input id="fileupload" type="file" name="files[]" class="InputFile"  />
                                                           <i class="glyphicon glyphicon-upload"></i>
                                                           <span>Seleccione una Imagen</span>
@@ -91,19 +91,22 @@
                                                         </div>
 
                                                         <div style="position: relative; text-align: center; width: 200px;height: 200px;margin: auto;" align="center">
-                                                             <img id="VistaPrevia" name="VistaPrevia" class="form-control" style="text-align: center; width: 200px;height: 200px" />
+                                                    <img id="VistaPrevia" name="VistaPrevia" class="form-control" style="text-align: center; width: 200px;height: 200px" />
                                                              <div id="files" class="files"></div>
-                                                        </div>
+                                                       
                                                         <br>
+                                                            <button  type="button" id="eliminarImagenProd" class="btn btn-danger">Eliminar Imagen</button>
+                                                       </div>
+                                                       <br><br><br><br>
                                                     </div>
                                                     <div class="form-group">
                                                         
-                                                          <select id="cbProducto" name="cbProducto" class="selectpicker" data-live-search="true" data-width="100%" data-live-search-style="begins" title="Seleccione una Categoria">
+                                                          <select id="cbCate" name="cbCate" class="selectpicker" data-live-search="true" data-width="100%" data-live-search-style="begins" title="Seleccione una Categoria">
                                                           </select>
                                                     </div>
                                                     <div class="form-group">
                                                     
-                                                          <select id="cbSubProducto" name="cbSubProducto" class="selectpicker" data-live-search="true" data-live-search-style="begins" data-width="100%" title="Seleccione una SubCategoria">
+                                                          <select id="cbSubCate" name="cbSubCate" class="selectpicker" data-live-search="true" data-live-search-style="begins" data-width="100%" title="Seleccione una SubCategoria">
                                                           </select>                                                            
 
                                                     </div>
@@ -111,12 +114,14 @@
                                                             <input type="text" id="desc" name="desc" class="form-control" placeholder="descripcion" required>
                                                         </div>
                                                            <div class="form-group">
-                                                            <input type="text" id="desc" class="form-control" placeholder="costo" name="costo" id="costo" required>
+                                                            <input type="text"  class="form-control" placeholder="costo" name="costo" id="costo" required>
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer">
+                                                    <button type="reset" id="resetProd">reset</button>
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                                     <button type="button" id="Guardar" class="btn btn-success">Guardar</button>
+                                                     <button type="button" id="ActualizaProd" class="btn btn-success">Actualizar</button>
                                                 </div>
                                             </div>
                                         </div>

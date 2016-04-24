@@ -1,33 +1,18 @@
 // tipo menu 1  como el del blob
 //tipo menu 2 como el del productos
 $("document").ready(function() {
-/*    $("a#agregarProducto").click(function(event) {
-        var id = $(this).attr("itemid");
-        $.ajax({
-            type: "POST",
-            url: "panel/operacionesCarrito.php",
-            data: "id_producto=" + id + "&operacion=agregarCarrito",
-            async: false,
-            success: function(datos) {
-                alert("Articulo agregado a carrito");
-                cargarCarrito();
 
-            }
-        });
-        return false;
-    });
-    cargarCarrito();*/
     obtenerMenu();
     ObtenerImgsSlider();
 });
-
+/*
 function obtenerMenu()
 {
     var contadorRow =0;
     $.ajax({
             type: "POST",
             url: "AccesoDatos/menuDAO.php",
-            data: "accion=cargarMenui",
+            data: "accion=cargarMenu",
             async: false,
             dataType: "json",
             success: function(datos) {
@@ -50,7 +35,7 @@ function obtenerMenu()
                             {
                                 if(contadorRow == 0)
                                     menu += '<div class="row">';
-//ESTA VALIDACION ES PARA ACOMODAR  UN ITEM DEL MENU CUANDO TIENE MAS DE 17 CARACTERES
+//              ESTA VALIDACION ES PARA ACOMODAR  UN ITEM DEL MENU CUANDO TIENE MAS DE 17 CARACTERES
                                 if(cat.descripcion.length >=18)
                                    menu+='<ul class="col-sm-6 col-md-3 list-unstyled ">';
                                else
@@ -62,7 +47,7 @@ function obtenerMenu()
                                 if(cat.SubCategoria.length >0)
                                 {
                                       $.each(cat.SubCategoria, function(i, sub) {
-                                        menu+='<li><a href="about.html"><i class="fa fa-angle-right"></i> &nbsp; '+sub.descripcion+'</a></li>';
+                                        menu+='<li><a href="#"  onclick="CargarProductos('+cat.idCategoria+','+sub.idSubCategoria+')" ><i class="fa fa-angle-right"></i> &nbsp; '+sub.descripcion+'</a></li>';
                                       });
                                 }
                                  menu+=' </ul>';
@@ -76,7 +61,10 @@ function obtenerMenu()
                              }
                              else
                              {
-                                menu+='<li> <a href="portfolio-one.html">'+cat.descripcion+'</a> </li>';
+                                //Cuando el menu es vertical o es tipo 1  no cargara ningun producto por lo tanto
+                                //el archivo que cargara debera llamarse igual que su descripcion
+                                //por ejmplo MISION.php , Vision.php y asi 
+                                menu+='<li> <a href="'+cat.descripcion+'.php">'+cat.descripcion+'</a> </li>';
                              }
                          });
 
@@ -128,7 +116,7 @@ function obtenerMenu()
     
 
  }
-
+*/
 function CargarPagina(url)
 {
 	$("#Contendor").load(url, function(response, status, xhr) {
@@ -138,11 +126,11 @@ function CargarPagina(url)
 	  }
 	});
 }
-
+/*
 function CargarProductos(producto,sub) {
 	window.location.replace("http://localhost:8888/Eduardo/productos.php?prod="+producto+"&subproducto="+sub);
 }
-
+*/
 
 function ObtenerImgsSlider()
 {

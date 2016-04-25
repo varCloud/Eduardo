@@ -24,7 +24,7 @@
 	        <div class="navbar-header">
 	          <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 	             <a href="index.php" class="navbar-brand">
-                  <img src="images/logo/logo.png" alt="">
+                  <img src="images/logo/fondoBlanco.png" alt=""  style="width: 170px; height: 78px; margin-top: -25px;">
                </a> 
            </div>
 	        <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">

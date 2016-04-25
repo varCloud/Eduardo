@@ -1,4 +1,10 @@
+<?php
 
+session_start();
+if(isset($_SESSION['usuario']))
+{
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -257,6 +263,10 @@
 
         
     </body>
-
-<!-- Mirrored from lambdathemes.in/admin2/table-data.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2015 02:27:35 GMT -->
 </html>
+
+<?php
+}else
+    header("Location: login.html");
+    
+?>

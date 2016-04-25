@@ -1,11 +1,18 @@
+<?php
+
+session_start();
+if(isset($_SESSION['usuario']))
+{
+    
+?>
+
 <!DOCTYPE html>
 <html>
     
-<!-- Mirrored from lambdathemes.in/admin2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2015 02:22:58 GMT -->
 <head>
         
         <!-- Title -->
-        <title>Modern | Admin Dashboard Template</title>
+        <title></title>
         
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">
@@ -136,7 +143,7 @@
                         </a>
                     </div>
                     <div class="logo-box">
-                        <a href="index.html" class="logo-text"><span>Modern</span></a>
+                        <a href="index.php" class="logo-text"><span>Blue Cloud</span></a>
                     </div><!-- Logo Box -->
                     <div class="search-button">
                         <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
@@ -147,6 +154,7 @@
                                 <li>		
                                     <a href="javascript:void(0);" class="waves-effect waves-button waves-classic sidebar-toggle"><i class="fa fa-bars"></i></a>
                                 </li>
+                                <!--
                                 <li>
                                     <a href="#cd-nav" class="waves-effect waves-button waves-classic cd-nav-trigger"><i class="fa fa-diamond"></i></a>
                                 </li>
@@ -192,12 +200,13 @@
                                         </li>
                                         <li class="no-link"><button class="btn btn-default reset-options">Reset Options</button></li>
                                     </ul>
-                                </li>
+                                </li>-->
                             </ul>
-                            <ul class="nav navbar-nav navbar-right">
+                            <ul class="nav navbar-nav navbar-right">  <!-- MENU DERECHA-->
+                                <!-- ICONO DE CORREOS
                                 <li>	
                                     <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
-                                </li>
+                                </li>  EL ICONO DE CORREOS
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge badge-success pull-right">4</span></a>
                                     <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
@@ -257,6 +266,9 @@
                                         <li class="drop-all"><a href="#" class="text-center">All Messages</a></li>
                                     </ul>
                                 </li>
+                                      FIN DEL ICONO DE CORREOS-->
+
+                                <!-- ICONO DE ALERTAS 
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-success pull-right">3</span></a>
                                     <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
@@ -288,26 +300,22 @@
                                         </li>
                                         <li class="drop-all"><a href="#" class="text-center">All Tasks</a></li>
                                     </ul>
-                                </li>
+                                </li> FIN DEL ICONO DE CORREOS-->
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
-                                        <span class="user-name">David<i class="fa fa-angle-down"></i></span>
-                                        <img class="img-circle avatar" src="assets/images/avatar1.png" width="40" height="40" alt="">
+                                        <span class="user-name">ING.EDUARDO<i class="fa fa-angle-down"></i></span>
+                                        <img class="img-circle avatar" src="assets/images/logo/fondoazul.png" width="40" height="40" alt="">
                                     </a>
                                     <ul class="dropdown-menu dropdown-list" role="menu">
-                                        <li role="presentation"><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
-                                        <li role="presentation"><a href="calendar.html"><i class="fa fa-calendar"></i>Calendar</a></li>
-                                        <li role="presentation"><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox<span class="badge badge-success pull-right">4</span></a></li>
-                                        <li role="presentation" class="divider"></li>
-                                        <li role="presentation"><a href="lock-screen.html"><i class="fa fa-lock"></i>Lock screen</a></li>
-                                        <li role="presentation"><a href="login.html"><i class="fa fa-sign-out m-r-xs"></i>Log out</a></li>
+                                        <li role="presentation"><a href="php/logout.php"><i class="fa fa-sign-out m-r-xs"></i>Cerrar Sesion</a></li>
                                     </ul>
                                 </li>
+                                <!--
                                 <li>
                                     <a href="javascript:void(0);" class="waves-effect waves-button waves-classic" id="showRight">
                                         <i class="fa fa-comments"></i>
                                     </a>
-                                </li>
+                                </li>-->
                             </ul><!-- Nav -->
                         </div><!-- Top Menu -->
                     </div>
@@ -317,18 +325,18 @@
                 <div class="page-sidebar-inner">
                     <ul class="menu accordion-menu">
                         <li class="nav-heading"><span>Navigation</span></li>
-                        <li class="active"><a href="#"  onclick='CargarPagina("infoEmpresa.php")'><span class="menu-icon icon-speedometer"></span><p>Mision y Vision</p></a></li>
+                        <li class="active"><a href="#"  onclick='CargarPagina("infoEmpresa.php")'><span class="menu-icon icon-user"></span><p>Mision y Vision</p></a></li>
                         <li><a href="#" onclick='CargarPagina("direccion.php")' ><span class="menu-icon icon-user"></span><p>Direccion</p></a></li>
                         <li class="droplink"><a href="#"  onclick='CargarPagina("altaMenu.php")' ><span class="menu-icon icon-envelope-open"></span><p>Menu</p><span class="arrow"></span></a>
-                            <ul class="sub-menu">
+                          <!--  <ul class="sub-menu">
                                 <li><a href="inbox.html">Inbox</a></li>
                                 <li><a href="message-view.html">View Message</a></li>
                                 <li><a href="compose.html">Compose</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li class="nav-heading"><span>Features</span></li>
                         <li class="droplink"><a href="#"  onclick='CargarPagina("altaCategoria.php")' ><span class="menu-icon icon-briefcase"></span><p>Categoria</p><span class="arrow"></span></a>
-                            <ul class="sub-menu">
+                              <!--  <ul class="sub-menu">
                                 <li><a href="ui-alerts.html">Alerts</a></li>
                                 <li><a href="ui-buttons.html">Buttons</a></li>
                                 <li><a href="ui-icons.html">Icons</a></li>
@@ -342,26 +350,26 @@
                                 <li><a href="ui-sliders.html">Sliders</a></li>
                                 <li><a href="ui-nestable.html">Nestable</a></li>
                                 <li><a href="ui-tree-view.html">Tree View</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="droplink"><a href="#"  onclick='CargarPagina("altaSubCategoria.php")' ><span class="menu-icon icon-layers"></span><p>SubCategoria</p><span class="arrow"></span></a>
-                            <ul class="sub-menu">
+                               <!-- <ul class="sub-menu">
                                 <li><a href="layout-blank.html">Blank Page</a></li>
                                 <li><a href="layout-fixed-sidebar.html">Fixed Menu</a></li>
                                 <li><a href="layout-static-header.html">Static Header</a></li>
                                 <li><a href="layout-collapsed-sidebar.html">Collapsed Sidebar</a></li>
                                 <li><a href="layout-large-menu.html">Large Menu</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li class="droplink"><a href="#"  onclick='CargarPagina("slider.php")'  ><span class="menu-icon icon-grid"></span><p>Slider Principal</p><span class="arrow"></span></a>
-                            <ul class="sub-menu">
+                               <!-- <ul class="sub-menu">
                                 <li><a href="table-static.html">Static Tables</a></li>
                                 <li><a href="table-responsive.html">Responsive Tables</a></li>
                                 <li><a href="table-data.html">Data Tables</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li class="droplink"><a href="#"  onclick='CargarPagina("productos.php")'  ><span class="menu-icon icon-note"></span><p>Productos</p><span class="arrow"></span></a>
-                            <ul class="sub-menu">
+                              <!--  <ul class="sub-menu">
                                 <li><a href="form-elements.html">Form Elements</a></li>
                                 <li><a href="form-wizard.html">Form Wizard</a></li>
                                 <li><a href="form-upload.html">File Upload</a></li>
@@ -369,8 +377,9 @@
                                 <li><a href="form-image-zoom.html">Image Zoom</a></li>
                                 <li><a href="form-select2.html">Select2</a></li>
                                 <li><a href="form-x-editable.html">X-editable</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
+                        <!--
                         <li class="droplink"><a href="#"><span class="menu-icon icon-bar-chart"></span><p>Charts</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="charts-sparkline.html">Sparkline</a></li>
@@ -545,6 +554,10 @@
        
         
     </body>
-
-<!-- Mirrored from lambdathemes.in/admin2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Aug 2015 02:24:04 GMT -->
 </html>
+
+<?php
+}else
+    header("Location: login.html");
+    
+?>

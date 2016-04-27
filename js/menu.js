@@ -25,7 +25,8 @@ function obtenerMenu()
                         
                      }else
                      {
-                        menu+='<li class="dropdown"> <a href="index.php" class="dropdown-toggle">'+item.descripcion+'</a>';
+
+                        menu+='<li class="dropdown"> <a href="'+(item.descripcion == "Contactanos" ? "contactanos.php" :"index.php" )+'" class="dropdown-toggle">'+item.descripcion+'</a>';
                         menu+='<ul class="dropdown-menu" role="menu">';
                      }
                          $.each(item.Categoria, function(i, cat) {

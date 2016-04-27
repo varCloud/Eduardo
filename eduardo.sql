@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `categoria`
 --
 
-CREATE TABLE `categoria` (
+CREATE TABLE `Categoria` (
   `idCategoria` int(11) NOT NULL,
   `idMenu` int(11) DEFAULT NULL,
   `descripcion` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL
@@ -36,7 +36,7 @@ CREATE TABLE `categoria` (
 -- Volcado de datos para la tabla `categoria`
 --
 
-INSERT INTO `categoria` (`idCategoria`, `idMenu`, `descripcion`) VALUES
+INSERT INTO `Categoria` (`idCategoria`, `idMenu`, `descripcion`) VALUES
 (1, 1, 'Mision'),
 (2, 1, 'Vision'),
 (3, 2, 'Ensamble'),

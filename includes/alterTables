@@ -1,0 +1,11 @@
+
+
+
+RENAME TABLE informacion TO Informacion  ;
+RENAME TABLE categoria TO Categoria  ;
+RENAME TABLE menu TO Menu  ;
+RENAME TABLE subcategoria TO SubCategoria  ;
+RENAME TABLE catsliders TO CatSliders  ;
+RENAME TABLE direccion TO Direccion  ;
+RENAME TABLE productos TO Productos  ;
+RENAME TABLE relsubcategorias TO relSubCategoria  ;

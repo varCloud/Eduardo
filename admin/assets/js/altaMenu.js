@@ -25,6 +25,10 @@ $("#ActualizarItemMenu").click(function() {
             ObtenerMenu();
         });
 
+
+
+  $('#cbTipoMenu').selectpicker('refresh');
+
 });
 
 function ObtenerMenu()
@@ -71,7 +75,7 @@ function ObtenerUnMenu(idMenuAux)
                  $("#GuardarItemMenu").css('display','none');
                  $("#descripcionMenu").val(datos.descripcion);
                  $("#cbTipoMenu").val(datos.tipoMenu);
-                 $('#cbTipoMenu').selectpicker('refresh')
+                 $('#cbTipoMenu').selectpicker('refresh');
                  $('#divAltaItemMenu').modal('show');
             }
         });

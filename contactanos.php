@@ -86,36 +86,36 @@
               <div>
                 <div class="section">
                   <label class="field prepend-icon">
-                    <input type="text" name="sendername" id="sendername" class="gui-input" placeholder="Enter name">
+                    <input type="text" name="nombre" id="nombre" class="gui-input" placeholder="Nombre">
                     <span class="field-icon"><i class="fa fa-user"></i></span> </label>
                 </div>
                 <!-- end section -->
                 
                 <div class="section">
                   <label class="field prepend-icon">
-                    <input type="email" name="emailaddress" id="emailaddress" class="gui-input" placeholder="Email address">
+                    <input type="email" name="emailaddress" id="emailaddress" class="gui-input" placeholder="Direccion de correo">
                     <span class="field-icon"><i class="fa fa-envelope"></i></span> </label>
                 </div>
                 <!-- end section -->
                 
                 <div class="section colm colm6">
                   <label class="field prepend-icon">
-                    <input type="tel" name="telephone" id="telephone" class="gui-input" placeholder="Telephone">
+                    <input type="tel" name="tel" id="tel" class="gui-input" placeholder="telefono">
                     <span class="field-icon"><i class="fa fa-phone-square"></i></span> </label>
                 </div>
                 <!-- end section -->
                 
                 <div class="section">
                   <label class="field prepend-icon">
-                    <input type="text" name="sendersubject" id="sendersubject" class="gui-input" placeholder="Enter subjec">
+                    <input type="text" name="sendersubject" id="sendersubject" class="gui-input" placeholder="Asunto del Correo">
                     <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span> </label>
                 </div>
                 <!-- end section -->
                 
                 <div class="section">
                   <label class="field prepend-icon">
-                    <textarea class="gui-textarea" id="sendermessage" name="sendermessage" placeholder="Enter message"></textarea>
-                    <span class="field-icon"><i class="fa fa-comments"></i></span> <span class="input-hint"> <strong>Hint:</strong> Please enter between 80 - 300 characters.</span> </label>
+                    <textarea class="gui-textarea" id="sendermessage" name="sendermessage" placeholder="Mensaje"></textarea>
+                    <span class="field-icon"><i class="fa fa-comments"></i></span> <span class="input-hint"> <strong>Nota:</strong> recuerda que estamos para servirte gracias por comunicarte con nosotros</span> </label>
                 </div>
                 <!-- end section --> 
                 

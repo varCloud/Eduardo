@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from codelayers.net/templates/hostlinea/classic-2/contact-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Mar 2016 15:44:11 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -82,7 +81,7 @@
             <br/>
             <br/>
             
-            <form method="post" action="http://codelayers.net/templates/hostlinea/classic-2/php/smartprocess.php" id="smart-form">
+            <form method="post"   id="smart-form">
               <div>
                 <div class="section">
                   <label class="field prepend-icon">
@@ -125,7 +124,7 @@
               </div>
               <!-- end .form-body section -->
               <div>
-                <button type="submit" data-btntext-sending="Sending..." class="btn btn-bgprimary">Enviar Correo</button>
+                <button type="button"  id="EnviarCorreo" class="btn btn-bgprimary">Enviar Correo</button>
                 <button type="reset" class="button"> Cancelar </button>
               </div>
               <!-- end .form-footer section -->
@@ -340,7 +339,7 @@
 <script type="text/javascript" src="js/gmaps/jquery.gmap.js"></script> 
 <script type="text/javascript" src="js/gmaps/examples.js"></script>
 <script src="js/functions/functions.js"></script>
+<script src="js/contactanos.js"></script>
 </body>
 
-<!-- Mirrored from codelayers.net/templates/hostlinea/classic-2/contact-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Mar 2016 15:44:11 GMT -->
 </html>
